@@ -7,6 +7,8 @@ class Home extends MY_Controller {
    }
 
 	public function index() {
-		$this->load_view('home');
+		$data = array();
+		$data['page_title'] = "Home Page";
+		$this->load_view('home', $data);
 	}
 }

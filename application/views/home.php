@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Home</title>
+	<title><?php echo $page_title; ?></title>
 </head>
 <body>
 	<div id="container">
