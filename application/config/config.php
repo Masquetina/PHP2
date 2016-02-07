@@ -25,6 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://localhost/PHP2/';
 
+function __autoload($class) {
+  if(strpos($class, 'CI_') !== 0) {
+    @include_once(APPPATH . 'core/' . $class . EXT);
+  }
+}
+
 /*
 |--------------------------------------------------------------------------
 | Index File
