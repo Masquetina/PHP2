@@ -7,6 +7,7 @@ class MY_Controller extends CI_Controller {
   }
 
   public function load_view($view, $data) {
+    $this->session;
     $this->load->view($view, $data);
   }
 }
