@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title><?=$page_title;?></title>
-	<link href="<?=base_url();?>vendor/css/bootstrap.css" type="text/css" rel="stylesheet">
-	<link href="<?=base_url();?>vendor/css/material.css" type="text/css" rel="stylesheet">
-	<link href="<?=base_url();?>vendor/css/ripples.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-	<div id="container">
-		<h1>Home</h1>
-		<button type="submit" class="btn btn-raised btn-primary">Link</button>
-
-		<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
-		<script type="text/javascript" src="<?=base_url();?>vendor/js/bootstrap.js"></script>
-		<script type="text/javascript" src="<?=base_url();?>vendor/js/arrive.js"></script>
-		<script type="text/javascript" src="<?=base_url();?>vendor/js/material.js"></script>
-		<script type="text/javascript" src="<?=base_url();?>vendor/js/ripples.js"></script>
-		<script>
-			// Initialise Material Design for Bottstrap
-			$(document).ready(function(){
-				$.material.init();
-			});
-		</script>
-</body>
-</html>
+<div class="container">
+	<div class="col-sm-12 col-md-6 col-lg-6">
+		<div class="panel panel-default">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Panel heading
+				</div>
+				<div class="panel-body">
+					Panel content
+					Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+					tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-6 col-lg-6">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				Basic panel
+				<p>
+					Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+					tortor mauris condimentum nibh ut fermentum massa justo sit amet risus. Etiam porta sem malesuad
+					magna mollis euismod. Donec sed odio dui.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
