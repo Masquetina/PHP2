@@ -1,0 +1,52 @@
+.navbar.navbar-default {
+
+}
+
+.panel.panel-default {
+  border-radius: 12px;
+}
+
+.panel.panel-default > .panel-heading {
+  padding: 0 !important;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: brown;
+  color: white;
+}
+
+.panel.panel-default > .panel-heading .quote-img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                      0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                      0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  opacity: .5;
+  width: 100%;
+}
+
+.panel.panel-default > .panel-body {
+  background-color: brown;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  color: white;
+  padding: 0px 32px 16px 64px;
+}
+
+.panel.panel-default > .panel-body h3 {
+  font-weight: 300;
+}
+
+.panel-heading small {
+  position: relative;
+  top: -48px;
+  padding-left: 32px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.panel-heading small::before {
+  content: '— ';
+}

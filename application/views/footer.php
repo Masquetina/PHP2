@@ -1,9 +1,7 @@
-<footer class="navbar navbar-default navbar-fixed-bottom">
+<footer class="">
 	<div class="container">
-		<div class="row col-sm-12 col-md-6 col-lg-6">
-			<div class="panel-body">
-				<p class="text-center">Ovo je neki footer!</p>
-			</div>
+		<div class="panel-body">
+			<p class="text-center">Ovo je neki footer!</p>
 		</div>
 	</div>
 </footer>

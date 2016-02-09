@@ -7,4 +7,5 @@
 	<link href="<?=base_url();?>vendor/css/bootstrap.css" type="text/css" rel="stylesheet">
 	<link href="<?=base_url();?>vendor/css/material.css" type="text/css" rel="stylesheet">
 	<link href="<?=base_url();?>vendor/css/ripples.css" type="text/css" rel="stylesheet">
+	<link href="<?=base_url();?>custom/css/style.css" type="text/css" rel="stylesheet">
 </head>
