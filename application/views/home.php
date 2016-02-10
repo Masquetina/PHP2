@@ -17,3 +17,7 @@
 		</div>
 	</div>
 </div>
+
+<!-- INLINE STYLE INSIDE HTML TAG
+style="color:blue;margin-left:30px;"
+-->

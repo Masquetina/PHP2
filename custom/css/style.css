@@ -10,7 +10,7 @@
   padding: 0 !important;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-color: brown;
+  background-color: brown; /* inline style from DB! */
   color: white;
 }
 
@@ -28,11 +28,11 @@
 }
 
 .panel.panel-default > .panel-body {
-  background-color: brown;
+  background-color: brown; /* inline style from DB! */
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   color: white;
-  padding: 0px 32px 16px 64px;
+  padding: 0px 32px 16px 64px; /* mediaQ for all paddings! */
 }
 
 .panel.panel-default > .panel-body h3 {
@@ -41,8 +41,8 @@
 
 .panel-heading small {
   position: relative;
-  top: -48px;
-  padding-left: 32px;
+  top: -48px; /* mediaQ for all tops! */
+  padding-left: 32px; /* mediaQ for all paddings! */
   font-size: 16px;
   font-weight: 500;
 }
