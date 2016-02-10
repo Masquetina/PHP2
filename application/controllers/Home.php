@@ -11,4 +11,10 @@ class Home extends MY_Controller {
 		$data['page_title'] = "Home Page";
 		$this->load_view('home', $data);
 	}
+
+	public function user() {
+		$data = array();
+		$data['page_title'] = "My Profile";
+		$this->load_view('profile', $data);
+	}
 }

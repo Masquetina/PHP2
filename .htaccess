@@ -1,3 +1,8 @@
-
-RewriteCond $1 !^(index\.php|js|img|fonts|css|custom|vendor|emails|robots\.txt)
-RewriteRule ^(.*)$ /index.php?/$1 [L]
+Options +FollowSymLinks
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine on
+RewriteCond $1 !^(index\.php|vendor|custom|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
