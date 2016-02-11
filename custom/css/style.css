@@ -20,7 +20,6 @@ a.brand, a.navbar-text:hover {
   padding: 0 !important;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-color: brown; /* inline style from DB! */
   color: white;
 }
 
@@ -38,7 +37,6 @@ a.brand, a.navbar-text:hover {
 }
 
 .panel.panel-default > .panel-body {
-  background-color: brown; /* inline style from DB! */
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   color: white;

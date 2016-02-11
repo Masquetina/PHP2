@@ -12,9 +12,9 @@ class Login extends MY_Controller {
 		$this->load_view('login', $data);
 	}
 
-  public function validate() {
+  public function validate_login() {
     $this->load->model('user');
-    $query = $this->user->validate();
+    $query = $this->user->validate_login();
 
     if($query) {
       $data = array(

@@ -7,14 +7,22 @@ class Home extends MY_Controller {
    }
 
 	public function index() {
+
 		$data = array();
 		$data['page_title'] = "Home Page";
+
+		$this->load->model('cards');
+    $query = $this->cards->get_all_cards();
+
+    if($query) {
+      $data['cards'] = $query;
+    }
 		$this->load_view('home', $data);
 	}
 
-	public function user() {
+	/*public function user() {
 		$data = array();
 		$data['page_title'] = "My Profile";
 		$this->load_view('profile', $data);
-	}
+	}*/
 }

@@ -1,23 +1,24 @@
 <div class="container">
+	<?php if(isset($cards)) : foreach($cards as $card) : ?>
 	<div class="col-sm-12 col-md-6 col-lg-6">
 		<div class="panel panel-default">
 			<div class="panel panel-default">
-				<div class="panel-heading">
-					<img class="quote-img" src="<?=base_url();?>custom/img/Kalinovik.jpg" />
-					<small>baba Radojka</small>
+				<div class="panel-heading" <?=$card->color; ?> >
+					<img class="quote-img" src="<?=base_url();?>custom/img/<?=$card->img; ?>" />
+					<small><?=$card->author; ?></small>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body" <?=$card->color; ?> >
 					<h3 class="text-right">
 						<cite>
-							Ako hoćeš da sakriješ sirotinju, prekrij je nacionalnom zastavom.
+							<?=$card->quote; ?>
 						</cite>
 					</h3>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	<?php endforeach ?>
+	<?php else : ?>
 
-<!-- INLINE STYLE INSIDE HTML TAG
-style="color:blue;margin-left:30px;"
--->
+	<?php endif ?>
+</div>
