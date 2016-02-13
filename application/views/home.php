@@ -35,6 +35,9 @@
 			<li>
 				<i class="material-icons link">delete</i>
 			</li>
+			<li>
+				<i class="material-icons link">flag</i>
+			</li>
 		</ul>
 	</div>
 	<?php endforeach ?>
