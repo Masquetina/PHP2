@@ -3,9 +3,91 @@
 	/*border: 1px solid red !important;*/
 }
 
-.navbar {
-  background-color: ;
+body {
+	background-color: ;
 }
+
+header {
+	width: 100%;
+	height: 56px;
+	color: rgba(255,255,255,.7);
+	background-color: #263238;
+
+
+}
+
+header .container {
+	min-width: 360px;
+}
+
+header ul {
+	list-style-type: none;
+}
+
+header ul li.links {
+	display: inline-block;
+	/*border: 1px solid red !important;*/
+}
+
+header .brand {
+
+}
+
+header ul li.links a{
+	text-decoration: none;
+	color: rgba(255,255,255,.7);
+}
+
+header ul li img{
+	cursor: pointer;
+	width: 36px;
+	border-radius: 100%;
+	margin: 10px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+header ul li.links ul.dropdown-menu {
+	padding: 0px;
+	min-width: auto;
+	left: auto;
+	right: 0;
+	float: right;
+	border-radius: 2px;
+}
+
+header ul li.links ul.dropdown-menu li {
+	padding: 4px;
+}
+
+header ul li.links ul.dropdown-menu li a {
+	color: rgba(0,0,0,.7);
+}
+
+header ul li.links ul.dropdown-menu li a:hover {
+	color: teal;
+}
+
+.form-group {
+	padding: 0px !important;
+}
+
+.form-group .form-control {
+	margin: 0px !important;
+}
+
+.form-group .control-label {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+@media screen and (max-width: 1199px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
 
 /* CARD */
 .link,
@@ -14,7 +96,7 @@
 	cursor: pointer;
 }
 
-.panel {
+.panel.panel-default {
 	border-radius: 2px;
 	margin-top: 3em;
 	overlay: hidden;
@@ -170,14 +252,15 @@
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .15), 0 -1px 0 rgba(0, 0, 0, .25);
 }
 
-.info-bar li i.link {
+.info-bar li i.link, .info-bar li small {
+	color: rgba(0,0,0,.4);
 	padding: 4px;
 	border-radius: 100%;
 	vertical-align: middle;
 }
 
 .info-bar li i.link:hover {
-	background-color: #e0e0e0;
+	background-color: rgba(0,0,0,.1);
 }
 
 .info-bar li i.favorite:hover {

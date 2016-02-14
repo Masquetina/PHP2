@@ -17,13 +17,6 @@ class Home extends MY_Controller {
     if($query) {
       $data['cards'] = $query;
     }
-		$this->load_view('home', $data);
+		$this->load_basic('home', $data);
 	}
-
-	/*
-		public function user() {
-		$data = array();
-		$data['page_title'] = "My Profile";
-		$this->load_view('profile', $data);
-	}*/
 }

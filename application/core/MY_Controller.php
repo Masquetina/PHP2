@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller {
 
@@ -6,11 +6,18 @@ class MY_Controller extends CI_Controller {
     parent::__construct();
   }
 
-  public function load_view($view, $data) {
+  public function load_basic($view, $data) {
     $this->session;
     $this->load->view('head', $data);
     $this->load->view('header');
-    $this->load->view($view);
+    $this->load->view($view, $data);
+    $this->load->view('footer');
+  }
+
+  public function load_acc_forms($view, $data) {
+    $this->session;
+    $this->load->view('head', $data);
+    $this->load->view($view, $data);
     $this->load->view('footer');
   }
 }

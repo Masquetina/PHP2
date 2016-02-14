@@ -24,7 +24,7 @@
 				</h2>
 			</div>
 		</div>
-		<ul class="info-bar text-muted">
+		<ul class="info-bar">
 			<li>
 				<i class="material-icons link favorite">favorite</i>
 				<small><?=$card->likes; ?></small>

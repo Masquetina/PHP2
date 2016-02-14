@@ -1,8 +1,6 @@
-Options +FollowSymLinks
-Options -Indexes
-DirectoryIndex index.php
 RewriteEngine on
-RewriteCond $1 !^(index\.php|vendor|custom|robots\.txt)
+RewriteBase /
+RewriteCond $1 !^(index.php|custom|vendor|robots.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
