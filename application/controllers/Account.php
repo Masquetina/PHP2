@@ -21,7 +21,11 @@ class Account extends MY_Controller {
 			$message = "Please check Your credentials.";
 			$this->index($message);
 		} else {
-			redirect('/');
+			if($this->session->userdata('id_rolle') == 1) {
+				redirect('index.php/dashboard');
+			} else {
+				redirect('/');
+			}
 		}
 	}
 
