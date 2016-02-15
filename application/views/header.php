@@ -11,36 +11,47 @@
 				<ul class="pull-right">
 					<?php if(!$this->session->userdata('validated')) : ?>
 					<li class="links btn btn-primary">
-						<a href="<?=base_url();?>index.php/login">Login</a>
+						<a href="<?=base_url();?>index.php/login">
+							<i class="material-icons icon">person</i>
+							<span>Login</span>
+						</a>
 					</li>
 					<?php endif ?>
+
 					<?php if($this->session->userdata('validated')) : ?>
-					<li class="links dropdown">
-						<span class="dropdown-toggle" data-toggle="dropdown">
-							<img src="<?=base_url();?>custom/img/avatars/<?=$this->session->userdata('id_user'); ?>.jpg" />
-						</span>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="#">My Profile</a>
-							</li>
-							<li>
-								<a href="<?=base_url();?>index.php/login/logout/">Log out</a>
-							</li>
-						</ul>
+						<?php if($this->session->userdata('id_rolle') == 1) : ?>
+						<li class="links">
+							<a>
+								<img src="<?=base_url();?>custom/img/avatars/<?=$this->session->userdata('id_user'); ?>.jpg" />
+							</a>
+						</li>
+						<?php endif ?>
+					<li class="links btn btn-primary">
+						<a href="<?=base_url();?>index.php/login/logout/">
+							<i class="material-icons icon">power_settings_new</i>
+							<span>Log out</span>
+						</a>
 					</li>
 					<?php endif ?>
 					<li class="links btn btn-raised btn-primary">
-						<a
-							<?php if($this->session->userdata('validated')) : ?>
-								href="<?=base_url() . 'index.php/quote/create'; ?>"
-							<?php else :
-								// $message [GET] ?>
-								href="<?=base_url() . 'index.php/login/'; ?>"
-							<?php endif ?>
-						>
+						<?php if(!$this->session->userdata('validated')) : ?>
+						<a href="<?=base_url() . 'index.php/login/'; ?>" >
 							<i class="material-icons icon">add</i>
 							<span>New Card</span>
 						</a>
+						<?php else : ?>
+							<?php if($this->session->userdata('id_rolle') == 1) : ?>
+							<a href="<?=base_url() . 'index.php/login/'; ?>" >
+								<i class="material-icons icon">add</i>
+								<span>New Card</span>
+							</a>
+							<?php else : ?>
+							<a href="<?=base_url() . 'index.php/dashboard/'; ?>" >
+								<i class="material-icons icon">settings</i>
+								<span>Dashboard</span>
+							</a>
+							<?php endif ?>
+						<?php endif ?>
 					</li>
 				</ul>
 		</div>

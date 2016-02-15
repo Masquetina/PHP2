@@ -1,3 +1,7 @@
+<div class="cover">
+	<h1></h1>
+	<h2></h2>
+</div>
 <div class="container">
 	<?php if(isset($cards)) : foreach($cards as $card) : ?>
 	<div class="col-xs-12 col-md-6 col-lg-6">

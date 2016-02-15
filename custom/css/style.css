@@ -3,6 +3,10 @@
 	/*border: 1px solid red !important;*/
 }
 
+a:focus {
+	outline: none;
+}
+
 body {
 	background-color: ;
 	min-width: 320px;
@@ -27,10 +31,6 @@ header ul li.links {
 	display: inline-block;
 }
 
-header .brand {
-
-}
-
 header ul li.links a{
 	text-decoration: none;
 	color: rgba(255,255,255,.7);
@@ -40,33 +40,42 @@ header ul li img{
 	cursor: pointer;
 	width: 36px;
 	border-radius: 100%;
-	margin: 10px;
+	margin: 10px 4px;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-header ul li.links ul.dropdown-menu {
-	padding: 0px;
-	min-width: auto;
-	left: auto;
-	right: 0;
-	float: right;
-	border-radius: 2px;
-}
-
-header ul li.links ul.dropdown-menu li {
-	padding: 4px;
-}
-
-header ul li.links ul.dropdown-menu li a {
-	color: rgba(0,0,0,.7);
-}
-
-header ul li.links ul.dropdown-menu li a:hover {
-	color: teal;
-}
-
-.links.btn-raised i {
+.links.btn i {
 	display: none;
+}
+
+.links.btn {
+	margin-left: 4px;
+	margin-right: 4px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	background-color: rgba(255,255,255,.1);
+}
+
+.links.btn:hover {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 768px) {
+	.links.btn {
+		border-radius: 100%;
+		width: 36px;
+		height: 36px;
+		padding: 0px;
+	}
+	.links.btn span {
+		display: none;
+	}
+	.links.btn i {
+		display: block;
+		padding: 6px;
+	}
 }
 
 .form-group {
@@ -81,37 +90,6 @@ header ul li.links ul.dropdown-menu li a:hover {
 	padding: 0px !important;
 	margin: 0px !important;
 }
-
-.links.btn-primary:first-of-type {
-	background-color: rgba(255,255,255,.1)
-}
-
-.links.btn-primary:first-of-type:hover {
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
-@media screen and (max-width: 480px) {
-	.links.btn-primary:first-of-type {
-		border-top-left-radius: 25px;
-		border-bottom-left-radius: 25px;
-		border-top-right-radius: 25px;
-		border-bottom-right-radius: 25px;
-	}
-	.links.btn-raised {
-		border-radius: 100%;
-		width: 36px;
-		height: 36px;
-		padding: 0px;
-	}
-	.links.btn-raised span {
-		display: none;
-	}
-	.links.btn-raised i {
-		display: block;
-		padding: 6px;
-	}
-}
-
 
 /* CARD */
 .link,
