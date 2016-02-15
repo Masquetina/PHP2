@@ -9,7 +9,6 @@
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/bootstrap.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/arrive.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/material.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>vendor/js/ripples.js"></script>
 	<script>
 		$(document).ready(function(){
 			$.material.init();

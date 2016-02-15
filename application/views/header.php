@@ -55,5 +55,5 @@
 					</li>
 				</ul>
 		</div>
+		<div class="clearfix"></div>
 	</header>
-	<div class="clearfix"></div>

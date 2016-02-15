@@ -63,14 +63,14 @@
 					$data = 'reset';
 					$value = 'Reset';
 					$extra = array(
-						'class' => 'btn btn-default'
+						'class' => 'btn btn-primary'
 					);
 					echo form_reset($data, $value, $extra);
 
 					$data = 'submit';
 					$value = 'Submit';
 					$extra = array(
-						'class' => 'btn btn-primary'
+						'class' => 'btn btn-primary btn-raised'
 					);
 					echo form_submit($data, $value, $extra);
 					?>

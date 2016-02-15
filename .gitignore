@@ -9,4 +9,5 @@ application/logs/*
 !application/logs/.htaccess
 
 vendor
+!vendor/css/material.css
 nbproject
