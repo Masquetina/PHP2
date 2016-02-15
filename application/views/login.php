@@ -4,7 +4,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<?php
-				$action = "index.php/account/login";
+				$action = "index.php/login/login";
 				$attributes = array(
 					'class' => 'form-horizontal'
 				);
@@ -87,7 +87,7 @@
 		</div>
 		<div class="text-muted">
 			<p>Don't have an account?
-				<a href="<?=base_url();?>account/signup">Sign up</a>
+				<a href="<?=base_url();?>signup">Sign up</a>
 			</p>
 		</div>
 	</div>

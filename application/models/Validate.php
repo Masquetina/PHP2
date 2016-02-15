@@ -1,6 +1,6 @@
 <?php
 
-class Login extends CI_Model {
+class Validate extends CI_Model {
 
   public function login() {
     $this->db->where('email', $this->input->post('email'));

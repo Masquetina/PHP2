@@ -11,7 +11,7 @@
 				<ul class="pull-right">
 					<?php if(!$this->session->userdata('validated')) : ?>
 					<li class="links btn btn-primary">
-						<a href="<?=base_url();?>index.php/account">Login</a>
+						<a href="<?=base_url();?>index.php/login">Login</a>
 					</li>
 					<?php endif ?>
 					<?php if($this->session->userdata('validated')) : ?>
@@ -24,7 +24,7 @@
 								<a href="#">My Profile</a>
 							</li>
 							<li>
-								<a href="<?=base_url();?>index.php/account/logout/">Log out</a>
+								<a href="<?=base_url();?>index.php/login/logout/">Log out</a>
 							</li>
 						</ul>
 					</li>
@@ -35,7 +35,7 @@
 								href="<?=base_url() . 'index.php/quote/create'; ?>"
 							<?php else :
 								// $message [GET] ?>
-								href="<?=base_url() . 'index.php/account/'; ?>"
+								href="<?=base_url() . 'index.php/login/'; ?>"
 							<?php endif ?>
 						>
 							<i class="material-icons icon">add</i>
