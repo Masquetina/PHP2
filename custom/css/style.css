@@ -5,6 +5,7 @@
 
 body {
 	background-color: ;
+	min-width: 320px;
 }
 
 header {
@@ -12,12 +13,10 @@ header {
 	height: 56px;
 	color: rgba(255,255,255,.7);
 	background-color: #263238;
-
-
 }
 
 header .container {
-	min-width: 360px;
+
 }
 
 header ul {
@@ -26,7 +25,6 @@ header ul {
 
 header ul li.links {
 	display: inline-block;
-	/*border: 1px solid red !important;*/
 }
 
 header .brand {
@@ -67,6 +65,10 @@ header ul li.links ul.dropdown-menu li a:hover {
 	color: teal;
 }
 
+.links.btn-raised i {
+	display: none;
+}
+
 .form-group {
 	padding: 0px !important;
 }
@@ -80,12 +82,34 @@ header ul li.links ul.dropdown-menu li a:hover {
 	margin: 0px !important;
 }
 
-@media screen and (max-width: 1199px) {
-
+.links.btn-primary:first-of-type {
+	background-color: rgba(255,255,255,.1)
 }
 
-@media screen and (max-width: 767px) {
+.links.btn-primary:first-of-type:hover {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
 
+@media screen and (max-width: 480px) {
+	.links.btn-primary:first-of-type {
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
+	.links.btn-raised {
+		border-radius: 100%;
+		width: 36px;
+		height: 36px;
+		padding: 0px;
+	}
+	.links.btn-raised span {
+		display: none;
+	}
+	.links.btn-raised i {
+		display: block;
+		padding: 6px;
+	}
 }
 
 
@@ -100,7 +124,6 @@ header ul li.links ul.dropdown-menu li a:hover {
 	border-radius: 2px;
 	margin-top: 3em;
 	overlay: hidden;
-	min-width: 300px;
 }
 
 .panel-heading {
@@ -244,11 +267,12 @@ header ul li.links ul.dropdown-menu li a:hover {
 .info-bar {
 	margin-top: -8px;
   padding: 0px;
+	min-width: 280px;
 }
 
 .info-bar li {
 	display: inline-block;
-  margin: 0 4px;
+  margin: 0 2px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .15), 0 -1px 0 rgba(0, 0, 0, .25);
 }
 
@@ -261,10 +285,6 @@ header ul li.links ul.dropdown-menu li a:hover {
 
 .info-bar li i.link:hover {
 	background-color: rgba(0,0,0,.1);
-}
-
-.info-bar li i.favorite:hover {
-	background-color: transparent;
 }
 
 @media screen and (max-width: 479px) {

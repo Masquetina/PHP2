@@ -5,13 +5,13 @@
 			<div class="panel-heading" <?=$card->color; ?> >
 				<div class="interactions-group">
 					<a href="#" title="">
-						<img class="interactions avatar" src="http://placehold.it/64/fff.png" />
+						<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->id_user; ?>.jpg" />
 					</a>
 				</div>
 				<img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img; ?>" />
 				<small class="author"><?=$card->author; ?></small>
 				<div class="info-block" <?=$card->color; ?> >
-					<i class="material-icons icon">add</i>
+					<i class="material-icons icon">expand_more</i>
 					<div class="text">
 						<p class="text-left"><?=$card->info; ?></p>
 					</div>
@@ -26,18 +26,34 @@
 		</div>
 		<ul class="info-bar">
 			<li>
-				<i class="material-icons link favorite">favorite</i>
+				<i class="material-icons link favorite"
+				<?php if($this->session->userdata('validated')) : ?>
+					<?php if(($card->id_user) == $this->session->userdata('id_user')) {
+						echo 'style = "color: #ba68c8"';
+					} ?>
+					<?php endif ?> >favorite</i>
 				<small><?=$card->likes; ?></small>
 			</li>
-			<li>
-				<i class="material-icons link">edit</i>
-			</li>
-			<li>
-				<i class="material-icons link">delete</i>
-			</li>
-			<li>
-				<i class="material-icons link">flag</i>
-			</li>
+			<?php if($this->session->userdata('validated')) : ?>
+				<?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
+					<li>
+						<a href="#">
+							<i class="material-icons link">edit</i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="material-icons link">delete</i>
+						</a>
+					</li>
+				<?php else : ?>
+					<li>
+						<a href="#">
+							<i class="material-icons link">flag</i>
+						</a>
+					</li>
+				<?php endif ?>
+			<?php endif ?>
 		</ul>
 	</div>
 	<?php endforeach ?>
