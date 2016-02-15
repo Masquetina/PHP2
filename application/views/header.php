@@ -24,9 +24,6 @@
 								<a href="#">My Profile</a>
 							</li>
 							<li>
-								<a href="#">Settings</a>
-							</li>
-							<li>
 								<a href="<?=base_url();?>index.php/account/logout/">Log out</a>
 							</li>
 						</ul>
@@ -36,7 +33,8 @@
 						<a
 							<?php if($this->session->userdata('validated')) : ?>
 								href="<?=base_url() . 'index.php/quote/create'; ?>"
-							<?php else : ?>
+							<?php else :
+								// $message [GET] ?>
 								href="<?=base_url() . 'index.php/account/'; ?>"
 							<?php endif ?>
 						>

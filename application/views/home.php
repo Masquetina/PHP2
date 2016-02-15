@@ -35,18 +35,7 @@
 				<small><?=$card->likes; ?></small>
 			</li>
 			<?php if($this->session->userdata('validated')) : ?>
-				<?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
-					<li>
-						<a href="#">
-							<i class="material-icons link">edit</i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="material-icons link">delete</i>
-						</a>
-					</li>
-				<?php else : ?>
+				<?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
 					<li>
 						<a href="#">
 							<i class="material-icons link">flag</i>

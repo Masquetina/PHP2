@@ -10,6 +10,8 @@ class Cards extends CI_Model {
     //  $this->db->join('users', 'cards.id_user = users.id_user');
     //  $this->db->join('users', 'id_user', 'inner');
     $this->db->join('cards', 'likes.id_card = cards.id_card', 'right');
+    $this->db->where('cards.flag = 0');
+    $this->db->where('cards.delete = 0');
     $this->db->order_by('cards.id_card', 'desc');
     $query = $this->db->get();
 

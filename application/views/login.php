@@ -4,78 +4,91 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<?php
-				$form = array(
+				$action = "index.php/account/login";
+				$attributes = array(
 					'class' => 'form-horizontal'
 				);
-				echo form_open('index.php/account/login', $form);
+				echo form_open($action, $attributes);
 				echo form_fieldset('Login');
 				?>
+
 				<div class="form-group">
 					<?php
+					$label_text= 'Email';
+					$id= 'inputEmail';
 					$attributes = array(
-						'class' => 'control-label',
+						'class' => 'control-label'
 					);
-					echo form_label('Email', 'inputEmail', $attributes);
+					echo form_label($label_text, $id, $attributes);
 					?>
+
 					<?php
-					$email = array(
+					$data = array(
 						'id'					=> 'inputEmail',
 						'name'				=> 'email',
 						'maxlength'   => '20',
 						'size'        => '15',
-						'value' 			=> $this->input->post('email'),
 						'class' 			=> 'form-control'
 					);
-					echo form_input($email);
+					$value = $this->input->post('email');
+					echo form_input($data, $value);
 					?>
 				</div>
+
 				<div class="form-group">
 					<?php
+					$label_text= 'Password';
+					$id= 'inputPassword';
 					$attributes = array(
-						'class' => 'control-label',
+						'class' => 'control-label'
 					);
-					echo form_label('Password', 'inputPassword', $attributes);
+					echo form_label($label_text, $id, $attributes);
 					?>
+
 					<?php
-					$password = array(
+					$data = array(
 						'id'					=> 'inputPassword',
 						'name'				=> 'password',
 						'maxlength'   => '20',
 						'size'        => '15',
-						'value' 			=> $this->input->post('password'),
 						'class' 			=> 'form-control'
 					);
-					echo form_password($password);
-					?>
-					</div>
-					<div class="form-group">
-						<?php
-						$reset = array(
-							'name' => '',
-							'value' => 'true',
-							'type' => 'reset',
-							'content' => 'Reset',
-							'class' => 'btn btn-default'
-						);
-						echo form_button($reset);
-						$submit = array(
-							'name'  => '',
-							'value' => 'Login',
-							'class' => 'btn btn-primary'
-						);
-						echo form_submit($submit);
-						?>
-					</div>
-					<?php
-					echo form_fieldset_close();
-					echo form_close();
+					$value = $this->input->post('password');
+					echo form_password($data, $value);
 					?>
 				</div>
-			</div>
-			<div class="text-muted">
-				<p>Don't have an account?
-					<a href="<?=base_url();?>account/signup">Sign up</a>
-				</p>
+
+				<div class="form-group">
+					<?php
+					$data = 'reset';
+					$value = 'Reset';
+					$extra = array(
+						'class' => 'btn btn-default'
+					);
+					echo form_reset($data, $value, $extra);
+
+					$data = 'submit';
+					$value = 'Submit';
+					$extra = array(
+						'class' => 'btn btn-primary'
+					);
+					echo form_submit($data, $value, $extra);
+					?>
+				</div>
+				<?php
+				echo form_fieldset_close();
+				echo form_close();
+
+
+				//form_button([$data = ''[, $content = ''[, $extra = '']]])
+				//$js = 'onClick="some_function()"';
+				?>
 			</div>
 		</div>
+		<div class="text-muted">
+			<p>Don't have an account?
+				<a href="<?=base_url();?>account/signup">Sign up</a>
+			</p>
+		</div>
 	</div>
+</div>

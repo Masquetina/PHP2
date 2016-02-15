@@ -18,7 +18,7 @@ class Account extends MY_Controller {
 		$query = $this->login->login();
 
 		if(!$query) {
-			$message = "Invalid...";
+			$message = "Please check Your credentials.";
 			$this->index($message);
 		} else {
 			redirect('/');
