@@ -10,8 +10,8 @@
 				</ul>
 				<ul class="pull-right">
 					<?php if(!$this->session->userdata('validated')) : ?>
-					<li class="links btn btn-primary">
-						<a href="<?=base_url();?>index.php/login">
+					<li class="links">
+						<a class="btn btn-primary" href="<?=base_url();?>index.php/login">
 							<i class="material-icons icon">person</i>
 							<span>Login</span>
 						</a>
@@ -26,27 +26,27 @@
 							</a>
 						</li>
 						<?php endif ?>
-					<li class="links btn btn-primary">
-						<a href="<?=base_url();?>index.php/login/logout/">
+					<li class="links">
+						<a class="btn btn-primary" href="<?=base_url();?>index.php/login/logout/">
 							<i class="material-icons icon">power_settings_new</i>
 							<span>Log out</span>
 						</a>
 					</li>
 					<?php endif ?>
-					<li class="links btn btn-raised btn-primary">
+					<li class="links">
 						<?php if(!$this->session->userdata('validated')) : ?>
-						<a href="<?=base_url() . 'index.php/login/'; ?>" >
+						<a class="btn btn-raised btn-primary" href="<?=base_url() . 'index.php/login/'; ?>" >
 							<i class="material-icons icon">add</i>
 							<span>New Card</span>
 						</a>
 						<?php else : ?>
 							<?php if($this->session->userdata('id_rolle') == 1) : ?>
-							<a href="<?=base_url() . 'index.php/login/'; ?>" >
+							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'index.php/login/'; ?>" >
 								<i class="material-icons icon">add</i>
 								<span>New Card</span>
 							</a>
 							<?php else : ?>
-							<a href="<?=base_url() . 'index.php/dashboard/'; ?>" >
+							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'index.php/dashboard/'; ?>" >
 								<i class="material-icons icon">settings</i>
 								<span>Dashboard</span>
 							</a>
