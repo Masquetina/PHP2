@@ -25,7 +25,7 @@ class Login extends MY_Controller {
 		$query = $this->validate->login();
 
 		if(!$query) {
-			$message = "Please check Your credentials.";
+			$message = "Your credentials are not valid. Please try again.";
 			$this->index($message);
 		} else {
 			if($this->session->userdata('id_rolle') == 2) {

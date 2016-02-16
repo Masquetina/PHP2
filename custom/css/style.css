@@ -3,6 +3,10 @@
 	/*border: 1px solid red !important;*/
 }
 
+a {
+	text-decoration: none !important;
+}
+
 a:focus, input:focus, button:focus {
 	outline: none !important;
 }
@@ -15,10 +19,26 @@ body {
 	min-width: 320px;
 }
 
+.message-container {
+	width: 100%;
+	height: 56px;
+	top: 0px;
+	position: fixed;
+	background-color: #ff7043;
+	border-top: 4px solid #263238;
+	z-index: 999;
+}
+
+.message-container p {
+	color: rgba(255, 255, 255, .8);
+	font-weight: 400;
+	padding: 16px;
+}
+
 header {
 	width: 100%;
 	height: 56px;
-	color: rgba(255,255,255, 8);
+	color: rgba(255,255,255, 1);
 	background-color: #263238;
 	padding: 0px;
 	margin: 0px;
@@ -26,6 +46,7 @@ header {
 
 header ul {
 	list-style-type: none;
+	padding: 0px;
 }
 
 header ul li.links {
@@ -43,6 +64,14 @@ header ul li img{
 	border-radius: 100%;
 	margin: 10px 4px;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+header ul li img.logo{
+	width: 76px;
+	border-radius: 0%;
+	margin: -2px 0px 0px 0px;
+	padding: 0px 4px;
+	opacity: .9;
 }
 
 .links.btn i {
@@ -84,7 +113,52 @@ header ul li img{
 	height: 280px;
 	background: #ccc;
 	padding: 0px;
-	margin: 0px 0px 56px 0px;
+	margin: 0px 0px 24px 0px;
+}
+
+.line {
+	width: 100%;
+	height: 4px;
+	background-color: #263238;
+	padding: 0px;
+	margin: 0px 0px 52px 0px;
+}
+
+a.logo-form {
+	display: block;
+	margin: 0 auto;
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	background-color: #263238;
+}
+
+a.logo-form img {
+	width: 40px;
+	margin: 16px 12px;
+	opacity: .9;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.container-form .btn-primary:hover {
+	background-color: rgba(0, 200, 83, 0.9) !important;
+}
+
+.container-form .btn-simple {
+	background-color: rgba(0, 200, 83, 0.1);
+}
+
+.container-form .btn-simple:hover {
+	background-color: rgba(0, 200, 83, 0.1) !important;
+}
+
+a.text-primary {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+a.text-primary:hover {
+	color: #00c853 !important;
 }
 
 .form-group {
@@ -123,12 +197,12 @@ header ul li img{
 	height: 100%;
 	position: relative;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-	z-index: 999;
+	z-index: 2;
 }
 
 .panel-heading .interactions {
 	position: absolute;
-	z-index: 999;
+	z-index: 2;
 }
 
 .panel-heading .avatar {

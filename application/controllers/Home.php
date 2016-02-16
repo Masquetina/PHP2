@@ -10,7 +10,6 @@ class Home extends MY_Controller {
 
 		$data = array();
 		$data['page_title'] = "Home Page";
-
 		$this->load->model('cards');
     $query = $this->cards->get_all_cards();
 

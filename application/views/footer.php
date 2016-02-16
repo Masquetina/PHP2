@@ -12,11 +12,11 @@
 	<script>
 		$(document).ready(function(){
 			$.material.init();
-			$(function() {
-				$(".info-block").click(function() {
-					$(this).toggleClass("active");
-				});
+			$('input:text:visible:first')[0].focus();
+			$(".form-control").focus(function() {
+				$(this).val('');
 			});
+			$('.message-container').delay(3000).fadeOut(3000);
 		});
 	</script>
 </body>

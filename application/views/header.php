@@ -1,10 +1,10 @@
 <body>
 	<header>
-		<div class="container-fluid">
+		<div class="container">
 				<ul class="pull-left">
-					<li class="links">
-						<a class="" href="<?=base_url();?>">
-
+					<li>
+						<a href="<?=base_url();?>">
+							<img class="logo" src="<?=base_url();?>custom/logo.svg" />
 						</a>
 					</li>
 				</ul>

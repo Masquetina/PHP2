@@ -1,6 +1,11 @@
-<div class="container">
+	<?php if(!is_null($message)) : ?>
+		<div class="message-container text-center">
+			<p><?=$message;?></p>
+		</div>
+	<?php endif ?>
+<div class="line"></div>
+<div class="container container-form">
 	<div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-		<?php if(!is_null($message)) echo $message;?>
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<?php
@@ -63,7 +68,7 @@
 					$data = 'reset';
 					$value = 'Reset';
 					$extra = array(
-						'class' => 'btn btn-primary'
+						'class' => 'btn btn-primary btn-simple'
 					);
 					echo form_reset($data, $value, $extra);
 
@@ -78,17 +83,19 @@
 				<?php
 				echo form_fieldset_close();
 				echo form_close();
-
-
-				//form_button([$data = ''[, $content = ''[, $extra = '']]])
-				//$js = 'onClick="some_function()"';
 				?>
 			</div>
 		</div>
-		<div class="text-muted">
-			<p>Don't have an account?
-				<a href="<?=base_url();?>signup">Sign up</a>
+		<div>
+			<p class="text-muted">Don't have an account?
+				<a class="text-primary" href="<?=base_url();?>signup">Sign up</a>
 			</p>
 		</div>
+		<a class="logo-form" href="<?=base_url();?>">
+			<img src="<?=base_url();?>custom/logo.svg" />
+		</a>
 	</div>
 </div>
+<script type="text/javascript">
+
+</script>

@@ -1,5 +1,8 @@
 <div class="cover"></div>
 <div class="container">
+	<div class="">
+		<h2 class="text-center">Quotation Cards</h2>
+	</div>
 	<?php if(isset($cards)) : foreach($cards as $card) : ?>
 	<div class="col-xs-12 col-md-6 col-lg-6">
 		<div class="panel panel-default">
