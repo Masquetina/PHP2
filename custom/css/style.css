@@ -16,7 +16,7 @@ a:active, input:active, button:active {
 }
 
 body {
-	min-width: 320px;
+	min-width: 360px;
 }
 
 .message-container {
