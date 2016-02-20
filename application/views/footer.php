@@ -7,11 +7,8 @@
 	</footer>
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/bootstrap.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>vendor/js/arrive.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>vendor/js/material.js"></script>
 	<script>
 		$(document).ready(function(){
-			$.material.init();
 			$(".info-block").click(function() {
 				$(this).toggleClass("active");
 			});

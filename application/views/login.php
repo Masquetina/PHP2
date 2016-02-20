@@ -14,7 +14,7 @@
 					'class' => 'form-horizontal'
 				);
 				echo form_open($action, $attributes);
-				echo form_fieldset('Login');
+				//echo form_fieldset('Login');
 				?>
 
 				<div class="form-group">
@@ -70,7 +70,7 @@
 					?>
 				</div>
 				<?php
-				echo form_fieldset_close();
+				//echo form_fieldset_close();
 				echo form_close();
 				?>
 			</div>
