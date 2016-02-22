@@ -10,7 +10,7 @@ class Login extends MY_Controller {
 		if($this->session->userdata('id_rolle') == 1) {
 			redirect('/');
 		} else if ($this->session->userdata('id_rolle') == 2) {
-			redirect('index.php/dashboard');
+			redirect('dashboard');
 		} else {
 			$data = array();
 			$data['message'] = $message;
@@ -29,7 +29,7 @@ class Login extends MY_Controller {
 			$this->index($message);
 		} else {
 			if($this->session->userdata('id_rolle') == 2) {
-				redirect('index.php/dashboard');
+				redirect('dashboard');
 			} else {
 				redirect('/');
 			}
@@ -38,7 +38,7 @@ class Login extends MY_Controller {
 
 	public function logout() {
 		$this->session->sess_destroy();
-		redirect('/');
+		redirect('home');
 	}
 
 	// MOVE THIS INTO SEPARATE CONTROLLER Signup extends MY_Controller

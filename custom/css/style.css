@@ -194,7 +194,7 @@ header ul li.links a{
 	color: rgba(255,255,255,.8);
 }
 
-header ul li img{
+header ul li.links img{
 	cursor: pointer;
 	width: 36px;
 	border-radius: 100%;
