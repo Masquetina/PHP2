@@ -24,6 +24,18 @@ class Validate extends CI_Model {
 
   public function signup() {
 
+    $this->db->where('email', $this->input->post('email'));
+    $this->db->where('password', $this->input->post('password'));
+
+    $query = $this->db->get('users');
+
+    if($query->num_rows() == 0) {
+
+    } else {
+
+    }
+
+
     // IF SUCCESS
     $this->session->set_flashdata('message', 'The account is successfully created. You can log in now.');
   }
