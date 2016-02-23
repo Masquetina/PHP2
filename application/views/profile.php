@@ -1,5 +1,7 @@
-<div class="">
-		<img class="" src="<?=base_url();?>custom/img/avatars/<?=$user->username;?>.jpg" />
+<div class="profile-header">
+		<img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
+		<h2><?=ucwords($user->username);?></h2>
+		<p><?=$user->description;?></p>
 </div>
 <div class="container">
 	<h2 class="text-center"><?=ucwords($user->username);?>'s Quotation Cards</h2>
@@ -8,8 +10,8 @@
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
 					<div class="interactions-group">
-						<a href="<?=base_url();?>profile/<?=$card->id_user;?>" title="">
-							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->username;?>.jpg" />
+						<a href="<?=base_url();?>profile/<?=$card->id_user;?>" title="<?=ucwords($user->username);?>">
+							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
 						</a>
 					</div>
 					<img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />

@@ -26,8 +26,9 @@
 					<?php if($this->session->userdata('validated')) : ?>
 						<?php if($this->session->userdata('id_rolle') == 1) : ?>
 						<li class="links">
-							<a>
-								<img src="<?=base_url();?>custom/img/avatars/<?=$this->session->userdata('id_user'); ?>.jpg" />
+							<a href="<?=base_url();?>profile/<?=$this->session->userdata('id_user');?>"
+								 title="<?=ucwords($this->session->userdata('username'));?>">
+								<img src="<?=base_url();?>custom/img/avatars/<?=$this->session->userdata('avatar'); ?>" />
 							</a>
 						</li>
 						<?php endif ?>

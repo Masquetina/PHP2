@@ -13,6 +13,7 @@ class Validate extends CI_Model {
 				'username'  => $row->username,
 				'email'     => $row->email,
 				'id_rolle'  => $row->id_rolle,
+        'avatar'    => $row->avatar,
         'validated' => TRUE
 			);
 			$this->session->set_userdata($data);
