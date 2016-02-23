@@ -22,10 +22,8 @@ class Login extends MY_Controller {
 	public function login() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {
-
 			$this->load->model('validate');
 			$query = $this->validate->login();
-
 			if(!$query) {
 				$message = "Your credentials are not valid. Please try again.";
 				$this->index($message);
@@ -51,21 +49,4 @@ class Login extends MY_Controller {
 		$this->session->set_flashdata('message', 'Bye bye, hope to see You again soon.');
 		redirect('/');
 	}
-
-	// MOVE THIS INTO SEPARATE CONTROLLER Signup extends MY_Controller
-	/*
-	public function signup() {
-		$this->load->model('validate');
-		$query = $this->validate->signup();
-
-		if(!$query) {
-			$message = "There is already a user with the same email address.";
-			$this->index($message);
-		} else {
-			$message = "The account is successfully created. You can log in now.";
-			$this->index($message);
-			redirect('/index.php/login', $message);
-		}
-	}
-	*/
 }

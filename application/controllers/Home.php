@@ -7,12 +7,10 @@ class Home extends MY_Controller {
    }
 
 	public function index() {
-
 		$data = array();
 		$data['page_title'] = "Home Page";
 		$this->load->model('cards');
     $query = $this->cards->get_all_cards();
-
     if($query) {
       $data['cards'] = $query;
     }

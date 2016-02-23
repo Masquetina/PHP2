@@ -20,13 +20,10 @@ class Signup extends MY_Controller {
 	}
 
 	public function signup() {
-
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {
-
 			$this->load->model('validate');
 			$query = $this->validate->signup();
-
 			if(!$query) {
 				$message = "Somebody is already registered with that email address.";
 				$this->index($message);

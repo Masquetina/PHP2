@@ -10,19 +10,15 @@ class Profile extends MY_Controller {
 
 		$data = array();
 		$data['page_title'] = "Profile Page";
-
 		$id_user = $this->uri->segment(2);
 		if($id_user == 1) {
 			redirect('/');
 		} else {
 			$this->load->model('user');
-
     	$query = $this->user->get_profile($id_user);
-
     	if($query) {
       	$data['cards'] = $query;
-				$data['id_user'] = $id_user;
-
+				$data['user'] = $query[0];
 				$this->load_basic('profile', $data);
 			}
 		}

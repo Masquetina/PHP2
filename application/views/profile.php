@@ -1,15 +1,15 @@
 <div class="">
-		<img class="" src="<?=base_url();?>custom/img/avatars/<?=$id_user;?>.jpg" />
+		<img class="" src="<?=base_url();?>custom/img/avatars/<?=$user->username;?>.jpg" />
 </div>
 <div class="container">
-	<h2 class="text-center">Quotation Cards</h2>
+	<h2 class="text-center"><?=ucwords($user->username);?>'s Quotation Cards</h2>
 	<?php if(isset($cards)) : foreach($cards as $card) : ?>
 		<div class="col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
 					<div class="interactions-group">
 						<a href="<?=base_url();?>profile/<?=$card->id_user;?>" title="">
-							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->id_user;?>.jpg" />
+							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->username;?>.jpg" />
 						</a>
 					</div>
 					<img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />

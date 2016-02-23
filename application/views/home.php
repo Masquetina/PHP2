@@ -7,7 +7,7 @@
 				<div class="panel-heading" <?=$card->color;?> >
 					<div class="interactions-group">
 						<a href="<?=base_url();?>profile/<?=$card->id_user;?>" title="">
-							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->id_user;?>.jpg" />
+							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->username;?>.jpg" />
 						</a>
 					</div>
 					<img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />
