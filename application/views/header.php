@@ -1,5 +1,10 @@
 <body>
 	<header>
+		<?php if($this->session->flashdata('message')) : ?>
+			<div class="message-container text-center greeting">
+				<p><?=$this->session->flashdata('message');?></p>
+			</div>
+		<?php endif ?>
 		<div class="container">
 				<ul class="pull-left">
 					<li>

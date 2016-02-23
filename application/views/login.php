@@ -1,6 +1,11 @@
 	<?php if(!is_null($message)) : ?>
-		<div class="message-container text-center">
+		<div class="message-container text-center warning">
 			<p><?=$message;?></p>
+		</div>
+	<?php endif ?>
+	<?php if($this->session->flashdata('message')) : ?>
+		<div class="message-container text-center greeting">
+			<p><?=$this->session->flashdata('message');?></p>
 		</div>
 	<?php endif ?>
 <div class="line"></div>
@@ -14,7 +19,7 @@
 					'class' => 'form-horizontal'
 				);
 				echo form_open($action, $attributes);
-				//echo form_fieldset('Login');
+				echo form_fieldset('Login');
 				?>
 
 				<div class="form-group">
@@ -32,7 +37,7 @@
 					$label_text= 'Email';
 					$id= 'inputEmail';
 					$attributes = array(
-						'class' => 'control-label'
+						'class' => 'control-label, text-primary'
 					);
 					echo form_label($label_text, $id, $attributes);
 					?>
@@ -53,7 +58,7 @@
 					$label_text= 'Password';
 					$id= 'inputPassword';
 					$attributes = array(
-						'class' => 'control-label'
+						'class' => 'control-label, text-primary'
 					);
 					echo form_label($label_text, $id, $attributes);
 					?>
@@ -70,7 +75,7 @@
 					?>
 				</div>
 				<?php
-				//echo form_fieldset_close();
+				echo form_fieldset_close();
 				echo form_close();
 				?>
 			</div>

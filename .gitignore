@@ -11,3 +11,5 @@ application/logs/*
 vendor
 !vendor/css/material.css
 nbproject
+error.log
+access.log

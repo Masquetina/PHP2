@@ -18,13 +18,13 @@ class Validate extends CI_Model {
         'validated' => TRUE
 			);
 			$this->session->set_userdata($data);
-			return true;
-		} else {
-		  return false;
-    }
+      $this->session->set_flashdata('message', 'Hi! Wellcome.');
+		}
   }
 
   public function signup() {
 
+    // IF SUCCESS
+    $this->session->set_flashdata('message', 'The account is successfully created. You can log in now.');
   }
 }

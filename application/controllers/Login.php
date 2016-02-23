@@ -20,25 +20,36 @@ class Login extends MY_Controller {
 	}
 
 	public function login() {
-		// TO PROTECT ALL THE PATHS/FUNCTIONS AS ABOVE, OR JUST index()?
-		$this->load->model('validate');
-		$query = $this->validate->login();
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
 
-		if(!$query) {
-			$message = "Your credentials are not valid. Please try again.";
-			$this->index($message);
-		} else {
-			if($this->session->userdata('id_rolle') == 2) {
-				redirect('dashboard');
+			$this->load->model('validate');
+			$query = $this->validate->login();
+
+			if(!$query) {
+				$message = "Your credentials are not valid. Please try again.";
+				$this->index($message);
 			} else {
-				redirect('/');
+				if($this->session->userdata('id_rolle') == 2) {
+					redirect('dashboard');
+				} else {
+					redirect('/');
+				}
 			}
 		}
 	}
 
 	public function logout() {
-		$this->session->sess_destroy();
-		redirect('home');
+		$data = array(
+			'id_user' ,
+			'username',
+			'email',
+			'id_rolle',
+			'validated'
+		);
+		$this->session->unset_userdata($data);
+		$this->session->set_flashdata('message', 'Bye bye, hope to see You again soon.');
+		redirect('/');
 	}
 
 	// MOVE THIS INTO SEPARATE CONTROLLER Signup extends MY_Controller
