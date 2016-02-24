@@ -225,8 +225,6 @@ header ul li img.logo{
 	display: none;
 }
 
-/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
-
 .cover {
     height: 400px;
     background: url('http://quote.com/custom/img/1920x400.png') center center no-repeat scroll;
