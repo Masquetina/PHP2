@@ -12,12 +12,13 @@ class MY_Controller extends CI_Controller {
     $this->load->view('header');
     $this->load->view($view, $data);
     $this->load->view('footer');
+    $this->load->view('scripts');
   }
 
   public function load_acc_forms($view, $data) {
     $this->session;
     $this->load->view('head', $data);
     $this->load->view($view, $data);
-    $this->load->view('footer');
+    $this->load->view('scripts');
   }
 }

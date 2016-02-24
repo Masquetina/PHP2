@@ -16,8 +16,9 @@ class Validate extends CI_Model {
         'avatar'    => $row->avatar,
         'validated' => TRUE
 			);
+      $message = 'Hi ' . ucwords($data['username']) . '! Wellcome.';
 			$this->session->set_userdata($data);
-      $this->session->set_flashdata('message', 'Hi! Wellcome.');
+      $this->session->set_flashdata('message', $message);
 		}
   }
 
@@ -30,6 +31,7 @@ class Validate extends CI_Model {
 
     }
     // IF SUCCESS
-    $this->session->set_flashdata('message', 'The account is successfully created. You can log in now.');
+    $message = 'The account is successfully created. You can log in now.';
+    $this->session->set_flashdata('message', $message);
   }
 }
