@@ -1,7 +1,11 @@
-<div class="profile-header">
+<div class="cover">
+  <div class="container">
 		<img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
 		<h2><?=ucwords($user->username);?></h2>
-		<p><?=$user->description;?></p>
+		<?php if($this->session->userdata('validated')) : ?>
+			<!-- OVO MI TREBA DA BIH PRAVILA RAZLIKU KADA JE KORISNIK ULOGOVAN  -->
+		<?php endif ?>
+  </div>
 </div>
 <div class="container">
 	<h2 class="text-center"><?=ucwords($user->username);?>'s Quotation Cards</h2>

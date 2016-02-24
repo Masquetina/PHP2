@@ -41,11 +41,11 @@
 				<li>
 					<i class="material-icons link favorite"
 					<?php if($this->session->userdata('validated')) : ?>
-						<?php if(($card->id_user) == $this->session->userdata('id_user')) {
+						<?php /*if(($card->id_user) == $this->session->userdata('id_user')) {
 							echo 'style = "color: #ba68c8"';
-						} ?>
+						}*/ ?>
 					<?php endif ?> >favorite</i>
-					<small><?=$card->likes; ?></small>
+					<small><?=$card->likes;?></small>
 				</li>
 				<?php if($this->session->userdata('validated')) : ?>
 					<?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>

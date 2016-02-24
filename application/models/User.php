@@ -6,14 +6,10 @@ class User extends CI_Model {
     $this->db->select('*');
     $this->db->from('users');
     $this->db->where('users.id_user', $id_user);
-
     $this->db->join('cards', 'cards.id_user = users.id_user');
     $this->db->where('cards.delete = 0');
     $this->db->order_by('cards.id_card', 'desc');
-
-    $this->db->join('likes', 'likes.id_card = cards.id_card', 'left');
-    
-    $query = $this->db->get();
+        $query = $this->db->get();
     return $query->result();
   }
 }

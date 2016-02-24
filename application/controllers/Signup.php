@@ -14,7 +14,7 @@ class Signup extends MY_Controller {
 		} else {
 			$data = array();
 			$data['message'] = $message;
-			$data['page_title'] = "Login Page";
+			$data['page_title'] = "Signup Page";
 			$this->load_acc_forms('signup', $data);
 		}
 	}
