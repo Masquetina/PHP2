@@ -9,7 +9,11 @@ class User extends CI_Model {
     $this->db->join('cards', 'cards.id_user = users.id_user');
     $this->db->where('cards.delete = 0');
     $this->db->order_by('cards.id_card', 'desc');
-        $query = $this->db->get();
-    return $query->result();
+    $query = $this->db->get();
+    if($query->num_rows() != 0) {
+      return $query->result();
+    } else {
+      redirect('/');
+    }
   }
 }
