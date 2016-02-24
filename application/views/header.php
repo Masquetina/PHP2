@@ -33,7 +33,7 @@
 						</li>
 						<?php endif ?>
 					<li class="links">
-						<a class="btn btn-primary" href="<?=base_url();?>login/logout/">
+						<a class="btn btn-primary" href="<?=base_url();?>login/logout">
 							<i class="material-icons icon">power_settings_new</i>
 							<span>Log out</span>
 						</a>
@@ -41,18 +41,18 @@
 					<?php endif ?>
 					<li class="links">
 						<?php if(!$this->session->userdata('validated')) : ?>
-						<a class="btn btn-raised btn-primary" href="<?=base_url() . 'login/'; ?>" >
+						<a class="btn btn-raised btn-primary" href="<?=base_url() . 'login'; ?>" >
 							<i class="material-icons icon">add</i>
 							<span>New Card</span>
 						</a>
 						<?php else : ?>
 							<?php if($this->session->userdata('id_rolle') == 1) : ?>
-							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'login/'; ?>" >
+							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'login'; ?>" >
 								<i class="material-icons icon">add</i>
 								<span>New Card</span>
 							</a>
 							<?php else : ?>
-							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'dashboard/'; ?>" >
+							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'dashboard'; ?>" >
 								<i class="material-icons icon">settings</i>
 								<span>Dashboard</span>
 							</a>
