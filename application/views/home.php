@@ -10,7 +10,7 @@
   </div>
 </div>
 <div class="container">
-	<h2 class="text-center">Quotation Cards</h2>
+	<h2 class="text-center">Quote Cards</h2>
 	<?php if(isset($cards)) : foreach($cards as $card) : ?>
 		<div class="col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">

@@ -85,7 +85,7 @@
 		</div>
 		<div class="text-center">
 			<small class="text-muted">
-				<a class="text-primary" href="<?=base_url();?>settings/password">Change Your password</a>
+				<a class="text-primary" href="<?=base_url();?>settings/password">Forgot password?</a>
 			</small>
 		</div>
 		<div class="text-center">
