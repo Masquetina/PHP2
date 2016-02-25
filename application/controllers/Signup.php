@@ -30,6 +30,8 @@ class Signup extends MY_Controller {
 			} else {
 				redirect('login');
 			}
+		} else {
+		redirect('signup');
 		}
 	}
 }

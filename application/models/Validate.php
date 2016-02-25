@@ -41,7 +41,7 @@ class Validate extends CI_Model {
       $this->session->set_flashdata('message', $message);
       return TRUE;
     } else {
-      return TRUE;
+      return FALSE;
     }
   }
 }

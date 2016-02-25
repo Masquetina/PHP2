@@ -49,3 +49,4 @@
 [Wed Feb 24 21:06:03.997224 2016] [:error] [pid 2849] [client 192.168.1.5:58859] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /var/www/Quote/public_html/application/models/User.php on line 19, referer: http://quote.com/
 [Wed Feb 24 21:11:21.965606 2016] [:error] [pid 3188] [client 192.168.1.5:58918] PHP Parse error:  syntax error, unexpected '}' in /var/www/Quote/public_html/application/models/User.php on line 17, referer: http://quote.com/
 [Wed Feb 24 21:11:24.050482 2016] [:error] [pid 3188] [client 192.168.1.5:58918] PHP Parse error:  syntax error, unexpected '}' in /var/www/Quote/public_html/application/models/User.php on line 17, referer: http://quote.com/
+[Thu Feb 25 18:43:34.792446 2016] [:error] [pid 2852] [client 192.168.1.4:35933] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /var/www/Quote/public_html/application/controllers/Signup.php on line 34

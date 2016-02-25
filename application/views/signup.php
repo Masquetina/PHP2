@@ -17,13 +17,34 @@
 		<div class="panel panel-default">
 			<div class="panel-body text">
 				<?php
-				$action = "login/login";
+				$action = "signup/signup";
 				$attributes = array(
 					'class' => 'form-horizontal'
 				);
 				echo form_open($action, $attributes);
-				echo form_fieldset('Login');
+				echo form_fieldset('Create Account');
 				?>
+
+				<div class="form-group">
+					<?php
+					$data = array(
+						'id'					=> 'inputUsername',
+						'name'				=> 'username',
+						'maxlength'   => '20',
+						'size'        => '15',
+						'class' 			=> 'form-control'
+					);
+					$value = $this->input->post('Username');
+					echo form_input($data, $value);
+
+					$label_text= 'Username';
+					$id= 'inputUsername';
+					$attributes = array(
+						'class' => 'control-label, text-primary'
+					);
+					echo form_label($label_text, $id, $attributes);
+					?>
+				</div>
 
 				<div class="form-group">
 					<?php
@@ -69,8 +90,29 @@
 
 				<div class="form-group">
 					<?php
+					$data = array(
+						'id'					=> 'repeatPassword',
+						'name'				=> 'repeatPassword',
+						'maxlength'   => '20',
+						'size'        => '15',
+						'class' 			=> 'form-control'
+					);
+					$value = $this->input->post('repeatPassword');
+					echo form_password($data, $value);
+
+					$label_text= 'Repeat password';
+					$id= 'repeatPassword';
+					$attributes = array(
+						'class' => 'control-label, text-primary'
+					);
+					echo form_label($label_text, $id, $attributes);
+					?>
+				</div>
+
+				<div class="form-group">
+					<?php
 					$data = 'submit';
-					$value = 'Login';
+					$value = 'Create Account';
 					$extra = array(
 						'class' => 'btn btn-primary btn-raised btn-block btn-lg'
 					);
@@ -84,13 +126,13 @@
 			</div>
 		</div>
 		<div class="text-center">
-			<small class="text-muted">
-				<a class="text-primary" href="<?=base_url();?>settings/password">Change Your password</a>
+			<small class="text-muted">By clicking Create Account, I agree to the
+				<a class="text-primary" href="<?=base_url();?>"> Terms of Service</a>
 			</small>
 		</div>
 		<div class="text-center">
-			<small class="text-muted">Don't have an account?
-				<a class="text-primary" href="<?=base_url();?>signup">Create Account</a>
+			<small class="text-muted">Already have an account?
+				<a class="text-primary" href="<?=base_url();?>login">Login</a>
 			</small>
 		</div>
 	</div>

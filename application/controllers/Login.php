@@ -34,6 +34,8 @@ class Login extends MY_Controller {
 					redirect('/');
 				}
 			}
+		} else {
+			redirect('login');
 		}
 	}
 

@@ -47,7 +47,7 @@
 						</a>
 						<?php else : ?>
 							<?php if($this->session->userdata('id_rolle') == 1) : ?>
-							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'login'; ?>" >
+							<a class="btn btn-raised btn-primary" href="<?=base_url() . 'create'; ?>" >
 								<i class="material-icons icon">add</i>
 								<span>New Card</span>
 							</a>

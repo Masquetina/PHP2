@@ -1,6 +1,6 @@
 <div class="cover">
   <div class="container">
-    <h1 class="text-center">Quote Cards</h1>
+    <h1 class="text-center">QuoteApp</h1>
 		<h3 class="text-center">Side text to tell something</h3>
 		<?php if(!$this->session->userdata('validated')) : ?>
 		<a class="call-to-action btn btn-raised btn-primary" href="<?=base_url() . 'signup'; ?>" >
