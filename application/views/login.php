@@ -1,6 +1,6 @@
-<?php if(!is_null($message)) : ?>
+<?php if($this->session->flashdata('warning')) : ?>
 <div class="message-container text-center warning">
-	<p><?=$message;?></p>
+	<p><?=$this->session->flashdata('warning');?></p>
 </div>
 <?php endif ?>
 <?php if($this->session->flashdata('message')) : ?>
@@ -17,7 +17,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body text">
 				<?php
-				$action = "login/login";
+				$action = "login";
 				$attributes = array(
 					'class' => 'form-horizontal'
 				);
@@ -28,11 +28,11 @@
 				<div class="form-group">
 					<?php
 					$data = array(
-						'id'					=> 'inputEmail',
-						'name'				=> 'email',
-						'maxlength'   => '20',
-						'size'        => '15',
-						'class' 			=> 'form-control'
+						'id'				=> 'inputEmail',
+						'name'			=> 'email',
+						'maxlength'	=> '20',
+						'size'      => '15',
+						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('email');
 					echo form_input($data, $value);
@@ -49,11 +49,11 @@
 				<div class="form-group">
 					<?php
 					$data = array(
-						'id'					=> 'inputPassword',
-						'name'				=> 'password',
-						'maxlength'   => '20',
-						'size'        => '15',
-						'class' 			=> 'form-control'
+						'id'				=> 'inputPassword',
+						'name'			=> 'password',
+						'maxlength'	=> '20',
+						'size'      => '15',
+						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('password');
 					echo form_password($data, $value);

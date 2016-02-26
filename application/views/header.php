@@ -33,7 +33,7 @@
 						</li>
 						<?php endif ?>
 					<li class="links">
-						<a class="btn btn-primary" href="<?=base_url();?>login/logout">
+						<a class="btn btn-primary" href="<?=base_url();?>logout">
 							<i class="material-icons icon">power_settings_new</i>
 							<span>Log out</span>
 						</a>

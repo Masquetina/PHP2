@@ -6,49 +6,31 @@ class Login extends MY_Controller {
 		parent::__construct();
 	}
 
-	public function index($message = NULL) {
-		if($this->session->userdata('id_rolle') == 1) {
-			redirect('/');
-		} else if ($this->session->userdata('id_rolle') == 2) {
-			redirect('dashboard');
-		} else {
-			$data = array();
-			$data['message'] = $message;
-			$data['page_title'] = "Login Page";
-			$this->load_acc_forms('login', $data);
-		}
-	}
+	public function index() {
+		$data = array();
+		$data['page_title'] = "Login Page";
+		$this->load_acc_forms('login', $data);
 
-	public function login() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {
 			$this->load->model('validate');
 			$query = $this->validate->login();
 			if(!$query) {
-				$message = "Your credentials are not valid. Please try again.";
-				$this->index($message);
+				$this->session->set_flashdata('warning', 'Your credentials are not valid. Please try again.');
+				redirect ('login');
 			} else {
 				if($this->session->userdata('id_rolle') == 2) {
 					redirect('dashboard');
-				} else {
+				} else if($this->session->userdata('id_rolle') == 1) {
 					redirect('/');
 				}
 			}
 		} else {
-			redirect('login');
+			if($this->session->userdata('id_rolle') == 2) {
+				redirect('dashboard');
+			} else if($this->session->userdata('id_rolle') == 1) {
+				redirect('/');
+			}
 		}
-	}
-
-	public function logout() {
-		$data = array(
-			'id_user' ,
-			'username',
-			'email',
-			'id_rolle',
-			'validated'
-		);
-		$this->session->unset_userdata($data);
-		$this->session->set_flashdata('message', 'Bye bye, hope to see You again soon.');
-		redirect('/');
 	}
 }

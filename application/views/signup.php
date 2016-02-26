@@ -28,11 +28,11 @@
 				<div class="form-group">
 					<?php
 					$data = array(
-						'id'					=> 'inputUsername',
-						'name'				=> 'username',
-						'maxlength'   => '20',
-						'size'        => '15',
-						'class' 			=> 'form-control'
+						'id'				=> 'inputUsername',
+						'name'			=> 'username',
+						'maxlength'	=> '20',
+						'size'      => '15',
+						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('Username');
 					echo form_input($data, $value);
@@ -49,11 +49,11 @@
 				<div class="form-group">
 					<?php
 					$data = array(
-						'id'					=> 'inputEmail',
-						'name'				=> 'email',
-						'maxlength'   => '20',
-						'size'        => '15',
-						'class' 			=> 'form-control'
+						'id'				=> 'inputEmail',
+						'name'			=> 'email',
+						'maxlength' => '20',
+						'size'      => '15',
+						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('email');
 					echo form_input($data, $value);
@@ -70,11 +70,11 @@
 				<div class="form-group">
 					<?php
 					$data = array(
-						'id'					=> 'inputPassword',
-						'name'				=> 'password',
-						'maxlength'   => '20',
-						'size'        => '15',
-						'class' 			=> 'form-control'
+						'id'				=> 'inputPassword',
+						'name'			=> 'password',
+						'maxlength' => '20',
+						'size'      => '15',
+						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('password');
 					echo form_password($data, $value);
@@ -91,11 +91,11 @@
 				<div class="form-group">
 					<?php
 					$data = array(
-						'id'					=> 'repeatPassword',
-						'name'				=> 'repeatPassword',
-						'maxlength'   => '20',
-						'size'        => '15',
-						'class' 			=> 'form-control'
+						'id'				=> 'repeatPassword',
+						'name'			=> 'repeatPassword',
+						'maxlength' => '20',
+						'size'      => '15',
+						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('repeatPassword');
 					echo form_password($data, $value);
