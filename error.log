@@ -57,3 +57,4 @@
 [Fri Feb 26 23:55:42.566367 2016] [:error] [pid 2799] [client 192.168.1.4:47137] PHP Parse error:  syntax error, unexpected '{' in /var/www/Quote/public_html/application/controllers/Login.php on line 31, referer: http://quote.com/
 [Sat Feb 27 00:01:18.946594 2016] [:error] [pid 7222] [client 192.168.1.4:47157] PHP Parse error:  syntax error, unexpected 'redirect' (T_STRING) in /var/www/Quote/public_html/application/controllers/Login.php on line 20, referer: http://quote.com/signup
 [Sat Feb 27 00:06:41.265026 2016] [:error] [pid 2796] [client 192.168.1.4:47183] PHP Parse error:  syntax error, unexpected '{' in /var/www/Quote/public_html/application/controllers/Login.php on line 38, referer: http://quote.com/login
+[Sat Feb 27 08:07:15.160831 2016] [:error] [pid 2785] [client 192.168.1.4:37320] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /var/www/Quote/public_html/application/controllers/Signup.php on line 20, referer: http://quote.com/

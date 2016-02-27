@@ -16,12 +16,13 @@ class Login extends MY_Controller {
 			$this->load->model('validate');
 			$query = $this->validate->login();
 			if(!$query) {
-				$this->session->set_flashdata('warning', 'Your credentials are not valid. Please try again.');
+				$warning = 'Your credentials are not valid. Please try again.';
+				$this->session->set_flashdata('warning', $warning);
 				redirect ('login');
 			} else {
 				if($this->session->userdata('id_rolle') == 2) {
 					redirect('dashboard');
-				} else if($this->session->userdata('id_rolle') == 1) {
+				} else {
 					redirect('/');
 				}
 			}

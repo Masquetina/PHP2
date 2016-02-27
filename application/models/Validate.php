@@ -18,14 +18,15 @@ class Validate extends CI_Model {
           'avatar'    => $row->avatar,
           'validated' => TRUE
   			);
-        $message = 'Hi ' . ucwords($data['username']) . '! Wellcome.';
   			$this->session->set_userdata($data);
+        $message = 'Hi ' . ucwords($data['username']) . '! Wellcome.';
         $this->session->set_flashdata('message', $message);
+        return TRUE;
       } else {
-        $message = 'Ops! Are You banned? Login is disabled.';
-        $this->session->set_flashdata('message', $message);
+        $warning = 'Ops! Are You banned? Login is disabled.';
+        $this->session->set_flashdata('warning', $warning);
+        return TRUE;
       }
-      return TRUE;
 		} else {
       return FALSE;
     }

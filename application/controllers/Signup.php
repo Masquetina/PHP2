@@ -6,32 +6,28 @@ class Signup extends MY_Controller {
 		parent::__construct();
 	}
 
-	public function index($message = NULL) {
-		if($this->session->userdata('id_rolle') == 1) {
-			redirect('/');
-		} else if ($this->session->userdata('id_rolle') == 2) {
-			redirect('dashboard');
-		} else {
-			$data = array();
-			$data['message'] = $message;
-			$data['page_title'] = "Signup Page";
-			$this->load_acc_forms('signup', $data);
-		}
-	}
+	public function index() {
+		$data = array();
+		$data['page_title'] = "Signup Page";
+		$this->load_acc_forms('signup', $data);
 
-	public function signup() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {
 			$this->load->model('validate');
 			$query = $this->validate->signup();
 			if(!$query) {
-				$message = "Somebody is already registered with that email address.";
-				$this->index($message);
+				$warning = 'Somebody is already registered with that email address.';
+				$this->session->set_flashdata('warning', $warning);
+				redirect ('signup');
 			} else {
 				redirect('login');
 			}
 		} else {
-		redirect('signup');
+			if($this->session->userdata('id_rolle') == 2) {
+				redirect('dashboard');
+			} else if($this->session->userdata('id_rolle') == 1) {
+				redirect('/');
+			}
 		}
 	}
 }

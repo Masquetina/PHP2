@@ -1,13 +1,4 @@
-<?php if(!is_null($message)) : ?>
-<div class="message-container text-center warning">
-	<p><?=$message;?></p>
-</div>
-<?php endif ?>
-<?php if($this->session->flashdata('message')) : ?>
-<div class="message-container text-center greeting">
-	<p><?=$this->session->flashdata('message');?></p>
-</div>
-<?php endif ?>
+
 <div class="line"></div>
 <div class="container container-form">
 	<div class="col-xs-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
@@ -17,7 +8,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body text">
 				<?php
-				$action = "signup/signup";
+				$action = "signup";
 				$attributes = array(
 					'class' => 'form-horizontal'
 				);
