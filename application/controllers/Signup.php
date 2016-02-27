@@ -9,7 +9,7 @@ class Signup extends MY_Controller {
 	public function index() {
 		$data = array();
 		$data['page_title'] = "Signup Page";
-		$this->load_acc_forms('signup', $data);
+		$this->load_forms('signup', $data);
 
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {

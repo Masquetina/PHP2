@@ -9,7 +9,7 @@ class Login extends MY_Controller {
 	public function index() {
 		$data = array();
 		$data['page_title'] = "Login Page";
-		$this->load_acc_forms('login', $data);
+		$this->load_forms('login', $data);
 
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {

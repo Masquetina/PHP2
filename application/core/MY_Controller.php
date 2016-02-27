@@ -15,7 +15,7 @@ class MY_Controller extends CI_Controller {
     $this->load->view('scripts');
   }
 
-  public function load_acc_forms($view, $data) {
+  public function load_forms($view, $data) {
     $this->session;
     $this->load->view('head', $data);
     $this->load->view('flashdata');
