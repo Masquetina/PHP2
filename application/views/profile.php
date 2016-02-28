@@ -37,7 +37,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
 					<div class="interactions-group">
-						<a href="<?=base_url();?>profile/<?=$card->id_user;?>" title="<?=ucwords($user->username);?>">
+						<a href="<?=base_url();?>profile/<?=$card->username;?>" title="<?=ucwords($user->username);?>">
 							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
 						</a>
 					</div>
