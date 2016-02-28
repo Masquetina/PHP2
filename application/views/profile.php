@@ -1,33 +1,40 @@
 <div class="cover">
   <div class="container">
-		<img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
-		<?php if($this->session->userdata('validated')) : ?>
-      <?php
-      $action = "settings";
-      $attributes = array(
-        'class' => 'form'
-      );
-      echo form_open_multipart($action, $attributes);
-      ?>
-
-      <?=form_upload('userfile');?>
-
-      <?=form_hidden('username', $user->username);?>
-
-      <?php
-      $data = 'submit';
-      $value = 'Apply change';
-      $extra = array(
-        'class' => 'btn btn-primary btn-raised'
-      );
-      echo form_submit($data, $value, $extra);
-      ?>
-
-      <?php
-      echo form_close();
-      ?>
-		<?php endif ?>
-    <h2 class="text-center"><?=ucwords($user->username);?></h2>
+      <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
+      <h2 class="text-center"><?=ucwords($user->username);?></h2>
+      <?php if($this->session->userdata('validated')) : ?>
+        <?php
+        $action = "settings";
+        $attributes = array(
+          'class' => 'upload'
+        );
+        echo form_open_multipart($action, $attributes);
+        ?>
+        <?=form_hidden('username', $user->username);?>
+        <div class="multipart text-center">
+          <span class="btn btn-primary">
+            Change
+            <i class="material-icons">face</i>
+          <?php
+          $attributes = array(
+            'class' => 'upload'
+          );
+          echo form_upload('userfile', $attributes);
+          ?>
+          </span>
+        <?php
+        $data = 'submit';
+        $value = 'Upload';
+        $extra = array(
+          'class' => 'btn btn-primary'
+        );
+        echo form_submit($data, $value, $extra);
+        ?>
+        </div>
+        <?php
+        echo form_close();
+        ?>
+  		<?php endif ?>
   </div>
 </div>
 <div class="container">

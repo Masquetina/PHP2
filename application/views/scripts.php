@@ -15,6 +15,11 @@
 			$(".form-control").focus(function() {
 				$(this).val('').toggleClass("active");
 			});
+
+			$(".choose").change(function () {
+		  	$(".upload").val() = $(this).val();
+				$(".file").text = $(".upload").val();
+		  });
 		});
 	</script>
 </body>

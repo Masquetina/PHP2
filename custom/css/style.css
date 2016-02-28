@@ -58,6 +58,7 @@ h6 {
   font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
   cursor: default;
+  color: #263238;
 }
 
 h5,
@@ -269,6 +270,12 @@ header ul li img.logo{
 
 .cover h1 {
 	padding-top: 128px;
+  font-weight: 400;
+}
+
+.cover h2 {
+  font-size: 48px;
+  font-weight: 400;
 }
 
 .cover h3 {
@@ -278,7 +285,7 @@ header ul li img.logo{
 .cover .btn {
 	display: block;
 	margin: 0 auto;
-  width: auto;
+  width: 160px;
 }
 
 .cover .btn.call-to-action {
@@ -289,7 +296,7 @@ header ul li img.logo{
 .cover img {
   border-radius: 100%;
   display: block;
-  margin: 80px auto 16px auto;
+  margin: 96px auto 0 auto;
   width: 160px;
   height: 160px;
   clear: both;
@@ -297,6 +304,58 @@ header ul li img.logo{
 	0 2px 2px 0 rgba(0, 0, 0, 0.14),
 	0 3px 1px -2px rgba(0, 0, 0, 0.2),
 	0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.multipart {
+    position: relative;
+    margin: 24px auto 0 auto;
+    width: auto;
+}
+
+.multipart .btn {
+  display: inline-block;
+  width: auto;
+  font-size: 12px;
+}
+
+.multipart .btn:first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 2px 4px 2px 12px;
+  margin-right: -1px;
+  color: rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.2);
+}
+
+.multipart .btn:first-child:hover {
+  color: rgba(0,0,0,.4);
+  background-color: rgba(255,255,255,.4);
+}
+
+.multipart .btn:last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding: 5px 12px 6px 8px;
+  margin-left: -1px;
+  color: rgba(255,255,255,.4);
+  background-color: rgba(0,0,0,.2);
+}
+
+.multipart .btn:last-child:hover {
+  color: rgba(255,255,255,.5);
+  background-color: rgba(0,0,0,.4);
+}
+
+.multipart input[type=file] {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
 
 @media screen and (max-width: 768px) {
@@ -383,6 +442,12 @@ a.text-primary:hover {
 	0 1px 2px rgba(0,0,0,0.24);
 }
 
+.panel h2,
+.panel p,
+.panel small {
+  color: #fff;
+}
+
 .panel:hover {
 
 }
@@ -401,7 +466,6 @@ a.text-primary:hover {
 	padding: 0px !important;
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
-	color: #fff !important;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
@@ -493,7 +557,6 @@ a.text-primary:hover {
 .panel-heading .info-block .text {
 	display: block;
 	display: none;
-	color: #fff;
 }
 
 .panel-heading .info-block.active .text {
