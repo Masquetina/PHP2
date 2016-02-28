@@ -6,7 +6,7 @@
 		</div>
 		<?php endif ?>
 		<?php if($this->session->flashdata('message')) : ?>
-		<div class="message-container text-center greeting">
+		<div class="message-container text-center info">
 			<p><?=$this->session->flashdata('message');?></p>
 		</div>
 		<?php endif ?>
@@ -31,7 +31,7 @@
 					<?php if($this->session->userdata('validated')) : ?>
 						<?php if($this->session->userdata('id_rolle') == 1) : ?>
 						<li class="links">
-							<a href="<?=base_url();?>profile/<?=$this->session->userdata('id_user');?>"
+							<a href="<?=base_url();?>profile/<?=$this->session->userdata('username');?>"
 								 title="<?=ucwords($this->session->userdata('username'));?>">
 								<img src="<?=base_url();?>custom/img/avatars/<?=$this->session->userdata('avatar'); ?>" />
 							</a>

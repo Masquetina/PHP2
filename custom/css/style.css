@@ -57,6 +57,7 @@ h5,
 h6 {
   font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
+  cursor: default;
 }
 
 h5,
@@ -195,7 +196,7 @@ a:focus .material-icons {
 	z-index: 999;
 }
 
-.message-container.greeting {
+.message-container.info {
 	background-color: #388e3c;
 }
 
@@ -273,11 +274,24 @@ header ul li img.logo{
 	margin-top: -8px;
 }
 
+.cover .btn {
+	display: block;
+	margin: 0 auto;
+  width: auto;
+}
+
 .cover .btn.call-to-action {
 	padding: 16px;
-	display:block;
-	margin: 0 auto;
 	width: 240px;
+}
+
+.cover img {
+  border-radius: 100%;
+  display: block;
+  margin: 80px auto 16px auto;
+  width: 160px;
+  clear: both;
+  border: 8px solid rgba(255,255,255,.5);
 }
 
 @media screen and (max-width: 768px) {

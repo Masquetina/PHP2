@@ -1,9 +1,32 @@
 <div class="cover">
   <div class="container">
 		<img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
-		<h2><?=ucwords($user->username);?></h2>
+		<h2 class="text-center"><?=ucwords($user->username);?></h2>
 		<?php if($this->session->userdata('validated')) : ?>
-			<!-- OVO MI TREBA DA BIH PRAVILA RAZLIKU KADA JE KORISNIK ULOGOVAN  -->
+      <?php
+      $action = "settings";
+      $attributes = array(
+        'class' => 'form'
+      );
+      echo form_open_multipart($action, $attributes);
+      ?>
+
+      <?=form_upload('userfile');?>
+
+      <?=form_hidden('username', $user->username);?>
+
+      <?php
+      $data = 'submit';
+      $value = 'Upload';
+      $extra = array(
+        'class' => 'btn btn-primary btn-raised'
+      );
+      echo form_submit($data, $value, $extra);
+      ?>
+
+      <?php
+      echo form_close();
+      ?>
 		<?php endif ?>
   </div>
 </div>

@@ -4,7 +4,7 @@
 </div>
 <?php endif ?>
 <?php if($this->session->flashdata('message')) : ?>
-<div class="message-container text-center greeting">
+<div class="message-container text-center info">
 	<p><?=$this->session->flashdata('message');?></p>
 </div>
 <?php endif ?>
