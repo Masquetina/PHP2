@@ -1,7 +1,6 @@
 <div class="cover">
   <div class="container">
 		<img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
-		<h2 class="text-center"><?=ucwords($user->username);?></h2>
 		<?php if($this->session->userdata('validated')) : ?>
       <?php
       $action = "settings";
@@ -17,7 +16,7 @@
 
       <?php
       $data = 'submit';
-      $value = 'Upload';
+      $value = 'Apply change';
       $extra = array(
         'class' => 'btn btn-primary btn-raised'
       );
@@ -28,6 +27,7 @@
       echo form_close();
       ?>
 		<?php endif ?>
+    <h2 class="text-center"><?=ucwords($user->username);?></h2>
   </div>
 </div>
 <div class="container">

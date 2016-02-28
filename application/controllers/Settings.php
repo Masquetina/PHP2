@@ -8,8 +8,8 @@ class Settings extends MY_Controller {
 
 	public function index() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		$username = $this->input->post('username');
 		if ($ispost) {
-			$username = $this->input->post('username');
 			$config['upload_path'] = './custom/img/avatars/';
       $config['allowed_types'] = 'jpg|jpeg';
 			$config['file_name'] = $username;
@@ -21,6 +21,18 @@ class Settings extends MY_Controller {
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/'. $username);
 			} else {
+				list($width, $height) = getimagesize('./custom/img/avatars/' . $username . '.jpg');
+				$config['image_library'] = 'gd2';
+        $config['source_image'] = './custom/img/avatars/' . $username . '.jpg';
+				$config['new_image'] = './custom/img/avatars/' . $username . '.jpg';
+				$config['maintain_ratio'] = TRUE;
+        $config['width'] = 320;
+        $config['height'] = 320;
+				$config['x_axis'] = 320 - 320/2;
+				$config['y_axis'] = 320 - 320/2;
+				$this->load->library('image_lib', $config);
+				$this->image_lib->crop();
+
 				redirect('profile/'. $username);
 			}
 		}
