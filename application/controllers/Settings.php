@@ -7,9 +7,9 @@ class Settings extends MY_Controller {
 	}
 
 	public function index() {
-		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		$username = $this->input->post('username');
-		if ($ispost) {
+		//$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		//$username = $this->input->post('username');
+		//if ($ispost) {
 			$config['upload_path'] = './custom/img/avatars/';
       $config['allowed_types'] = 'jpg';
 			// MIN MAX WIDTH HEIGHT SIZE !!!
@@ -38,6 +38,6 @@ class Settings extends MY_Controller {
 				}
 				redirect('profile/'. $username);
 			}
-		}
+//		}
 	}
 }

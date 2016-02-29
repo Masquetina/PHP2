@@ -1,25 +1,20 @@
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function() {
 			$('.message-container').fadeOut(3000,
 				function() {
 					$(this).remove();
 				});
 
 			$(".info-block").click(function() {
-					$(this).toggleClass("active");
+				$(this).toggleClass('active');
 			});
 
 			$('input:text:visible:first')[0].focus();
 
-			$(".form-control").focus(function() {
-				$(this).val('').toggleClass("active");
+			$('.form-control').focus(function() {
+				$(this).val('').toggleClass('active');
 			});
-
-			$(".choose").change(function () {
-		  	$(".upload").val() = $(this).val();
-				$(".file").text = $(".upload").val();
-		  });
 		});
 	</script>
 </body>

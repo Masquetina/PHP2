@@ -1,40 +1,21 @@
 <div class="cover">
   <div class="container">
+    <div class="multipart text-center">
+    <?php if($this->session->userdata('id_user') == $user->id_user) : ?>
+      <?=form_hidden('username', $user->username);?>
       <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
-      <h2 class="text-center"><?=ucwords($user->username);?></h2>
-      <?php if($this->session->userdata('validated')) : ?>
-        <?php
-        $action = "settings";
-        $attributes = array(
-          'class' => 'upload'
-        );
-        echo form_open_multipart($action, $attributes);
-        ?>
-        <?=form_hidden('username', $user->username);?>
-        <div class="multipart text-center">
-          <span class="btn btn-primary">
-            Change
-            <i class="material-icons">face</i>
-          <?php
-          $attributes = array(
-            'class' => 'upload'
-          );
-          echo form_upload('userfile', $attributes);
-          ?>
-          </span>
-        <?php
-        $data = 'submit';
-        $value = 'Upload';
-        $extra = array(
-          'class' => 'btn btn-primary'
-        );
-        echo form_submit($data, $value, $extra);
-        ?>
-        </div>
-        <?php
-        echo form_close();
-        ?>
-  		<?php endif ?>
+      <span class="upload">
+
+      </span>
+      <?php
+      $attributes = array(
+        'title' => 'Clickk to change'
+      );
+      echo form_upload('userfile', $attributes);
+      ?>
+  	<?php endif ?>
+    </div>
+    <h2 class="text-center"><?=ucwords($user->username);?></h2>
   </div>
 </div>
 <div class="container">
@@ -88,3 +69,25 @@
 	<?php endforeach ?>
 <?php endif ?>
 </div>
+<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
+<script>
+  $(document).ready(function() {
+    $(':file').hover(function() {
+      $(this).attr('title',' ');
+      $('.upload').toggleClass('visible');
+    });
+
+    var base_url = '<?php print base_url() ?>';
+
+    var file = ;
+    $(':file').on('change', prepareUpload);
+    function prepareUpload(event) {
+      file = event.target.file;
+    }
+    $.post(base_url + 'settings', file {
+
+    });
+
+
+  });
+</script>

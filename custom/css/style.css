@@ -274,7 +274,6 @@ header ul li img.logo{
 }
 
 .cover h2 {
-  font-size: 48px;
   font-weight: 400;
 }
 
@@ -294,68 +293,58 @@ header ul li img.logo{
 }
 
 .cover img {
-  border-radius: 100%;
+  clear: both;
   display: block;
-  margin: 96px auto 0 auto;
+  padding: 0;
+  margin: 0 auto;
   width: 160px;
   height: 160px;
-  clear: both;
+  border-radius: 100%;
   box-shadow:
 	0 2px 2px 0 rgba(0, 0, 0, 0.14),
 	0 3px 1px -2px rgba(0, 0, 0, 0.2),
 	0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 .multipart {
     position: relative;
-    margin: 24px auto 0 auto;
-    width: auto;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
 }
 
-.multipart .btn {
-  display: inline-block;
-  width: auto;
-  font-size: 12px;
-}
-
-.multipart .btn:first-child {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding: 2px 4px 2px 12px;
-  margin-right: -1px;
-  color: rgba(0,0,0,.2);
-  background-color: rgba(255,255,255,.2);
-}
-
-.multipart .btn:first-child:hover {
-  color: rgba(0,0,0,.4);
-  background-color: rgba(255,255,255,.4);
-}
-
-.multipart .btn:last-child {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  padding: 5px 12px 6px 8px;
-  margin-left: -1px;
-  color: rgba(255,255,255,.4);
-  background-color: rgba(0,0,0,.2);
-}
-
-.multipart .btn:last-child:hover {
-  color: rgba(255,255,255,.5);
-  background-color: rgba(0,0,0,.4);
-}
-
-.multipart input[type=file] {
+.multipart input[type=file], .upload {
     position: absolute;
-    width: 100px;
-    top: 0;
-    left: 0;
+    top: 26px;
+    left: 16px;
     margin: 0;
     padding: 0;
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
+    display: block;
+    margin: 0 auto;
+    width: 128px;
+    height: 128px;
+    border: none;
+}
+
+.upload {
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.visible.upload {
+  opacity: 1;
+  filter: alpha(opacity=1);
+}
+
+.upload i {
+  
 }
 
 @media screen and (max-width: 768px) {
