@@ -13,11 +13,11 @@ class Card extends MY_Controller {
 			$this->load->model('cards');
   		$query = $this->cards->delete_card($id_card);
   		if($query) {
-				$message = 'You deleted the card.';
+				$message = 'You just deleted a card.';
 				$this->session->set_flashdata('message', $message);
 				redirect('profile/' . $username);
 			} else {
-				$warning = 'You can\'t delete this card!';
+				$warning = 'Not authorised to perform this action.';
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/' . $username);
 			}

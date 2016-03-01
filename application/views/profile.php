@@ -1,8 +1,8 @@
 <div class="cover">
   <div class="container">
     <div class="multipart text-center">
-    <?php if($this->session->userdata('id_user') == $user->id_user) : ?>
       <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
+      <?php if($this->session->userdata('id_user') == $user->id_user) : ?>
       <span class="upload">
         <!-- OVDE IDE IKONICA -->
       </span>
@@ -23,11 +23,10 @@
     }
     if($counter == 0) {
     ?>
-      <h2 class="text-center">There's no Quote Cards</h2>
+      <h2 class="text-center">There's no Quote Cards jet</h2>
     <?php
     } else {
   ?>
-    <h2 class="text-center"><?=ucwords($user->username);?>'s Quote Cards</h2>
     <?php if($card->delete == 0) : ?>
 		<div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
@@ -83,6 +82,7 @@
 		</div>
     <?php endif ?>
   <?php } ?>
+
 	<?php endforeach ?>
 <?php endif ?>
 </div>

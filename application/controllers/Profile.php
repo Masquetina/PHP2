@@ -15,9 +15,9 @@ class Profile extends MY_Controller {
 		} else {
 			$this->load->model('user');
     	$query = $this->user->get_profile($username);
-      	$data['cards'] = $query;
-				$data['user'] = $query[0];
-				$this->load_basic('profile', $data);
+      $data['cards'] = $query;
+			$data['user'] = $query[0];
+			$this->load_basic('profile', $data);
 		}
 	}
 }
