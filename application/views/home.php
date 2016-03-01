@@ -56,6 +56,6 @@
 		</div>
 	 <?php endforeach ?>
   <?php else : ?>
-    <h2 class="text-center">There is no Quote Cards</h2>
+    <h2 class="text-center">Ther's no Quote Cards</h2>
   <?php endif ?>
 </div>

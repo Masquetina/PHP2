@@ -13,21 +13,24 @@
   </div>
 </div>
 <div class="container">
-	<?php if(isset($cards)) : foreach($cards as $card) : ?>
-
-  <?php
-    $counter = 0;
-    $delete = $card->delete;
-    if($delete == 0) {
-      $counter++;
-    }
+	<?php $counter = 0;
+        if(isset($cards)) : ?>
+    <?php foreach($cards as $card) : ?>
+      <?php
+      $delete = $card->delete;
+      if($delete == 0) {
+        $counter++;
+      }
+      ?>
+    <?php endforeach ?>
+    <?php
     if($counter == 0) {
     ?>
       <h2 class="text-center">There's no Quote Cards</h2>
     <?php
     } else {
-  ?>
-
+    ?>
+  	<?php foreach($cards as $card) : ?>
     <?php if($card->delete == 0) : ?>
 		<div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
@@ -82,11 +85,9 @@
 			</ul>
 		</div>
     <?php endif ?>
-
-  <?php } ?>
-
-	<?php endforeach ?>
-<?php endif ?>
+	  <?php endforeach ?>
+    <?php } ?>
+  <?php endif ?>
 </div>
 <script>
   $(document).ready(function() {

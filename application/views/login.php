@@ -21,7 +21,7 @@
 					$data = array(
 						'id'				=> 'inputEmail',
 						'name'			=> 'email',
-						'maxlength'	=> '20',
+						'maxlength'	=> '30',
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
@@ -42,7 +42,7 @@
 					$data = array(
 						'id'				=> 'inputPassword',
 						'name'			=> 'password',
-						'maxlength'	=> '20',
+						'maxlength'	=> '15',
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
