@@ -311,7 +311,7 @@ header ul li img.logo{
     position: relative;
     display: block;
     padding: 0;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
     width: 160px;
     height: 160px;
     border-radius: 100%;
@@ -319,7 +319,7 @@ header ul li img.logo{
 
 .multipart input[type=file], .upload {
     position: absolute;
-    top: 26px;
+    top: 16px;
     left: 16px;
     margin: 0;
     padding: 0;
@@ -344,7 +344,7 @@ header ul li img.logo{
 }
 
 .upload i {
-  
+
 }
 
 @media screen and (max-width: 768px) {

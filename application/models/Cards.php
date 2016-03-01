@@ -15,4 +15,19 @@ class Cards extends CI_Model {
     $query = $this->db->get();
     return $query->result();
   }
+
+  public function delete_card($id_card) {
+    $data = array(
+     'delete' => 1,
+    );
+    $id_user = $this->session->userdata('id_user');
+    $this->db->where('id_user', $id_user);
+    $this->db->where('id_card', $id_card);
+    $query = $this->db->update('cards', $data);
+    if($this->db->affected_rows() != 0) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
 }

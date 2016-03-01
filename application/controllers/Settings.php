@@ -7,9 +7,9 @@ class Settings extends MY_Controller {
 	}
 
 	public function index() {
-		//$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		//$username = $this->input->post('username');
-		//if ($ispost) {
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		$username = $this->input->post('username');
+		if ($ispost) {
 			$config['upload_path'] = './custom/img/avatars/';
       $config['allowed_types'] = 'jpg';
 			// MIN MAX WIDTH HEIGHT SIZE !!!
@@ -29,15 +29,14 @@ class Settings extends MY_Controller {
 				$config['maintain_ratio']	= FALSE;
 				$config['width']					= 320;
 				$config['height']					= 320;
-				//$config['x_axis']					= $image[0] - (($image[0] / 2) + ($image[0] / 4));
-				//$config['y_axis']					= $image[1] - (($image[1] / 2) + ($image[1] / 4));
+
 				$this->load->library('image_lib', $config);
 				$this->image_lib->resize();
 				if($this->session->userdata('avatar') == 'avatar.jpg'){
-					// POZVATI MODEL DA PROMENI PUTANJU U BAZI
+					// POZVATI MODEL DA PROMENI PODATAK O PUTANJI SLIKE U BAZI
 				}
 				redirect('profile/'. $username);
 			}
-//		}
+		}
 	}
 }

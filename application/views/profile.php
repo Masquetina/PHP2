@@ -2,26 +2,34 @@
   <div class="container">
     <div class="multipart text-center">
     <?php if($this->session->userdata('id_user') == $user->id_user) : ?>
-      <?=form_hidden('username', $user->username);?>
       <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
       <span class="upload">
-
+        <!-- OVDE IDE IKONICA -->
       </span>
-      <?php
-      $attributes = array(
-        'title' => 'Clickk to change'
-      );
-      echo form_upload('userfile', $attributes);
-      ?>
+      <?=form_upload('userfile');?>
   	<?php endif ?>
     </div>
     <h2 class="text-center"><?=ucwords($user->username);?></h2>
   </div>
 </div>
 <div class="container">
-	<h2 class="text-center"><?=ucwords($user->username);?>'s Quote Cards</h2>
 	<?php if(isset($cards)) : foreach($cards as $card) : ?>
-		<div class="col-xs-12 col-md-6 col-lg-6">
+
+  <?php
+    $counter = 0;
+    $delete = $card->delete;
+    if($delete == 0) {
+      $counter++;
+    }
+    if($counter == 0) {
+    ?>
+      <h2 class="text-center">There's no Quote Cards</h2>
+    <?php
+    } else {
+  ?>
+    <h2 class="text-center"><?=ucwords($user->username);?>'s Quote Cards</h2>
+    <?php if($card->delete == 0) : ?>
+		<div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
 					<div class="interactions-group">
@@ -47,12 +55,7 @@
 			</div>
 			<ul class="info-bar">
 				<li>
-					<i class="material-icons link favorite"
-					<?php if($this->session->userdata('validated')) : ?>
-						<?php /*if(($card->id_user) == $this->session->userdata('id_user')) {
-							echo 'style = "color: #ba68c8"';
-						}*/ ?>
-					<?php endif ?> >favorite</i>
+					<i class="material-icons link favorite">favorite</i>
 					<small><?=$card->likes;?></small>
 				</li>
 				<?php if($this->session->userdata('validated')) : ?>
@@ -63,31 +66,31 @@
 							</a>
 						</li>
 					<?php endif ?>
+          <?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
+						<li>
+							<a href="#">
+								<i class="material-icons link">edit</i>
+							</a>
+						</li>
+            <li>
+							<a id="<?=$card->id_card;?>" href="<?=base_url();?>card/<?=$card->id_card;?>">
+								<i class="<?=$card->id_card;?> material-icons link delete">delete</i>
+							</a>
+						</li>
+					<?php endif ?>
 				<?php endif ?>
 			</ul>
 		</div>
+    <?php endif ?>
+  <?php } ?>
 	<?php endforeach ?>
 <?php endif ?>
 </div>
-<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
 <script>
   $(document).ready(function() {
     $(':file').hover(function() {
       $(this).attr('title',' ');
       $('.upload').toggleClass('visible');
     });
-
-    var base_url = '<?php print base_url() ?>';
-
-    var file = ;
-    $(':file').on('change', prepareUpload);
-    function prepareUpload(event) {
-      file = event.target.file;
-    }
-    $.post(base_url + 'settings', file {
-
-    });
-
-
   });
 </script>

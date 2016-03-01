@@ -1,4 +1,3 @@
-	<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('.message-container').fadeOut(3000,

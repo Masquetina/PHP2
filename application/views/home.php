@@ -39,12 +39,7 @@
 			</div>
 			<ul class="info-bar">
 				<li>
-					<i class="material-icons link favorite"
-					<?php if($this->session->userdata('validated')) : ?>
-						<?php /*if(($card->id_user) == $this->session->userdata('id_user')) {
-							echo 'style = "color: #ba68c8"';
-						}*/ ?>
-					<?php endif ?> >favorite</i>
+					<i class="material-icons link favorite">favorite</i>
 					<small><?=$card->likes;?></small>
 				</li>
 				<?php if($this->session->userdata('validated')) : ?>
