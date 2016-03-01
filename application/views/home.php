@@ -10,8 +10,9 @@
   </div>
 </div>
 <div class="container">
-	<h2 class="text-center">Quote Cards</h2>
-	<?php if(isset($cards)) : foreach($cards as $card) : ?>
+	<?php if(isset($cards)) : ?>
+    <h2 class="text-center">Quote Cards</h2>
+    <?php foreach($cards as $card) : ?>
 		<div class="col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
@@ -53,6 +54,8 @@
 				<?php endif ?>
 			</ul>
 		</div>
-	<?php endforeach ?>
-<?php endif ?>
+	 <?php endforeach ?>
+  <?php else : ?>
+    <h2 class="text-center">There is no Quote Cards</h2>
+  <?php endif ?>
 </div>

@@ -23,10 +23,11 @@
     }
     if($counter == 0) {
     ?>
-      <h2 class="text-center">There's no Quote Cards jet</h2>
+      <h2 class="text-center">There's no Quote Cards</h2>
     <?php
     } else {
   ?>
+
     <?php if($card->delete == 0) : ?>
 		<div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
@@ -81,6 +82,7 @@
 			</ul>
 		</div>
     <?php endif ?>
+
   <?php } ?>
 
 	<?php endforeach ?>

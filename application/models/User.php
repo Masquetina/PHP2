@@ -10,9 +10,13 @@ class User extends CI_Model {
     $this->db->select('*');
     $this->db->from('users');
     $this->db->where('users.username', $username);
-    $this->db->join('cards', 'cards.id_user = users.id_user');
+    $this->db->join('cards', 'cards.id_user = users.id_user', 'left');
     $this->db->order_by('cards.id_card', 'desc');
     $query = $this->db->get();
-    return $query->result();
+    if($query->num_rows() != 0) {
+      return $query->result();
+    } else {
+      redirect('/');
+    }
   }
 }

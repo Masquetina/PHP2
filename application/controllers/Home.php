@@ -13,7 +13,9 @@ class Home extends MY_Controller {
     $query = $this->cards->get_all_cards();
     if($query) {
       $data['cards'] = $query;
-    }
-		$this->load_basic('home', $data);
+			$this->load_basic('home', $data);
+    } else {
+			$this->load_basic('home', $data);
+		}
 	}
 }

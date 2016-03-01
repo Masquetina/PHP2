@@ -11,9 +11,13 @@ class Cards extends CI_Model {
     $this->db->from('cards');
     $this->db->where('cards.delete = 0');
     $this->db->order_by('cards.id_card', 'desc');
-    $this->db->join('users', 'cards.id_user = users.id_user');
+    $this->db->join('users', 'cards.id_user = users.id_user', 'left');
     $query = $this->db->get();
-    return $query->result();
+    if($query->num_rows() != 0) {
+      return $query->result();
+    } else {
+      return FALSE;
+    }
   }
 
   public function delete_card($id_card) {
