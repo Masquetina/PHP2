@@ -127,7 +127,7 @@
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="ToS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal" id="ToS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -140,8 +140,14 @@
       </div>
       <div class="modal-body">
         <p>
-					...
+					Welcome to QuoteApp! We invite You to access our websites and use the QuoteApp service,
+					but please note that Your invitation is subject to Your agreement with these Terms of Service.
+					This document describes in detail Your rights and our rights relating to the provision of
+					the Service (as defined below), so please review these Terms carefully.
         </p>
+				<p>
+					...
+				</p>
     </div>
   </div>
 </div>
