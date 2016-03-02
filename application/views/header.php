@@ -84,9 +84,34 @@
 					<h4 class="modal-title" id="myModalLabel">About</h4>
 				</div>
 				<div class="modal-body">
+					<img src="<?=base_url();?>custom/img/masquetina.jpg" />
 					<p>
-						...
+						Hi!
 					</p>
+					<p>
+						My name is Iva and I attend Web programming classes at ICT college Belgrade Serbia,
+						spending my earthly time striving to become darned awesome Web developer, enduring through a number
+						of challenges, often on the edge of sanity... But that's just local politics, if You
+						know what I mean.
+					</p>
+					<p>
+						This Web application is a student project, made out of sweat and tears,
+						and some PHP, SQL, JavaScript, jQuery, HTML and CSS.
+					</p>
+					<div class="social">
+						<ul>
+							<li>
+								<a href="https://dribbble.com/Masquetina" target="_blank">
+									<i class="mdi mdi-dribbble"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/Masquetina" target="_blank">
+									<i class="mdi mdi-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
 			</div>
 		</div>
 	</div>

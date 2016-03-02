@@ -1,7 +1,7 @@
 <footer>
 	<div class="container">
 		<div class="panel-body">
-			<p class="text-center text-warning"></p>
+			<p class="text-center"></p>
 		</div>
 	</div>
 </footer>

@@ -354,7 +354,7 @@ header ul li img.logo{
 
 .upload {
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,.4);
 }
 
 .visible.upload {
@@ -363,7 +363,9 @@ header ul li img.logo{
 }
 
 .upload i {
-
+  color: rgba(0,0,0,.6);;
+  font-size: 64px;
+  padding: 32px;
 }
 
 @media screen and (max-width: 768px) {
@@ -439,7 +441,7 @@ a.text-primary:hover {
 .nav-tabs {
   position: absolute;
   margin: 0 16px;
-  bottom: -4px;
+  bottom: -1px;
 }
 
 .nav {
@@ -471,13 +473,13 @@ a.text-primary:hover {
   color: #263238;
   text-transform: uppercase;
   border: none;
-  border-bottom: transparent solid 5px;
+  border-bottom: transparent solid 2px;
   background-color: transparent;
 }
 
 .nav-tabs > li > a:hover {
   border: none;
-  border-bottom: #263238 solid 5px;
+  border-bottom: #263238 solid 2px;
   background-color: transparent;
 }
 
@@ -487,11 +489,10 @@ a.text-primary:hover {
   color: #263238;
   background-color: transparent;
   border: none;
-  border-bottom: #263238 solid 5px;
+  border-bottom: #263238 solid 2px;
   cursor: default;
 }
 
-/* CARD */
 .link,
 .avatar,
 .info-block {
@@ -774,7 +775,7 @@ a.text-primary:hover {
 
 .modal-header button {
   border-radius: 100%;
-  width:32px;
+  width: 32px;
   height: 32px;
 }
 
@@ -784,6 +785,55 @@ a.text-primary:hover {
 
 .modal-header button i {
   padding: 4px;
+}
+
+.modal img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: block;
+  margin: -16px auto 24px auto;
+  -webkit-box-shadow:
+  0 2px 2px 0 rgba(0, 0, 0, 0.14),
+  0 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow:
+          0 2px 2px 0 rgba(0, 0, 0, 0.14),
+          0 3px 1px -2px rgba(0, 0, 0, 0.2),
+          0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.modal ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.modal .social {
+  display: table;
+	margin: 0 auto;
+  padding: 16px;
+}
+
+.modal ul li {
+  display: inline-block;;
+  margin-right: 10px;
+  padding: 0;
+  margin: 0 16px;
+}
+
+.modal .mdi {
+  font-size: 32px;
+  text-align: center;
+}
+
+.modal .mdi-dribbble {
+  color: #ea4c89;
+}
+
+.modal .mdi-twitter {
+  color: #55acee;
 }
 
 footer {

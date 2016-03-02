@@ -10,7 +10,6 @@
 			});
 
 			$('input:text:visible:first')[0].focus();
-
 			$('.form-control').focus(function() {
 				$(this).val('').toggleClass('active');
 			});

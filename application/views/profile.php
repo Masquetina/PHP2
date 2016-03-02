@@ -4,7 +4,7 @@
       <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
       <?php if($this->session->userdata('id_user') == $user->id_user) : ?>
       <span class="upload">
-        <!-- OVDE IDE IKONICA -->
+        <i class="material-icons icon">settings</i>
       </span>
       <?=form_upload('userfile');?>
   	<?php endif ?>
@@ -106,7 +106,7 @@
       // PROVERA
 
 
-
+      // OVO TREBA DOVRŠITI !!!
       $.POST(base_url + 'settings/' + username);
     });
   });
