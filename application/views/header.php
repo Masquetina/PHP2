@@ -56,14 +56,51 @@
 							<span>New Card</span>
 						</a>
 						<?php else : ?>
-						<a class="btn btn-raised btn-primary" href="<?=base_url() . 'dashboard'; ?>" >
+						<a id="about-link" class="btn btn-raised btn-primary" href="<?=base_url() . 'dashboard'; ?>" >
 							<i class="material-icons icon">settings</i>
 							<span>Dashboard</span>
 						</a>
 						<?php endif ?>
 					<?php endif ?>
 				</li>
+				<li class="links">
+					<a id="about-link" class="show" href="#">
+						<i class="material-icons icon">info_outline</i>
+					</a>
+				</li>
 			</ul>
 		</div>
 		<div class="clearfix"></div>
 	</header>
+
+	<div class="modal" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							<i class="material-icons">close</i>
+						</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">About</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						This web site is a student project. It is made out of sweat and tears, and some PHP, SQL,
+						JavaScript, jQuery, HTML, CSS and XML. The design is minimalistic and flat, oposite to colorful T-shirt designs.
+						Yes, the student, that would be me, designed those to.
+						My name is Iva and I attend web programming classes at ICT college Belgrade Serbia,
+						spending my earthly time striving to become Web developer, enduring through a number of challenges,
+						often on the edge of sanity... But that's just local politics, if You know what I mean.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+	<script>
+	$(document).ready(function() {
+		$('#about-link').click(function() {
+				$('#about').modal('show');
+		});
+	});
+	</script>

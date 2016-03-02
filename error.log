@@ -129,3 +129,4 @@
 [Tue Mar 01 13:03:53.135498 2016] [:error] [pid 27479] [client 192.168.1.4:53766] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /var/www/Quote/public_html/application/views/profile.php on line 93, referer: http://quote.com/profile/masquetina
 [Tue Mar 01 13:04:07.284069 2016] [:error] [pid 3350] [client 192.168.1.4:53767] PHP Parse error:  syntax error, unexpected end of file in /var/www/Quote/public_html/application/views/profile.php on line 103, referer: http://quote.com/profile/masquetina
 [Tue Mar 01 13:04:08.791496 2016] [:error] [pid 3350] [client 192.168.1.4:53767] PHP Parse error:  syntax error, unexpected end of file in /var/www/Quote/public_html/application/views/profile.php on line 103, referer: http://quote.com/profile/masquetina
+[Wed Mar 02 10:30:59.648036 2016] [:error] [pid 27479] [client 192.168.1.4:56543] PHP Parse error:  syntax error, unexpected '{' in /var/www/Quote/public_html/application/controllers/Login.php on line 30

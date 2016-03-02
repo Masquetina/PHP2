@@ -6,7 +6,7 @@ input:-webkit-autofill:active {
 }
 
 * {
-	transition: all .2s ease-in-out;
+	/*transition: all .2s ease-in-out;*/
 	/*border: 1px solid red !important;*/
 }
 
@@ -258,14 +258,29 @@ header ul li img.logo{
 	display: none;
 }
 
+.links .show i {
+	display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 44px;
+  color: rgba(255,255,255,.2);
+}
+
+.links i.show {
+	display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
 .cover {
-    height: 400px;
-    background: url('http://quote.com/custom/img/1920x400.png') center center no-repeat scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-		margin-bottom: 24px;
+  position: relative;
+  height: 400px;
+  background: url('http://quote.com/custom/img/1920x400.png') center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+	margin-bottom: 24px;
 }
 
 .cover h1 {
@@ -417,6 +432,61 @@ a.text-primary:hover {
 	color: #9e9d24; !important;
 }
 
+.nav-tabs {
+  position: absolute;
+  margin: 0 16px;
+  bottom: -4px;
+}
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 8px 24px;
+  font-size: 24px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs > li > a {
+  color: #263238;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: transparent solid 5px;
+  background-color: transparent;
+}
+
+.nav-tabs > li > a:hover {
+  border: none;
+  border-bottom: #263238 solid 5px;
+  background-color: transparent;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #263238;
+  background-color: transparent;
+  border: none;
+  border-bottom: #263238 solid 5px;
+  cursor: default;
+}
+
 /* CARD */
 .link,
 .avatar,
@@ -451,6 +521,68 @@ a.text-primary:hover {
 	overlay: hidden;
 }
 
+.panel .avatar {
+	left: calc(100% - 64px - 16px);
+	bottom: calc(100% - 64px - 16px);
+	width: 64px;
+  height: 64px;
+	border-radius: 100%;
+	box-shadow:
+	0 2px 2px 0 rgba(0, 0, 0, 0.14),
+	0 3px 1px -2px rgba(0, 0, 0, 0.2),
+	0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.panel .img {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	opacity: .4;
+	width: 100%;
+}
+
+.panel.panel-user .avatar {
+  width: 48px;
+  height: 48px;
+  margin: 8px 12px;
+}
+
+/*.panel.panel-user {
+  margin: 4px 0;
+  padding: 0;
+}*/
+
+.panel.panel-user:hover {
+  -webkit-box-shadow:
+	0 4px 5px 0 rgba(0, 0, 0, 0.14),
+	0 1px 10px 0 rgba(0, 0, 0, 0.12),
+	0 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow:
+					0 4px 5px 0 rgba(0, 0, 0, 0.14),
+					0 1px 10px 0 rgba(0, 0, 0, 0.12),
+					0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.panel.panel-user p{
+  display: inline-block;
+  color: rgba(0,0,0,.6);
+  font-size: 120%;
+}
+
+.panel.panel-user a i{
+  display: inline-block;
+  border-radius: 100%;
+  padding: 4px;
+  margin: 15px 8px;
+  color: rgba(0,0,0,.4);
+  text-shadow:
+	0 1px 0 rgba(255, 255, 255, .15),
+	0 -1px 0 rgba(0, 0, 0, .25);
+}
+
+.panel.panel-user a i:hover{
+  background-color: rgba(0,0,0,.1);
+}
+
 .panel-heading {
 	padding: 0px !important;
 	border-top-left-radius: 2px;
@@ -469,25 +601,6 @@ a.text-primary:hover {
 .panel-heading .interactions {
 	position: absolute;
 	z-index: 2;
-}
-
-.panel-heading .avatar {
-	left: calc(100% - 64px - 16px);
-	bottom: calc(100% - 64px - 16px);
-	width: 64px;
-  height: 64px;
-	border-radius: 100%;
-	box-shadow:
-	0 2px 2px 0 rgba(0, 0, 0, 0.14),
-	0 3px 1px -2px rgba(0, 0, 0, 0.2),
-	0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
-.panel-heading .img {
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
-	opacity: .4;
-	width: 100%;
 }
 
 .panel-heading small {
@@ -640,4 +753,8 @@ a.text-primary:hover {
 	.panel-body h2 {
 		font-size: 160%;
 	}
+}
+
+footer {
+  width: 100%;
 }

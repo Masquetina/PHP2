@@ -20,6 +20,8 @@ class Signup extends MY_Controller {
 				$this->session->set_flashdata('warning', $warning);
 				redirect ('signup');
 			} else {
+				$message = 'The account is successfully created. You can log in now.';
+	      $this->session->set_flashdata('message', $message);
 				redirect('login');
 			}
 		} else {

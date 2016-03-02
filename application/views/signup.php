@@ -118,7 +118,7 @@
 		</div>
 		<div class="text-center">
 			<small class="text-muted">By clicking Create Account, I agree to the
-				<a class="text-primary" href="<?=base_url();?>"> Terms of Service</a>
+				<a id="ToS-link" class="text-primary" href="#" data-toggle="modal" data-target="ToS"> Terms of Service</a>
 			</small>
 		</div>
 		<div class="text-center">
@@ -128,3 +128,28 @@
 		</div>
 	</div>
 </div>
+<div class="modal fade" id="ToS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<i class="material-icons">close</i>
+					</span>
+				</button>
+        <h4 class="modal-title" id="myModalLabel">Terms of Service</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+					...
+        </p>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+	$('#ToS-link').click(function() {
+			$('#ToS').modal('show');
+	});
+});
+</script>

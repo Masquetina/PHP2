@@ -8,4 +8,5 @@
 	<link href="<?=base_url();?>vendor/css/bootstrap.css" type="text/css" rel="stylesheet">
 	<link href="<?=base_url();?>custom/css/style.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="<?=base_url();?>vendor/js/jquery.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>vendor/js/bootstrap.js"></script>
 </head>

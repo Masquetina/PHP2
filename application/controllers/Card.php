@@ -17,9 +17,9 @@ class Card extends MY_Controller {
 				$this->session->set_flashdata('message', $message);
 				redirect('profile/' . $username);
 			} else {
-				$warning = 'Not authorised to perform this action.';
+				$warning = 'Can\'t perform this action.';
 				$this->session->set_flashdata('warning', $warning);
-				redirect('profile/' . $username);
+				redirect('/');
 			}
 		} else {
 			redirect('/');

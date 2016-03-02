@@ -4,7 +4,7 @@ class Cards extends CI_Model {
 
   function __construct() {
     parent::__construct();
-   }
+  }
 
   public function get_all_cards() {
     $this->db->select('*');

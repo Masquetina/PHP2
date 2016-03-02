@@ -12,7 +12,7 @@ class Login extends MY_Controller {
 		$this->load_forms('login', $data);
 
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		if ($ispost) {
+		if($ispost) {
 			$this->load->model('validate');
 			$query = $this->validate->login();
 			if(!$query) {

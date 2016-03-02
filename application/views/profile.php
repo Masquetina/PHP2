@@ -13,8 +13,7 @@
   </div>
 </div>
 <div class="container">
-	<?php $counter = 0;
-        if(isset($cards)) : ?>
+	<?php $counter = 0; if(isset($cards)) : ?>
     <?php foreach($cards as $card) : ?>
       <?php
       $delete = $card->delete;
