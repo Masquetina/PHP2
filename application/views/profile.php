@@ -89,10 +89,25 @@
   <?php endif ?>
 </div>
 <script>
+  var base_url = '<?php print base_url();?>';
+  var username = '<?php print $this->session->userdata('username');?>';
   $(document).ready(function() {
     $(':file').hover(function() {
       $(this).attr('title',' ');
       $('.upload').toggleClass('visible');
+    });
+
+    $(':file').change(function() {
+
+      var file = this.files[0];
+      var name = file.name;
+      var size = file.size;
+      var type = file.type;
+      // PROVERA
+
+
+
+      $.POST(base_url + 'settings/' + username);
     });
   });
 </script>

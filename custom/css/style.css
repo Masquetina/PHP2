@@ -5,9 +5,8 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-* {
-	/*transition: all .2s ease-in-out;*/
-	/*border: 1px solid red !important;*/
+*:not(body) {
+	transition: all .2s ease-in-out;
 }
 
 *:focus,
@@ -753,6 +752,10 @@ a.text-primary:hover {
 	.panel-body h2 {
 		font-size: 160%;
 	}
+}
+
+.modal {
+  transition: all 0s ease-in-out;
 }
 
 footer {

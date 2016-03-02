@@ -73,7 +73,7 @@
 		<div class="clearfix"></div>
 	</header>
 
-	<div class="modal" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-sm" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -86,12 +86,7 @@
 				</div>
 				<div class="modal-body">
 					<p>
-						This web site is a student project. It is made out of sweat and tears, and some PHP, SQL,
-						JavaScript, jQuery, HTML, CSS and XML. The design is minimalistic and flat, oposite to colorful T-shirt designs.
-						Yes, the student, that would be me, designed those to.
-						My name is Iva and I attend web programming classes at ICT college Belgrade Serbia,
-						spending my earthly time striving to become Web developer, enduring through a number of challenges,
-						often on the edge of sanity... But that's just local politics, if You know what I mean.
+						...
 					</p>
 			</div>
 		</div>

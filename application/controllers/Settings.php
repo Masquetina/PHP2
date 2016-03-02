@@ -8,19 +8,23 @@ class Settings extends MY_Controller {
 
 	public function index() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		$username = $this->input->post('username');
 		if ($ispost) {
+			$username = $this->uri->segment(2);
 			$config['upload_path'] = './custom/img/avatars/';
       $config['allowed_types'] = 'jpg';
 			// MIN MAX WIDTH HEIGHT SIZE !!!
 			$config['file_name'] = $username;
 			$config['overwrite'] = TRUE;
 	    $this->load->library('upload', $config);
-			!$this->upload->do_upload('userfile');
+			$this->upload->do_upload('userfile');
+
+
 			if(!$this->upload->do_upload()) {
 				$warning = 'Please choose a JPG file.';
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/'. $username);
+
+				
 			} else {
 				$image = getimagesize('./custom/img/avatars/' . $username . '.jpg');
 				$config['image_library']	= 'gd2';
