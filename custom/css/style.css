@@ -228,6 +228,11 @@ header ul li.links {
 	display: inline-block;
 }
 
+header ul li .btn {
+	margin-left: 4px;
+  margin-right: 4px;
+}
+
 header ul li.links a{
 	text-decoration: none;
 	color: rgba(255,255,255,.8);
@@ -261,7 +266,7 @@ header ul li img.logo{
 	display: inline-block;
   padding: 0;
   margin: 0;
-  font-size: 44px;
+  font-size: 32px;
   color: rgba(255,255,255,.2);
 }
 
@@ -756,6 +761,29 @@ a.text-primary:hover {
 
 .modal {
   transition: all 0s ease-in-out;
+}
+
+.modal-content {
+  border-radius: 2px;
+}
+
+.modal-header {
+  border-top: solid 4px #263238;
+  border-bottom: none;
+}
+
+.modal-header button {
+  border-radius: 100%;
+  width:32px;
+  height: 32px;
+}
+
+.modal-header button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-header button i {
+  padding: 4px;
 }
 
 footer {

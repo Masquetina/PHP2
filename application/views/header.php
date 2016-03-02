@@ -56,7 +56,7 @@
 							<span>New Card</span>
 						</a>
 						<?php else : ?>
-						<a id="about-link" class="btn btn-raised btn-primary" href="<?=base_url() . 'dashboard'; ?>" >
+						<a class="btn btn-raised btn-primary" href="<?=base_url() . 'dashboard'; ?>" >
 							<i class="material-icons icon">settings</i>
 							<span>Dashboard</span>
 						</a>
@@ -72,7 +72,6 @@
 		</div>
 		<div class="clearfix"></div>
 	</header>
-
 	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-sm" role="document">
 			<div class="modal-content">
@@ -92,10 +91,10 @@
 		</div>
 	</div>
 </div>
-	<script>
+<script>
 	$(document).ready(function() {
 		$('#about-link').click(function() {
 				$('#about').modal('show');
 		});
 	});
-	</script>
+</script>
