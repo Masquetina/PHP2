@@ -445,24 +445,27 @@ a.text-primary:hover {
   bottom: -1px;
 }*/
 
-.nav {
+.nav,
+.tab-content {
   margin-bottom: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
-.nav > li {
+
+.nav li {
   float: none;
   position: relative;
   display: block;
 }
-.nav > li > a {
+.nav li a {
+  width: auto;
   position: relative;
   display: block;
   padding: 4px;
   font-size: 24px;
 }
-.nav > li > a:hover,
-.nav > li > a:focus {
+.nav li a:hover,
+.nav li a:focus {
   text-decoration: none;
   background-color: transparent;
 }
@@ -471,7 +474,7 @@ a.text-primary:hover {
   border-bottom: none;
 }
 
-.nav-tabs > li > a {
+.nav-tabs li a {
   border-radius: 0;
   color: #263238;
   text-transform: uppercase;
@@ -480,15 +483,15 @@ a.text-primary:hover {
   background-color: transparent;
 }
 
-.nav-tabs > li > a:hover {
+.nav-tabs li  a:hover {
   border: none;
   border-right: #263238 solid 2px;
   background-color: transparent;
 }
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.nav-tabs li.active > a,
+.nav-tabs li.active > a:hover,
+.nav-tabs li.active > a:focus {
   color: #263238;
   background-color: transparent;
   border: none;
