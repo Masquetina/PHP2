@@ -1,10 +1,21 @@
+<div class="line"></div>
 <div class="container-fluid">
   <div class="col-xs-2 col-md-2 col-lg-2">
-    <ul class="nav nav-tabs">
-      <li role="presentation" class="active"><a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">Cards</a></li>
-      <li role="presentation"><a href="#users" aria-controls="users" role="tab" data-toggle="tab">Users</a></li>
+    <ul class="nav-tabs">
+      <li>
+        <a href="#"></a>
+      </li>
+      <li role="presentation" class="active">
+        <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
+          Cards
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
+          Users
+        </a>
+      </li>
     </ul>
-    <div class="clearfix"></div>
   </div>
   <div class="tab-content col-xs-10 col-md-10 col-lg-10">
     <div role="tabpanel" class="tab-pane fade in" id="users">
