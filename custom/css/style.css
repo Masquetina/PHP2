@@ -7,6 +7,7 @@ input:-webkit-autofill:active {
 
 *:not(body) {
 	transition: all .2s ease-in-out;
+  /*border: 1px solid red;*/
 }
 
 *:focus,
@@ -311,7 +312,7 @@ header ul li img.logo{
 	width: 240px;
 }
 
-.cover img {
+.profile img {
   clear: both;
   display: block;
   padding: 0;
@@ -438,11 +439,11 @@ a.text-primary:hover {
 	color: #9e9d24; !important;
 }
 
-.nav-tabs {
+/*.nav-tabs {
   position: absolute;
   margin: 0 16px;
   bottom: -1px;
-}
+}*/
 
 .nav {
   margin-bottom: 0;
@@ -450,13 +451,14 @@ a.text-primary:hover {
   list-style: none;
 }
 .nav > li {
+  float: none;
   position: relative;
   display: block;
 }
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 8px 24px;
+  padding: 4px;
   font-size: 24px;
 }
 .nav > li > a:hover,
@@ -470,16 +472,17 @@ a.text-primary:hover {
 }
 
 .nav-tabs > li > a {
+  border-radius: 0;
   color: #263238;
   text-transform: uppercase;
   border: none;
-  border-bottom: transparent solid 2px;
+  border-right: transparent solid 2px;
   background-color: transparent;
 }
 
 .nav-tabs > li > a:hover {
   border: none;
-  border-bottom: #263238 solid 2px;
+  border-right: #263238 solid 2px;
   background-color: transparent;
 }
 
@@ -489,7 +492,7 @@ a.text-primary:hover {
   color: #263238;
   background-color: transparent;
   border: none;
-  border-bottom: #263238 solid 2px;
+  border-right: #263238 solid 2px;
   cursor: default;
 }
 

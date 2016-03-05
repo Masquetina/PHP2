@@ -6,10 +6,10 @@ class Settings extends MY_Controller {
 		parent::__construct();
 	}
 
-	public function index() {
+	public function image() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		if ($ispost) {
-			$username = $this->uri->segment(2);
+		if($ispost) {
+			$username = $this->uri->segment(3);
 			$config['upload_path'] = './custom/img/avatars/';
       $config['allowed_types'] = 'jpg';
 			// MIN MAX WIDTH HEIGHT SIZE !!!
@@ -24,7 +24,7 @@ class Settings extends MY_Controller {
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/'. $username);
 
-				
+
 			} else {
 				$image = getimagesize('./custom/img/avatars/' . $username . '.jpg');
 				$config['image_library']	= 'gd2';
@@ -42,5 +42,11 @@ class Settings extends MY_Controller {
 				redirect('profile/'. $username);
 			}
 		}
+	}
+
+	public function password() {
+		$data = array();
+		$data['page_title'] = "Password change request";
+		$this->load_forms('password', $data);
 	}
 }

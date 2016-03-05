@@ -55,4 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['profile/:any'] = 'profile';
 $route['card/:num'] = 'card';
-$route['settings/:any'] = 'settings';
+$route['settings/image/:any'] = 'settings/image';

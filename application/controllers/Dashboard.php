@@ -22,7 +22,7 @@ class Dashboard extends MY_Controller {
       	$data['cards'] = $query;
     	}
 
-			$this->load_basic('dashboard', $data);
+			$this->load_dashboard('dashboard', $data);
 		} else {
 			redirect('/');
 		}

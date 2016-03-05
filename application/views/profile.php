@@ -1,5 +1,6 @@
-<div class="cover">
-  <div class="container">
+<div class="clearfix"></div>
+<div class="container">
+  <div class="profile col-xs-12 col-md-4 col-lg-4">
     <div class="multipart text-center">
       <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
       <?php if($this->session->userdata('id_user') == $user->id_user) : ?>
@@ -11,6 +12,9 @@
     </div>
     <h2 class="text-center"><?=ucwords($user->username);?></h2>
   </div>
+  <div class="col-xs-12 col-md-8 col-lg-8">
+  </div>
+  <div class="clearfix"></div>
 </div>
 <div class="container">
 	<?php $counter = 0; if(isset($cards)) : ?>
@@ -103,11 +107,12 @@
       var name = file.name;
       var size = file.size;
       var type = file.type;
+      alert(file + " " + name + " " + size + " " + type);
       // PROVERA
 
 
       // OVO TREBA DOVRŠITI !!!
-      $.POST(base_url + 'settings/' + username);
+      $.POST(base_url + 'settings/image' + username);
     });
   });
 </script>

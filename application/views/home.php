@@ -1,17 +1,17 @@
+<?php if(!$this->session->userdata('validated')) : ?>
 <div class="cover">
   <div class="container">
     <h1 class="text-center">QuoteApp</h1>
 		<h3 class="text-center">Side text to tell something</h3>
-		<?php if(!$this->session->userdata('validated')) : ?>
 		<a class="call-to-action btn btn-raised btn-primary" href="<?=base_url() . 'signup'; ?>" >
 			<span>Join Us Now</span>
 		</a>
-		<?php endif ?>
   </div>
 </div>
+<?php endif ?>
+<div class="clearfix"></div>
 <div class="container">
 	<?php if(isset($cards)) : ?>
-    <h2 class="text-center">Quote Cards</h2>
     <?php foreach($cards as $card) : ?>
 		<div class="col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
@@ -39,18 +39,27 @@
 				</div>
 			</div>
 			<ul class="info-bar">
-				<li>
-					<i class="material-icons link favorite">favorite</i>
-					<small><?=$card->likes;?></small>
-				</li>
 				<?php if($this->session->userdata('validated')) : ?>
-					<?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
-						<li>
-							<a href="#">
-								<i class="material-icons link">flag</i>
-							</a>
-						</li>
+          <li>
+            <a href="#">
+    			    <i class="material-icons link favorite">favorite</i>
+            </a>
+    			  <small><?=$card->likes;?></small>
+    		  </li>
+          <?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
+					<li>
+						<a href="#">
+							<i class="material-icons link">flag</i>
+						</a>
+					</li>
 					<?php endif ?>
+          <?php else : ?>
+  				<li>
+            <a href="<?=base_url();?>login">
+  					  <i class="material-icons link favorite">favorite</i>
+            </a>
+  					<small><?=$card->likes;?></small>
+  				</li>
 				<?php endif ?>
 			</ul>
 		</div>

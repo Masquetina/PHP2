@@ -115,6 +115,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="clearfix"></div>
 </div>
 <script>
 	$(document).ready(function() {
