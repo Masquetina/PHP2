@@ -12,19 +12,15 @@ class Settings extends MY_Controller {
 			$username = $this->uri->segment(3);
 			$config['upload_path'] = './custom/img/avatars/';
       $config['allowed_types'] = 'jpg';
-			// MIN MAX WIDTH HEIGHT SIZE !!!
+			// MIN / MAX / WIDTH / HEIGHT
 			$config['file_name'] = $username;
 			$config['overwrite'] = TRUE;
 	    $this->load->library('upload', $config);
-			$this->upload->do_upload('userfile');
-
-
+			$this->upload->do_upload();
 			if(!$this->upload->do_upload()) {
 				$warning = 'Please choose a JPG file.';
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/'. $username);
-
-
 			} else {
 				$image = getimagesize('./custom/img/avatars/' . $username . '.jpg');
 				$config['image_library']	= 'gd2';
@@ -33,11 +29,10 @@ class Settings extends MY_Controller {
 				$config['maintain_ratio']	= FALSE;
 				$config['width']					= 320;
 				$config['height']					= 320;
-
 				$this->load->library('image_lib', $config);
 				$this->image_lib->resize();
 				if($this->session->userdata('avatar') == 'avatar.jpg'){
-					// POZVATI MODEL DA PROMENI PODATAK O PUTANJI SLIKE U BAZI
+				// POZVATI MODEL DA PROMENI PODATAK O PUTANJI SLIKE U BAZI
 				}
 				redirect('profile/'. $username);
 			}

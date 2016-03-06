@@ -20,6 +20,35 @@ class Cards extends CI_Model {
     }
   }
 
+  public function create_card($filename) {
+    $id_user = $this->session->userdata('id_user');
+    $author = $this->input->post(trim(addslashes('author')));
+    $quote = $this->input->post(trim(addslashes('quote')));
+    $description = $this->input->post(trim(addslashes('description')));
+    $color = $this->input->post('color');
+    $data = array(
+      'id_user' => $id_user,
+      'author'  => $author,
+      'quote'   => $quote,
+      'info'    => $description,
+      'img'     => $filename,
+      'color'   => 'style = "background-color:' . $color . '"',
+      'likes'   => 0,
+      'flag'    => 0,
+      'delete'  => 0,
+    );
+    $query = $this->db->insert('cards', $data);
+    if($query) {
+      $message = 'You created a new card.';
+      $this->session->set_flashdata('message', $message);
+      return TRUE;
+    } else {
+      $warning = 'Something went wrong!';
+      $this->session->set_flashdata('warning', $warning);
+      return FALSE;
+    }
+  }
+
   public function delete_card($id_card) {
     $data = array(
      'delete' => 1,

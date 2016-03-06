@@ -3,7 +3,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body text">
 				<?php
-				$action = "create";
+				$action = "create/card";
 				$attributes = array(
 					'class' => 'form-horizontal card',
 				);
@@ -54,12 +54,11 @@
 					?>
 				</div>
 
-
 				<div class="form-group">
 					<?php
 					$data = array(
 						'id'				=> 'inputDescription',
-						'name'			=> 'quote',
+						'name'			=> 'description',
 						'maxlength' => '70',
 						'cols'      => '20',
 						'rows'			=> '2',
@@ -80,13 +79,12 @@
 				<div class="form-group">
 					<?php
 					$atributes = array(
-						'id'				=> 'File',
-						'name'			=> 'upload-card',
-						'class' 		=> 'form-control'
+						'id'		=> 'File',
+						'name'	=> 'userfile',
 					);
 					 echo form_upload($atributes);
 
-					$label_text= 'Quote image';
+					$label_text= 'Image';
  					$id = 'File';
  					$attributes = array(
  						'class' => 'text-primary btn btn-primary btn-raised'
@@ -95,14 +93,13 @@
 					?>
 				</div>
 
-
 				<div class="form-group">
 					<?php
 					$data = array(
-        		'name'          => 'color',
-						'id'            => 'red',
-        		'value'         => '#f00',
-        		'checked'       => FALSE,
+        		'name'    => 'color',
+						'id'      => 'red',
+        		'value'   => '#f00',
+        		'checked' => FALSE,
 					);
 					echo form_radio($data);
 
@@ -116,22 +113,36 @@
 
 					<?php
 					$data = array(
-        		'name'          => 'color',
-						'id'            => 'green',
-        		'value'         => '#0f0',
-        		'checked'       => FALSE,
+        		'name'    => 'color',
+						'id'      => 'green',
+        		'value'   => '#0f0',
+        		'checked' => FALSE,
 					);
 					echo form_radio($data);
+
+					$label_text= '';
+					$id = 'green';
+					$attributes = array(
+						'class' => ''
+					);
+					echo form_label($label_text, $id, $attributes);
 					?>
 
 					<?php
 					$data = array(
-        		'name'          => 'color',
-        		'id'            => 'blue',
-        		'value'         => '#00f',
-        		'checked'       => FALSE,
+        		'name'    => 'color',
+        		'id'      => 'blue',
+        		'value'   => '#263238',
+        		'checked' => FALSE,
 					);
 					echo form_radio($data);
+
+					$label_text= '';
+					$id = 'blue';
+					$attributes = array(
+						'class' => ''
+					);
+					echo form_label($label_text, $id, $attributes);
 					?>
 				</div>
 
@@ -153,3 +164,13 @@
 		</div>
 	</div>
 </div>
+<script>
+  $(document).ready(function() {
+    $(':file').change(function() {
+      var file = this.files[0];
+      var name = file.name;
+      var size = file.size;
+      var type = file.type;
+    });
+  });
+</script>
