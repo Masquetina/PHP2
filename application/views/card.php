@@ -1,3 +1,4 @@
+<div class="error"></div>
 <div class="container">
 	<div class="col-xs-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
 		<div class="panel panel-default">
@@ -76,37 +77,54 @@
 					?>
 				</div>
 
-				<div class="form-group">
-					<?php
-					$atributes = array(
-						'id'		=> 'File',
-						'name'	=> 'userfile',
-					);
-					 echo form_upload($atributes);
-
-					$label_text= 'Image';
- 					$id = 'File';
- 					$attributes = array(
- 						'class' => 'text-primary btn btn-primary btn-raised'
- 					);
- 					echo form_label($label_text, $id, $attributes);
-					?>
-				</div>
-
-				<div class="form-group">
+				<div class="form-group radio-group">
 					<?php
 					$data = array(
         		'name'    => 'color',
-						'id'      => 'red',
-        		'value'   => '#f00',
+						'id'      => 'brown',
+        		'value'   => '#3e2723',
+        		'checked' => TRUE,
+					);
+					echo form_radio($data);
+
+					$label_text= '';
+					$id = 'brown';
+					$attributes = array(
+						'class' => 'brown'
+					);
+					echo form_label($label_text, $id, $attributes);
+					?>
+
+					<?php
+					$data = array(
+        		'name'    => 'color',
+						'id'      => 'pink',
+        		'value'   => '#880e4f',
         		'checked' => FALSE,
 					);
 					echo form_radio($data);
 
 					$label_text= '';
-					$id = 'red';
+					$id = 'pink';
 					$attributes = array(
-						'class' => ''
+						'class' => 'pink'
+					);
+					echo form_label($label_text, $id, $attributes);
+					?>
+
+					<?php
+					$data = array(
+        		'name'    => 'color',
+						'id'      => 'yellow',
+        		'value'   => '#',
+        		'checked' => FALSE,
+					);
+					echo form_radio($data);
+
+					$label_text= '';
+					$id = 'yellow';
+					$attributes = array(
+						'class' => 'yellow'
 					);
 					echo form_label($label_text, $id, $attributes);
 					?>
@@ -115,7 +133,7 @@
 					$data = array(
         		'name'    => 'color',
 						'id'      => 'green',
-        		'value'   => '#0f0',
+        		'value'   => '#827717',
         		'checked' => FALSE,
 					);
 					echo form_radio($data);
@@ -123,7 +141,7 @@
 					$label_text= '';
 					$id = 'green';
 					$attributes = array(
-						'class' => ''
+						'class' => 'green'
 					);
 					echo form_label($label_text, $id, $attributes);
 					?>
@@ -140,10 +158,29 @@
 					$label_text= '';
 					$id = 'blue';
 					$attributes = array(
-						'class' => ''
+						'class' => 'blue'
 					);
 					echo form_label($label_text, $id, $attributes);
+					$value = $this->input->post('color');
 					?>
+				</div>
+
+				<div class="form-group">
+					<?php
+					$atributes = array(
+						'id'		=> 'File',
+						'name'	=> 'userfile',
+					);
+					 echo form_upload($atributes);
+
+					$label_text= 'Image';
+ 					$id = 'File';
+ 					$attributes = array(
+ 						'class' => 'text-primary btn btn-primary btn-raised'
+ 					);
+ 					echo form_label($label_text, $id, $attributes);
+					?>
+					<span id="file-name" class="text-primary">No file selected</span>
 				</div>
 
 				<div class="form-group">
@@ -166,11 +203,44 @@
 </div>
 <script>
   $(document).ready(function() {
-    $(':file').change(function() {
-      var file = this.files[0];
-      var name = file.name;
-      var size = file.size;
-      var type = file.type;
-    });
+		var type;
+		$(':file').change(function() {
+			var file = this.files[0];
+			var name = file.name;
+			var size = file.size;
+			type		 = file.type;
+			$('#file-name').html(name);
+		});
+		$(':submit').click(function() {
+			var author = $('#inputAuthor').val();
+			var quote = $('#inputQuote').val();
+			var description = $('#inputDescription').val();
+			var color = $('input[name="color"]:checked').val();
+			var image = $('#file-name').html();
+			if(	(author == '') |
+					(quote == '') |
+					(description == '')
+				) {
+				$('.error')
+					.show()
+					.html(	'<div class="message-container text-center warning">' +
+										'<p>Please, fill in all the text fields!</p>' +
+									'</div>')
+					.fadeOut(3000);
+				return false;
+			}
+			if(	(image == 'No file selected') |
+					(type != 'image/jpeg')
+				) {
+				$('.error').show();
+				$('.error').html(	'<div class="message-container text-center warning">' +
+														'<p>Please, choose one JPG file!</p>' +
+													'</div>');
+				$('.error').fadeOut(3000);
+				return false;
+			}	else {
+				return true;
+			}
+		});
   });
 </script>

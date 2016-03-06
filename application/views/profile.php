@@ -73,11 +73,6 @@
 						</li>
 					<?php endif ?>
           <?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
-						<li>
-							<a href="#">
-								<i class="material-icons link">edit</i>
-							</a>
-						</li>
             <li>
 							<a id="<?=$card->id_card;?>" href="<?=base_url();?>card/<?=$card->id_card;?>">
 								<i class="<?=$card->id_card;?> material-icons link delete">delete</i>

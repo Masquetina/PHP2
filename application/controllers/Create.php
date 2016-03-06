@@ -21,14 +21,16 @@ class Create extends MY_Controller {
 	    $config['file_name'] = $username . rand(1, 999999) . '.jpg';
 	    $this->load->library('upload', $config);
 	    $this->upload->do_upload();
-			if(!$this->upload->do_upload()) {
+			if($this->upload->do_upload()) {
 				$image = $config['file_name'];
 				$config['image_library']	= 'gd2';
 				$config['source_image']		= './custom/img/cards/' . $image;
 				$config['new_image']			= './custom/img/cards/' . $image;
-				$config['maintain_ratio']	= TRUE;
-				$config['width']					= 600;
-				$config['height']					= 338;
+				$config['maintain_ratio']	= FALSE;
+				$config['width']					= '600';
+				$config['height']					= '338';
+				//$config['x_axis'] 				= '0';
+				//$config['y_axis'] 				= '0';
 				$this->load->library('image_lib', $config);
 				$this->image_lib->crop();
 				$filename = $config['file_name'];
