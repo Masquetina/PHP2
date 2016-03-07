@@ -594,7 +594,7 @@ a.text-primary:hover {
 
 .panel.panel-default {
 	border-radius: 2px;
-	margin-top: 3em;
+	margin-top: 12px;
 	overlay: hidden;
 }
 
@@ -788,28 +788,61 @@ a.text-primary:hover {
 }
 
 .info-bar {
-	margin-top: -8px;
-  padding: 0px;
-	min-width: 280px;
+	position: absolute;
+	right: calc(0% + 16px);
+	bottom: calc(0% + 0px);
+	z-index: 999;
 }
 
 .info-bar li {
-	display: inline-block;
-  margin: 0 2px;
-	text-shadow:
-	0 1px 0 rgba(255, 255, 255, .15),
-	0 -1px 0 rgba(0, 0, 0, .25);
+	display: block;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .15), 0 -1px 0 rgba(0, 0, 0, .25);
 }
 
-.info-bar li i.link, .info-bar li small {
-	color: rgba(0,0,0,.4);
+.info-bar li i.link {
+	color: #efefef;
+	cursor: pointer;
 	padding: 4px;
+	margin-top: 6px;
 	border-radius: 100%;
 	vertical-align: middle;
+	font-size: 24px;
 }
 
 .info-bar li i.link:hover {
-	background-color: rgba(0,0,0,.1);
+	background-color: rgba(255,255,255,.2);
+}
+
+.unclicable {
+  cursor: default !important;
+}
+
+.unclicable:hover {
+  background-color: transparent !important;
+}
+
+.count {
+	color: rgba(0,0,0,.8) !important;
+	background: rgba(255,255,255,.6);
+	border-radius: 4px;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 2px;
+	displey: block;
+}
+
+.count:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 4px 0;
+border-color: #fff transparent;
+display: block;
+width: 0;
+top: 17px;
+right: 12px;
+opacity:.6;
 }
 
 @media screen and (max-width: 479px) {

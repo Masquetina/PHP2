@@ -44,6 +44,18 @@
           <div class="col-xs-12 col-md-6 col-lg-6">
             <div class="panel panel-default">
               <div class="panel-heading" <?=$card->color;?> >
+                <ul class="info-bar">
+                  <li>
+                    <a href="#">
+                      <i class="material-icons link">check</i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="material-icons link">close</i>
+                    </a>
+                  </li>
+                </ul>
                 <img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />
                 <small class="author"><?=$card->author;?></small>
                 <div class="info-block" <?=$card->color;?> >
@@ -60,18 +72,6 @@
                 </h2>
               </div>
             </div>
-            <ul class="info-bar">
-              <li>
-                <a href="#">
-                  <i class="material-icons link">check</i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="material-icons link">close</i>
-                </a>
-              </li>
-            </ul>
           </div>
         <?php endforeach ?>
       <?php endif ?>

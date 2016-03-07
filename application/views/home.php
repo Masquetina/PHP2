@@ -21,6 +21,29 @@
 							 title="<?=ucwords($card->username);?>">
 							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
 						</a>
+            <ul class="info-bar">
+            <?php if(!$this->session->userdata('validated') || $this->session->userdata('id_user') == ($card->id_user)) : ?>
+              <li>
+							  <p class="count"><?=$card->likes;?></p>
+						  </li>
+        			<li>
+        				<i class="unclicable material-icons link favorite">favorite</i>
+        			</li>
+            <?php endif ?>
+            <?php if($this->session->userdata('validated')) : ?>
+              <?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
+              <li>
+							  <p class="count"><?=$card->likes;?></p>
+						  </li>
+              <li>
+          		  <i class="material-icons link favorite">favorite</i>
+          		</li>
+      				<li>
+    						<i class="material-icons link">flag</i>
+      				</li>
+      			  <?php endif ?>
+            <?php endif ?>
+      			</ul>
 					</div>
 					<img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />
 					<small class="author"><?=$card->author;?></small>
@@ -38,30 +61,6 @@
 					</h2>
 				</div>
 			</div>
-			<ul class="info-bar">
-				<?php if($this->session->userdata('validated')) : ?>
-          <li>
-            <a href="#">
-    			    <i class="material-icons link favorite">favorite</i>
-            </a>
-    			  <small><?=$card->likes;?></small>
-    		  </li>
-          <?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
-					<li>
-						<a href="#">
-							<i class="material-icons link">flag</i>
-						</a>
-					</li>
-					<?php endif ?>
-          <?php else : ?>
-  				<li>
-            <a href="<?=base_url();?>login">
-  					  <i class="material-icons link favorite">favorite</i>
-            </a>
-  					<small><?=$card->likes;?></small>
-  				</li>
-				<?php endif ?>
-			</ul>
 		</div>
 	 <?php endforeach ?>
   <?php else : ?>

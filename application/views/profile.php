@@ -26,46 +26,54 @@
 						<a href="<?=base_url();?>profile/<?=$card->username;?>" title="<?=ucwords($user->username);?>">
 							<img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
 						</a>
-					</div>
-					<img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />
-					<small class="author"><?=$card->author;?></small>
-					<div class="info-block" <?=$card->color;?> >
-						<i class="material-icons icon">expand_more</i>
-						<div class="text">
-							<p class="text-left"><?=$card->info;?></p>
-						</div>
-					</div>
-				</div>
-				<div class="panel-body" <?=$card->color;?> >
-					<h2 class="text-right">
-						<i class="material-icons quotations">format_quote</i>
-						<?=$card->quote;?>
-					</h2>
-				</div>
-			</div>
-			<ul class="info-bar">
-				<li>
-					<i class="material-icons link favorite">favorite</i>
-					<small><?=$card->likes;?></small>
-				</li>
-				<?php if($this->session->userdata('validated')) : ?>
-					<?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
-						<li>
-							<a href="#">
-								<i class="material-icons link">flag</i>
-							</a>
-						</li>
-					<?php endif ?>
-          <?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
-            <li>
-							<a class="delete" id="<?=$card->id_card;?>">
-								<i class="material-icons link delete">delete</i>
-							</a>
-						</li>
-					<?php endif ?>
-				<?php endif ?>
-			</ul>
-		</div>
+            <ul class="info-bar">
+            <?php if(!$this->session->userdata('validated') || $this->session->userdata('id_user') == ($card->id_user)) : ?>
+              <li>
+                <p class="count"><?=$card->likes;?></p>
+              </li>
+              <li>
+                <i class="unclicable material-icons link favorite">favorite</i>
+              </li>
+            <?php endif ?>
+            <?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
+              <li>
+  							<a class="delete" id="<?=$card->id_card;?>">
+  								<i class="material-icons link delete">delete</i>
+  							</a>
+  						</li>
+  					<?php endif ?>
+            <?php if($this->session->userdata('validated')) : ?>
+              <?php if($this->session->userdata('id_user') != ($card->id_user)) : ?>
+              <li>
+                <p class="count"><?=$card->likes;?></p>
+              </li>
+              <li>
+                <i class="material-icons link favorite">favorite</i>
+              </li>
+              <li>
+                <i class="material-icons link">flag</i>
+              </li>
+              <?php endif ?>
+            <?php endif ?>
+            </ul>
+          </div>
+          <img class="img" src="<?=base_url();?>custom/img/cards/<?=$card->img;?>" />
+          <small class="author"><?=$card->author;?></small>
+          <div class="info-block" <?=$card->color;?> >
+            <i class="material-icons icon">expand_more</i>
+            <div class="text">
+              <p class="text-left"><?=$card->info;?></p>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body" <?=$card->color;?> >
+          <h2 class="text-right">
+            <i class="material-icons quotations">format_quote</i>
+            <?=$card->quote;?>
+          </h2>
+        </div>
+      </div>
+    </div>
 	  <?php endforeach ?>
   <?php else : ?>
     There is no cards.
@@ -111,7 +119,7 @@
         type: "GET",
         success: function() {
           // UBACITI NEKI MALI LOADER KOJII SE VRTI
-          $('.' + id).fadeOut(500);
+          $('.' + id).fadeOut(1000);
         }
       });
     });

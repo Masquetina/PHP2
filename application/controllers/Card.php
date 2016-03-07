@@ -13,7 +13,7 @@ class Card extends MY_Controller {
 			$this->load->model('cards');
   		$query = $this->cards->delete_card($id_card);
   		if(!$query) {
-				$warning = 'Error! Something is wrong.';
+				$warning = 'Error! Something went wrong.';
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/' . $username);
 			}
