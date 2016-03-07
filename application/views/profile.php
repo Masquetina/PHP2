@@ -110,7 +110,8 @@
         url: base_url + 'card/' + id,
         type: "GET",
         success: function() {
-          $('.' + id).fadeOut(250);
+          // UBACITI NEKI MALI LOADER KOJII SE VRTI
+          $('.' + id).fadeOut(500);
         }
       });
     });

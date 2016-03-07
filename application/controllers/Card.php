@@ -12,6 +12,11 @@ class Card extends MY_Controller {
 			$id_card = $this->uri->segment(2);
 			$this->load->model('cards');
   		$query = $this->cards->delete_card($id_card);
+  		if(!$query) {
+				$warning = 'Error! Something is wrong.';
+				$this->session->set_flashdata('warning', $warning);
+				redirect('profile/' . $username);
+			}
 		} else {
 			redirect('/');
 		}
