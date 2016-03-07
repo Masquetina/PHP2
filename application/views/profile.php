@@ -17,24 +17,8 @@
   <div class="clearfix"></div>
 </div>
 <div class="container">
-	<?php $counter = 0; if(isset($cards)) : ?>
-    <?php foreach($cards as $card) : ?>
-      <?php
-      $delete = $card->delete;
-      if($delete == 0) {
-        $counter++;
-      }
-      ?>
-    <?php endforeach ?>
-    <?php
-    if($counter == 0) {
-    ?>
-      <h2 class="text-center">There's no Quote Cards</h2>
-    <?php
-    } else {
-    ?>
+	<?php if(isset($cards)) : ?>
   	<?php foreach($cards as $card) : ?>
-    <?php if($card->delete == 0) : ?>
 		<div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
@@ -74,22 +58,23 @@
 					<?php endif ?>
           <?php if($this->session->userdata('id_user') == ($card->id_user)) : ?>
             <li>
-							<a id="<?=$card->id_card;?>" href="<?=base_url();?>card/<?=$card->id_card;?>">
-								<i class="<?=$card->id_card;?> material-icons link delete">delete</i>
+							<a class="delete" id="<?=$card->id_card;?>">
+								<i class="material-icons link delete">delete</i>
 							</a>
 						</li>
 					<?php endif ?>
 				<?php endif ?>
 			</ul>
 		</div>
-    <?php endif ?>
 	  <?php endforeach ?>
-    <?php } ?>
+  <?php else : ?>
+    There is no cards.
   <?php endif ?>
 </div>
 <script>
   var base_url = '<?php print base_url();?>';
   var username = '<?php print $this->session->userdata('username');?>';
+
   $(document).ready(function() {
     $(':file').hover(function() {
       $(this).attr('title',' ');
@@ -102,12 +87,32 @@
       var name = file.name;
       var size = file.size;
       var type = file.type;
-      alert(file + " " + name + " " + size + " " + type);
-      // PROVERA
+      //alert(file + " " + name + " " + size + " " + type);
+      // OVDE TREBA DA URADIM PROVERU PRVO
 
+      $.ajax({
+        url: base_url + 'settings/image/' + username,
+        type: "POST",
+        data: file,
+        async: false,
+        success: function() {
+          alert(file)
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+      });
+    });
 
-      // OVO TREBA DOVRŠITI !!!
-      $.POST(base_url + 'settings/image' + username);
+    $('.delete').click(function() {
+      var id = $(this).attr('id');
+      $.ajax({
+        url: base_url + 'card/' + id,
+        type: "GET",
+        success: function() {
+          $('.' + id).fadeOut(250);
+        }
+      });
     });
   });
 </script>

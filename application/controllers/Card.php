@@ -12,15 +12,6 @@ class Card extends MY_Controller {
 			$id_card = $this->uri->segment(2);
 			$this->load->model('cards');
   		$query = $this->cards->delete_card($id_card);
-  		if($query) {
-				$message = 'You just deleted a card.';
-				$this->session->set_flashdata('message', $message);
-				redirect('profile/' . $username);
-			} else {
-				$warning = 'Can\'t perform this action.';
-				$this->session->set_flashdata('warning', $warning);
-				redirect('/');
-			}
 		} else {
 			redirect('/');
 		}

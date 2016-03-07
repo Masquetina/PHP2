@@ -83,7 +83,7 @@
         		'name'    => 'color',
 						'id'      => 'brown',
         		'value'   => '#3e2723',
-        		'checked' => TRUE,
+        		'checked' => FALSE,
 					);
 					echo form_radio($data);
 
@@ -223,22 +223,32 @@
 				) {
 				$('.error')
 					.show()
-					.html(	'<div class="message-container text-center warning">' +
-										'<p>Please, fill in all the text fields!</p>' +
-									'</div>')
+					.html('<div class="message-container text-center warning">' +
+									'<p>Please, fill all the text fields!</p>' +
+								'</div>')
+					.fadeOut(3000);
+				return false;
+			}
+			if(!color) {
+				$('.error')
+					.show()
+					.html('<div class="message-container text-center warning">' +
+									'<p>Please, choose a color!</p>' +
+								'</div>')
 					.fadeOut(3000);
 				return false;
 			}
 			if(	(image == 'No file selected') |
 					(type != 'image/jpeg')
 				) {
-				$('.error').show();
-				$('.error').html(	'<div class="message-container text-center warning">' +
-														'<p>Please, choose one JPG file!</p>' +
-													'</div>');
-				$('.error').fadeOut(3000);
+				$('.error')
+					.show()
+					.html('<div class="message-container text-center warning">' +
+									'<p>Please, choose a JPG file!</p>' +
+								'</div>')
+					.fadeOut(3000);
 				return false;
-			}	else {
+			} else {
 				return true;
 			}
 		});
