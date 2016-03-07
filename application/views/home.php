@@ -13,7 +13,7 @@
 <div class="container">
 	<?php if(isset($cards)) : ?>
     <?php foreach($cards as $card) : ?>
-		<div class="col-xs-12 col-md-6 col-lg-6">
+		<div class="col-xs-12 col-md-6 col-lg-4">
 			<div class="panel panel-default">
 				<div class="panel-heading" <?=$card->color;?> >
 					<div class="interactions-group">
