@@ -63,4 +63,32 @@ class Cards extends CI_Model {
       return FALSE;
     }
   }
+
+  public function flag_card($id_card) {
+    $data = array(
+     'flag' => 1,
+    );
+    $this->db->where('id_card', $id_card);
+    $query = $this->db->update('cards', $data);
+    if($this->db->affected_rows() != 0) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+
+  public function create_flag($id_card, $id_user_author) {
+    $id_user_flager = $this->session->userdata('id_user');
+    $data = array(
+      'id_card'        => $id_card,
+      'id_user_author' => $id_user_author,
+      'id_user_flager' => $id_user_flager
+    );
+    $query = $this->db->insert('flags', $data);
+    if($query) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
 }

@@ -23,8 +23,6 @@ class Administration extends CI_Model {
     $this->db->from('cards');
     $this->db->where('cards.delete = 0');
     $this->db->where('cards.flag = 1');
-    $this->db->join('users', 'cards.id_user = users.id_user');
-    $this->db->join('flags', 'users.id_user = flags.id_user_author');
     $query = $this->db->get();
     if($query->num_rows() != 0) {
       return $query->result();
