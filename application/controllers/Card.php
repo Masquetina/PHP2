@@ -11,8 +11,8 @@ class Card extends MY_Controller {
 			$username = $this->session->userdata('username');
 			$id_card = $this->uri->segment(3);
 			$this->load->model('cards');
-  		$query = $this->cards->delete_card($id_card);
-  		if(!$query) {
+			$query = $this->cards->delete_card($id_card);
+			if(!$query) {
 				$warning = 'Error! Something went wrong.';
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/' . $username);
@@ -23,13 +23,38 @@ class Card extends MY_Controller {
 	}
 
 	public function flag() {
-		$id_card = $this->uri->segment(3);
-		$id_user_author = $this->uri->segment(4);
-		$this->load->model('cards');
-  	$query = $this->cards->flag_card($id_card);
-		if($query) {
+
+			$id_card = $this->uri->segment(3);
+			$id_user_author = $this->uri->segment(4);
 			$this->load->model('cards');
-			$query = $this->cards->create_flag($id_card, $id_user_author);
-		}
+			$query = $this->cards->flag_card($id_card);
+			if($query) {
+				$this->load->model('cards');
+				$query = $this->cards->create_flag($id_card, $id_user_author);
+			}
+	}
+
+	public function ban() {
+
+			$id_card = $this->uri->segment(3);
+			$id_user_author = $this->uri->segment(4);
+			$id_user_flager = $this->uri->segment(5);
+			$this->load->model('cards');
+			$query = $this->cards->ban_card();
+			if($query) {
+
+			}
+	}
+
+	public function unflag() {
+
+			$id_card = $this->uri->segment(3);
+			$id_user_author = $this->uri->segment(4);
+			$id_user_flager = $this->uri->segment(5);
+			$this->load->model('cards');
+			$query = $this->cards->unflag_card();
+			if($query) {
+
+			}
 	}
 }

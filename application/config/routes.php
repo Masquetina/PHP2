@@ -56,4 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['profile/:any'] = 'profile';
 $route['card/delete/:any'] = 'card/delete';
 $route['card/flag/:any/:any'] = 'card/flag';
+$route['card/ban/:any/:any/:any'] = 'card/ban';
+$route['card/unflag/:any/:any/:any'] = 'card/unflag';
 $route['settings/image/:any'] = 'settings/image';

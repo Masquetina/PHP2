@@ -47,16 +47,14 @@
             		  <i class="material-icons link favorite">favorite</i>
             		</li>
                 <?php if( $this->session->userdata('id_rolle') == 1 ) : ?>
-        				<li>
-                  <a class="flag" for="<?=$card->id_card;?>">
-    								<i class="material-icons link">flag</i>
-    							</a>
+        				<li class="flag" for="<?=$card->id_card;?>" author="<?=$card->id_user;?>">
+    							<i class="material-icons link">flag</i>
         				</li>
         			  <?php endif ?>
               <?php endif ?>
               <?php if( $this->session->userdata('id_rolle') == 1 &&
                         $this->session->userdata('id_user') == ($card->id_user) ) : ?>
-                <li>
+                <li class="delete" for="<?=$card->id_card;?>">
             		  <i class="material-icons link favorite">delete</i>
             		</li>
               <?php endif ?>
@@ -87,8 +85,6 @@
 <script>
   var base_url = '<?php print base_url();?>';
   var username = '<?php print $this->session->userdata('username');?>';
-  var author   = '<?php print $user->id_user?>';
-
   $(document).ready(function() {
     $(':file').hover(function() {
       $(this).attr('title',' ');
@@ -116,23 +112,23 @@
     });
 
     $('.delete').click(function() {
-      var id = $(this).attr('for');
+      var id_card = $(this).attr('for');
       $.ajax({
-        url: base_url + 'card/delete/' + id,
+        url: base_url + 'card/delete/' + id_card,
         type: "GET",
         success: function() {
           // UBACITI NEKI MALI LOADER KOJII SE VRTI
-          $('.' + id).fadeOut(1000);
+          $('.' + id_card).fadeOut(1000);
         }
       });
     });
     $('.flag').click(function() {
-      var id = $(this).attr('for');
+      var id_card = $(this).attr('for');
+      var id_user_author = $(this).attr('author');
       $.ajax({
-        url: base_url + 'card/flag/' + id + '/' + author,
+        url: base_url + 'card/flag/' + id_card + '/' + id_user_author,
         type: "GET",
         success: function() {
-          alert('blabla');
         }
       });
     });
