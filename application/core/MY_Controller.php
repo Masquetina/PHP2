@@ -22,12 +22,4 @@ class MY_Controller extends CI_Controller {
     $this->load->view($view, $data);
     $this->load->view('scripts');
   }
-
-  public function load_dashboard($view, $data) {
-    $this->session;
-    $this->load->view('head', $data);
-    $this->load->view('flashdata');
-    $this->load->view($view, $data);
-    $this->load->view('scripts');
-  }
 }

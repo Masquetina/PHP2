@@ -1,6 +1,6 @@
 	<script>
 		$(document).ready(function() {
-			$('.message-container').fadeOut(3000,
+			$('.message-container').delay(3000).fadeOut(1,
 				function() {
 					$(this).remove();
 				});

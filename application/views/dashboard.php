@@ -1,27 +1,24 @@
 <div class="line"></div>
-<div class="container-fluid">
-  <div class="col-xs-2 col-md-2 col-lg-2">
+<div class="container">
+  <div class="col-xs-12 col-md-0 col-lg-0">
     <ul class="nav-tabs">
-      <li>
-        <a href="#"></a>
-      </li>
       <li role="presentation" class="active">
         <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
-          Cards
+            <i class="material-icons link">close</i>
         </a>
       </li>
       <li role="presentation">
         <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
-          Users
+            <i class="material-icons link">close</i>
         </a>
       </li>
     </ul>
   </div>
-  <div class="tab-content col-xs-10 col-md-10 col-lg-10">
+  <div class="tab-content col-xs-12 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
     <div role="tabpanel" class="tab-pane fade in" id="users">
       <?php if(isset($users)) : ?>
         <?php foreach($users as $user) : ?>
-          <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="col-xs-12 col-md-6 col-lg-6">
             <div class="panel panel-default panel-user">
               <a href="<?=base_url();?>profile/<?=$user->username;?>"
                 title="<?=ucwords($user->username);?>">
@@ -41,7 +38,7 @@
     <div role="tabpanel" class="tab-pane fade active" id="cards">
       <?php if(isset($cards)) : ?>
         <?php foreach($cards as $card) : ?>
-          <div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-4">
+          <div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
             <div class="panel panel-default">
               <div class="panel-heading" <?=$card->color;?> >
                 <ul class="info-bar">
