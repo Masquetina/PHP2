@@ -1,4 +1,5 @@
 <div class="clearfix"></div>
+<div class="message"></div>
 <div class="container">
   <div class="profile col-xs-12 col-md-4 col-lg-4">
     <div class="multipart text-center">
@@ -115,7 +116,7 @@
       var id_card = $(this).attr('for');
       $.ajax({
         url: base_url + 'card/delete/' + id_card,
-        type: "GET",
+        type: "POST",
         success: function() {
           $('.' + id_card).fadeOut(1);
           $('.message')
@@ -133,7 +134,7 @@
       var id_user_author = $(this).attr('author');
       $.ajax({
         url: base_url + 'card/flag/' + id_card + '/' + id_user_author,
-        type: "GET",
+        type: "POST",
         success: function() {
           $('.message')
   					.show()

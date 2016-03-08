@@ -17,13 +17,12 @@ class Card extends MY_Controller {
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/' . $username);
 			}
-		} else {
-			redirect('/');
 		}
 	}
 
 	public function flag() {
-
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
 			$id_card = $this->uri->segment(3);
 			$id_user_author = $this->uri->segment(4);
 			$this->load->model('cards');
@@ -32,10 +31,12 @@ class Card extends MY_Controller {
 				$this->load->model('cards');
 				$query = $this->cards->create_flag($id_card, $id_user_author);
 			}
+		}
 	}
 
 	public function ban() {
-
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
 			$id_card = $this->uri->segment(3);
 			$id_user_author = $this->uri->segment(4);
 			$id_user_flager = $this->uri->segment(5);
@@ -44,10 +45,12 @@ class Card extends MY_Controller {
 			if($query) {
 
 			}
+		}
 	}
 
 	public function unflag() {
-
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
 			$id_card = $this->uri->segment(3);
 			$id_user_author = $this->uri->segment(4);
 			$id_user_flager = $this->uri->segment(5);
@@ -56,5 +59,6 @@ class Card extends MY_Controller {
 			if($query) {
 
 			}
+		}
 	}
 }

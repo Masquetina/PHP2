@@ -84,7 +84,7 @@
       var id_card = $(this).attr('for');
       $.ajax({
         url: base_url + 'card/delete/' + id_card,
-        type: "GET",
+        type: "POST",
         success: function() {
           $('.' + id_card).fadeOut(1);
           $('.message')
@@ -102,7 +102,7 @@
       var id_user_author = $(this).attr('author');
       $.ajax({
         url: base_url + 'card/flag/' + id_card + '/' + id_user_author,
-        type: "GET",
+        type: "POST",
         success: function() {
           $('.message')
   					.show()
