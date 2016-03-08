@@ -117,8 +117,14 @@
         url: base_url + 'card/delete/' + id_card,
         type: "GET",
         success: function() {
-          // UBACITI NEKI MALI LOADER KOJII SE VRTI
-          $('.' + id_card).fadeOut(1000);
+          $('.' + id_card).fadeOut(1);
+          $('.message')
+  					.show()
+  					.html('<div class="message-container text-center info">' +
+  									'<p>You deleted a card.</p>' +
+  								'</div>')
+            .delay(3000)
+            .fadeOut(1);
         }
       });
     });
@@ -129,6 +135,13 @@
         url: base_url + 'card/flag/' + id_card + '/' + id_user_author,
         type: "GET",
         success: function() {
+          $('.message')
+  					.show()
+  					.html('<div class="message-container text-center info">' +
+  									'<p>You flaged a card. Admin is going to review it.</p>' +
+  								'</div>')
+  					.delay(3000)
+            .fadeOut(1);
         }
       });
     });

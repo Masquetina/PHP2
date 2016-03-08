@@ -271,10 +271,10 @@ a:focus .material-icons {
 .message-container {
 	width: 100%;
 	height: 56px;
+  position: fixed;
 	top: 0px;
-	position: fixed;
 	border-top: 4px solid #263238;
-	z-index: 999;
+	z-index: 4;
 }
 
 .message-container.info {
@@ -791,7 +791,7 @@ a.text-primary:hover {
 	position: absolute;
 	right: calc(0% + 16px);
 	bottom: calc(0% + 0px);
-	z-index: 999;
+	z-index: 3;
 }
 
 .info-bar li {
