@@ -12,7 +12,7 @@
   </li>
 </ul>
 <div class="container">
-  <div class="tab-content col-xs-12 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0">
+  <div class="tab-content col-xs-12 col-md-12 col-lg-12">
     <div role="tabpanel" class="tab-pane fade in" id="users">
       <?php if(isset($users)) : ?>
         <?php foreach($users as $user) : ?>
