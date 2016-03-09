@@ -120,14 +120,15 @@ $(document).ready(function() {
       url: base_url + 'card/delete/' + id_card,
       type: "POST",
       success: function() {
-        $('.' + id_card).fadeOut(1);
+        $('.' + id_card)
+          .fadeOut(3000);
         $('.message')
-        .show()
-        .html('<div class="message-container text-center info">' +
-        '<p>You deleted a card.</p>' +
-        '</div>')
-        .delay(3000)
-        .fadeOut(1);
+          .show()
+          .html('<div class="message-container text-center info">' +
+                  '<p>Deleting a Card...</p>' +
+                '</div>')
+          .delay(3000)
+          .fadeOut(1);
       }
     });
   });
@@ -139,12 +140,12 @@ $(document).ready(function() {
       type: "POST",
       success: function() {
         $('.message')
-        .show()
-        .html('<div class="message-container text-center info">' +
-        '<p>You flaged a card. Admin is going to review it.</p>' +
-        '</div>')
-        .delay(3000)
-        .fadeOut(1);
+          .show()
+          .html('<div class="message-container text-center info">' +
+                  '<p>You flaged a card. Admin is going to review it.</p>' +
+                '</div>')
+          .delay(3000)
+          .fadeOut(1);
       }
     });
   });
