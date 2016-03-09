@@ -247,6 +247,8 @@ header ul li.links img{
 }
 
 header ul li img.logo{
+  /*position: absolute;
+  left: calc(50% - 38px);*/
 	width: 76px;
 	border-radius: 0%;
 	margin: -2px 0 0 0;
@@ -272,7 +274,7 @@ header ul li img.logo{
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
 	.links .btn {
 		border-radius: 100%;
 		width: 36px;
@@ -877,8 +879,8 @@ span#file-name {
   position: relative;
   display: block;
   margin: 2px 0;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #263238;
   -webkit-box-shadow:
   0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -894,11 +896,11 @@ span#file-name {
   color: #fcfcfc;
   position: relative;
   display: block;
-  padding: 8px 72px;
+  padding: 8px 56px;
   margin: 0 0 0 0;
   font-size: 18px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   text-transform: uppercase;
   border: none;
 }
