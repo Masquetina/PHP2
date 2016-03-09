@@ -37,9 +37,9 @@
                 <?php if( $this->session->userdata('id_rolle') == 1 &&
                 $this->session->userdata('id_user') != ($card->id_user) ) : ?>
                 <li>
-                  <p class="count"><?=$card->likes;?></p>
+                  <p id="count-<?=$card->id_card;?>" class="count"><?=$card->likes;?></p>
                 </li>
-                <li>
+                <li class="like" for="<?=$card->id_card;?>">
                   <i class="material-icons link favorite">favorite</i>
                 </li>
                 <?php if( $this->session->userdata('id_rolle') == 1 ) : ?>
@@ -82,6 +82,18 @@
 <script>
 var base_url = '<?php print base_url();?>';
 $(document).ready(function() {
+  $('.like').click(function() {
+    var id_card = $(this).attr('for');
+    $.ajax({
+      url: base_url + 'card/like/' + id_card,
+      type: "POST",
+      success: function() {
+        var count = $('#count-' + id_card).html();
+        count = parseInt(count);
+        $('#count-' + id_card).html(count + 1);
+      }
+    });
+  });
   $('.delete').click(function() {
     var id_card = $(this).attr('for');
     $.ajax({
@@ -90,12 +102,11 @@ $(document).ready(function() {
       success: function() {
         $('.' + id_card).fadeOut(1);
         $('.message')
-        .show()
-        .html('<div class="message-container text-center info">' +
-        '<p>You deleted a card.</p>' +
-        '</div>')
-        .delay(3000)
-        .fadeOut(1);
+          .html('<div class="message-container text-center info">' +
+                  '<p>You deleted a card.</p>' +
+                '</div>')
+          .delay(3000)
+          .fadeOut(1);
       }
     });
   });
@@ -107,12 +118,11 @@ $(document).ready(function() {
       type: "POST",
       success: function() {
         $('.message')
-        .show()
-        .html('<div class="message-container text-center info">' +
-        '<p>You flaged a card. Admin is going to review it.</p>' +
-        '</div>')
-        .delay(3000)
-        .fadeOut(1);
+          .html('<div class="message-container text-center info">' +
+                  '<p>You flaged a card. Admin is going to review it.</p>' +
+                '</div>')
+          .delay(3000)
+          .fadeOut(1);
       }
     });
   });

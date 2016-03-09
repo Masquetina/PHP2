@@ -49,6 +49,31 @@ class Cards extends CI_Model {
     }
   }
 
+  public function like_card($id_card) {
+    $this->db->where('id_card', $id_card);
+    $this->db->set('likes', 'likes + 1', FALSE);
+    $query = $this->db->update('cards');
+    if($query) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+
+  public function create_like($id_card, $id_user) {
+    $id_user_flager = $this->session->userdata('id_user');
+    $data = array(
+      'id_card' => $id_card,
+      'id_user' => $id_user
+    );
+    $query = $this->db->insert('likes', $data);
+    if($query) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+
   public function delete_card($id_card) {
     $data = array(
      'delete' => 1,

@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['profile/:any'] = 'profile';
+$route['card/like/:any'] = 'card/like';
 $route['card/delete/:any'] = 'card/delete';
 $route['card/flag/:any/:any'] = 'card/flag';
 $route['card/ban/:any/:any/:any'] = 'card/ban';

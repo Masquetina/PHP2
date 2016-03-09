@@ -6,8 +6,23 @@ class Card extends MY_Controller {
 		parent::__construct();
 	}
 
+	public function like() {
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
+			$id_user = $this->session->userdata('id_user');
+			$id_card = $this->uri->segment(3);
+			$this->load->model('cards');
+			$query = $this->cards->like_card($id_card);
+			if($query) {
+				$this->load->model('cards');
+				$query = $this->cards->create_like($id_card, $id_user);
+			}
+		}
+	}
+
 	public function delete() {
-		if($this->session->userdata('validated')) {
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
 			$username = $this->session->userdata('username');
 			$id_card = $this->uri->segment(3);
 			$this->load->model('cards');
