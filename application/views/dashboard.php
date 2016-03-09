@@ -1,19 +1,17 @@
 <div class="line"></div>
+  <ul class="nav-tabs">
+    <li role="presentation" class="active">
+      <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
+          Cards
+      </a>
+    </li>
+    <li role="presentation">
+      <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
+          Users
+      </a>
+    </li>
+  </ul>
 <div class="container">
-  <div class="col-xs-12 col-md-0 col-lg-0">
-    <ul class="nav-tabs">
-      <li role="presentation" class="active">
-        <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
-            <i class="material-icons link">close</i>
-        </a>
-      </li>
-      <li role="presentation">
-        <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
-            <i class="material-icons link">close</i>
-        </a>
-      </li>
-    </ul>
-  </div>
   <div class="tab-content col-xs-12 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
     <div role="tabpanel" class="tab-pane fade in" id="users">
       <?php if(isset($users)) : ?>
