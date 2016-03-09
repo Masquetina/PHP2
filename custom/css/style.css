@@ -247,8 +247,6 @@ header ul li.links img{
 }
 
 header ul li img.logo{
-  /*position: absolute;
-  left: calc(50% - 38px);*/
 	width: 76px;
 	border-radius: 0%;
 	margin: -2px 0 0 0;
@@ -896,7 +894,7 @@ span#file-name {
   color: #fcfcfc;
   position: relative;
   display: block;
-  padding: 8px 56px;
+  padding: 8px 32px;
   margin: 0 0 0 0;
   font-size: 18px;
   border-top-right-radius: 0;
@@ -924,12 +922,12 @@ span#file-name {
 .nav-tabs li.active a:hover,
 .nav-tabs li.active a:focus {
   color: #fcfcfc;
-  background-color: #263238;
+  background-color: #fcc;
   border: none;
   cursor: default;
 }
 
-@media screen and (max-width: 990px) {
+/*@media screen and (max-width: 990px) {*/
   .tab-content {
     margin-top: 48px;
   }
@@ -938,7 +936,7 @@ span#file-name {
   }
   .nav-tabs {
     width: 100%;
-    background-color: #263238;
+    background-color: ;
   }
   .nav-tabs li {
     display: inline-block;
@@ -963,7 +961,7 @@ span#file-name {
   .nav-tabs li.active,
   .nav-tabs li:hover,
   .nav-tabs li:focus {
-    background-color: #263238;
+    background-color: #fcc;
     text-decoration: none;
     opacity: .8;
   }
@@ -972,9 +970,9 @@ span#file-name {
   .nav-tabs li a:focus {
     border: none;
     text-decoration: none;
-    background-color: #263238;
+    background-color: #fcc;
   }
-}
+/*}*/
 /*
 ----------MODAL
 */

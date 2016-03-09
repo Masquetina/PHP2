@@ -1,18 +1,18 @@
 <div class="line"></div>
-  <ul class="nav-tabs">
-    <li role="presentation" class="active">
-      <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
-          Cards
-      </a>
-    </li>
-    <li role="presentation">
-      <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
-          Users
-      </a>
-    </li>
-  </ul>
+<ul class="nav-tabs">
+  <li role="presentation" class="active">
+    <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
+      Cards
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
+      Users
+    </a>
+  </li>
+</ul>
 <div class="container">
-  <div class="tab-content col-xs-12 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+  <div class="tab-content col-xs-12 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0">
     <div role="tabpanel" class="tab-pane fade in" id="users">
       <?php if(isset($users)) : ?>
         <?php foreach($users as $user) : ?>
