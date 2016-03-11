@@ -12,46 +12,39 @@ class Signup extends MY_Controller {
 		$this->load_forms('signup', $data);
 
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		if ($ispost) {
+		if($ispost) {
 			$this->form_validation->set_rules(
-					'username',
-					'Username',
-					'trim|required|min_length[3]|max_length[20]|alpha|is_unique[users.username]'
+				'username',
+				'Username',
+				'trim|required|strtolower|min_length[3]|max_length[20]|alpha|is_unique[users.username]'
 			);
-
 			$this->form_validation->set_rules(
-					'email',
-					'Email',
-					'trim|strtolower|required|valid_email|max_length[30]|is_unique[users.email]'
+				'email',
+				'Email',
+				'trim|required|valid_email|max_length[30]|is_unique[users.email]'
 			);
-
 			$this->form_validation->set_rules(
-					'password',
-					'Password',
-					'trim|required|min_length[10]|max_length[20]'
+				'password',
+				'Password',
+				'trim|required|min_length[8]|max_length[20]'
 			);
-
 			$this->form_validation->set_rules(
-					'repeatPassword',
-					'Password confirmation',
-					'trim|required|matches[password]'
+				'repeatPassword',
+				'Password confirmation',
+				'trim|required|matches[password]'
 			);
-
-			$this->form_validation->set_error_delimiters('<div class="text-primary">', '</div>');
-
+			//$this->form_validation->set_error_delimiters('<div class="text-primary">', '</div>');
 			if (!$this->form_validation->run()) {
-        $this->load->view('signup');
-      } else {
+      	$this->load->view('signup');
+    	} else {
 				$this->load->model('validate');
 				$query = $this->validate->signup();
 				if($query) {
 					$message = 'The account is successfully created. You can log in now.';
-		      $this->session->set_flashdata('message', $message);
+	      	$this->session->set_flashdata('message', $message);
 					redirect('login');
 				}
-      }
-		} else {
-			$this->load_forms('signup', $data);
+    	}
 		}
 	}
 }

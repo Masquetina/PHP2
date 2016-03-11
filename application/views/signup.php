@@ -24,7 +24,7 @@
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
-					echo form_error('required');
+
 					$value = $this->input->post('username');
 					echo form_input($data, set_value('username'));
 
@@ -47,7 +47,7 @@
 						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('email');
-					echo form_input($data, $value);
+					echo form_input($data, set_value('email'));
 
 					$label_text= 'Email';
 					$id= 'inputEmail';
@@ -110,6 +110,7 @@
 					?>
 				</div>
 				<?php
+				echo validation_errors();
 				echo form_fieldset_close();
 				echo form_close();
 				?>

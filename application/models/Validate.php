@@ -7,8 +7,8 @@ class Validate extends CI_Model {
   }
 
   public function login() { // DODATI METODE ZA SVA MALA SLOVA & md5
-    $this->db->where('email', trim(strtolower(addslashes($this->input->post('email')))));
-    $this->db->where('password', trim(strtolower(md5($this->input->post('password')))));
+    $this->db->where('email', trim($this->input->post('email')));
+    $this->db->where('password', trim(md5($this->input->post('password'))));
     $query = $this->db->get('users');
     if($query->num_rows() == 1) {
       $row = $query->row();
@@ -37,9 +37,9 @@ class Validate extends CI_Model {
   }
 
   public function signup() {
-    $username = trim(strtolower(addslashes($this->input->post('username'))));
-    $email = trim(addslashes($this->input->post('email')));
-    $password = trim(strtolower(md5($this->input->post('password'))));
+    $username = trim(strtolower($this->input->post('username')));
+    $email = trim($this->input->post('email'));
+    $password = trim(md5($this->input->post('password')));
     $data = array(
       'username' => $username,
       'email'    => $email,
