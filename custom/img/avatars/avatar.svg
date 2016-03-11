@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg4776"
+   viewBox="0 0 320 320"
+   height="320"
+   width="320"
+   inkscape:version="0.91 r"
+   sodipodi:docname="avatar.svg"
+   inkscape:export-filename="/home/masquetina/PHP2/public_html/custom/img/avatars/avatar.jpg"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="160"
+     inkscape:cy="160"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4776" />
+  <defs
+     id="defs4778" />
+  <metadata
+     id="metadata4781">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="opacity:0.98999999;fill:#fffaff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4135"
+     width="320"
+     height="320"
+     x="0"
+     y="0"
+     inkscape:export-filename="/home/masquetina/PHP2/public_html/custom/img/avatars/avatar.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <g
+     transform="matrix(3.125,0,0,3.125,60,-3056.7569)"
+     id="layer1"
+     style="fill:#cccccc;fill-opacity:1">
+    <path
+       style="opacity:1;fill:#cccccc;fill-opacity:1"
+       d="m 59.428571,1006.3622 -13.714331,0 -9.142811,18.4 0,27.6 27.428571,0 0,-27.6 -13.257143,0 z m -36.571428,0 -13.714286,0 -9.142857,18.4 0,27.6 27.428571,0 0,-27.6 -13.714331,0 z"
+       id="path15163-47-7"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

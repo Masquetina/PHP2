@@ -2,7 +2,7 @@
 <div class="message"></div>
 <div class="content">
   <div class="container">
-    <div class="profile col-xs-12 col-md-4 col-lg-4">
+    <div class="profile col-xs-12 col-md-12 col-lg-12">
       <div class="multipart text-center">
         <img src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
         <?php if($this->session->userdata('id_user') == $user->id_user) : ?>

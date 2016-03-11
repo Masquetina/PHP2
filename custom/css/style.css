@@ -358,7 +358,6 @@ header ul li img.logo{
 */
 
 .profile img {
-  clear: both;
   display: block;
   padding: 0;
   margin: 0 auto;
@@ -380,7 +379,7 @@ header ul li img.logo{
     position: relative;
     display: block;
     padding: 0;
-    margin: 80px auto 0 auto;
+    margin: 64px auto 0 auto;
     width: 160px;
     height: 160px;
     border-radius: 100%;

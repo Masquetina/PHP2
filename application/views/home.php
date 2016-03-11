@@ -120,6 +120,7 @@ $(document).ready(function() {
       type: "POST",
       success: function() {
         $('.message')
+          .show()
           .html('<div class="message-container text-center info">' +
                   '<p>You flaged a card. Admin is going to review it.</p>' +
                 '</div>')
