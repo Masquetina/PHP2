@@ -6,8 +6,8 @@ class Validate extends CI_Model {
     parent::__construct();
   }
 
-  public function login() { // DODATI METODE ZA SVA MALA SLOVA & md5
-    $this->db->where('email', trim($this->input->post('email')));
+  public function login() {
+    $this->db->where('email', trim(strtolower($this->input->post('email'))));
     $this->db->where('password', trim(md5($this->input->post('password'))));
     $query = $this->db->get('users');
     if($query->num_rows() == 1) {

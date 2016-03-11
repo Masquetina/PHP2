@@ -7,7 +7,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body text">
 				<?php
-				$action = "signup";
+				$action = "signup/validate";
 				$attributes = array(
 					'class' => 'form-horizontal'
 				);
@@ -27,6 +27,10 @@
 
 					$value = $this->input->post('username');
 					echo form_input($data, set_value('username'));
+					echo form_error(
+					'username',
+					'<span class="text-primary pull-right text-right error">',
+					'</span>');
 
 					$label_text= 'Username';
 					$id= 'inputUsername';
@@ -48,6 +52,10 @@
 					);
 					$value = $this->input->post('email');
 					echo form_input($data, set_value('email'));
+					echo form_error(
+					'email',
+					'<span class="text-primary pull-right text-right error">',
+					'</span>');
 
 					$label_text= 'Email';
 					$id= 'inputEmail';
@@ -69,6 +77,10 @@
 					);
 					$value = $this->input->post('password');
 					echo form_password($data, $value);
+					echo form_error(
+					'password',
+					'<span class="text-primary pull-right text-right error">',
+					'</span>');
 
 					$label_text= 'Password';
 					$id= 'inputPassword';
@@ -89,6 +101,10 @@
 						'class' 		=> 'form-control'
 					);
 					echo form_password($data, $value);
+					echo form_error(
+					'repeatPassword',
+					'<span class="text-primary pull-right text-right error">',
+					'</span>');
 
 					$label_text= 'Repeat password';
 					$id= 'repeatPassword';
@@ -110,7 +126,6 @@
 					?>
 				</div>
 				<?php
-				echo validation_errors();
 				echo form_fieldset_close();
 				echo form_close();
 				?>
