@@ -16,7 +16,7 @@
     <div role="tabpanel" class="tab-pane fade in" id="users">
       <?php if(isset($users)) : ?>
         <?php foreach($users as $user) : ?>
-          <div class="col-xs-12 col-md-6 col-lg-6">
+          <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="panel panel-default panel-user">
               <a href="<?=base_url();?>profile/<?=$user->username;?>"
                 title="<?=ucwords($user->username);?>">
@@ -36,7 +36,7 @@
     <div role="tabpanel" class="tab-pane fade active" id="cards">
       <?php if(isset($cards)) : ?>
         <?php foreach($cards as $card) : ?>
-          <div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-6">
+          <div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-4">
             <div class="panel panel-default">
               <div class="panel-heading" <?=$card->color;?> >
                 <ul class="info-bar">

@@ -1,5 +1,5 @@
 <body>
-	<header>
+	<header class="no-jump">
 	<?php if($this->session->flashdata('warning')) : ?>
 		<div class="message-container text-center warning">
 			<p><?=$this->session->flashdata('warning');?></p>

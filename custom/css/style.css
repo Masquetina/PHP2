@@ -993,6 +993,10 @@ span#file-name {
   color: #55acee;
 }
 
+.modal-open .no-jump {
+overflow-y:scroll;
+}
+
 footer {
   width: 100%;
 }
