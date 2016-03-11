@@ -24,8 +24,9 @@
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
-					$value = $this->input->post('Username');
-					echo form_input($data, $value);
+					echo form_error('required');
+					$value = $this->input->post('username');
+					echo form_input($data, set_value('username'));
 
 					$label_text= 'Username';
 					$id= 'inputUsername';
@@ -41,7 +42,7 @@
 					$data = array(
 						'id'				=> 'inputEmail',
 						'name'			=> 'email',
-						'maxlength' => '20',
+						'maxlength' => '30',
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
@@ -87,7 +88,6 @@
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
-					$value = $this->input->post('repeatPassword');
 					echo form_password($data, $value);
 
 					$label_text= 'Repeat password';

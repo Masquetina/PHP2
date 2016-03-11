@@ -7,8 +7,8 @@ class Validate extends CI_Model {
   }
 
   public function login() { // DODATI METODE ZA SVA MALA SLOVA & md5
-    $this->db->where('email', $this->input->post(trim(addslashes('email'))));
-    $this->db->where('password', $this->input->post(trim(addslashes('password'))));
+    $this->db->where('email', trim(strtolower(addslashes($this->input->post('email')))));
+    $this->db->where('password', trim(strtolower(md5($this->input->post('password')))));
     $query = $this->db->get('users');
     if($query->num_rows() == 1) {
       $row = $query->row();
@@ -37,14 +37,20 @@ class Validate extends CI_Model {
   }
 
   public function signup() {
-    // DA LI PRVO POKUPITI SVE ŠTO JE KORISNIK UNEO?
-    $this->db->where('email', $this->input->post(trim(addslashes('email'))));
-    $query = $this->db->get('users');
-    if($query->num_rows() == 0) {
-      // UPISATI NOVOG KORISNIKA U TABELU users
+    $username = trim(strtolower(addslashes($this->input->post('username'))));
+    $email = trim(addslashes($this->input->post('email')));
+    $password = trim(strtolower(md5($this->input->post('password'))));
+    $data = array(
+      'username' => $username,
+      'email'    => $email,
+      'password' => $password,
+      'avatar'   => 'avatar.jpg',
+      'id_rolle' => 1,
+      'ban'      => 0,
+    );
+    $query = $this->db->insert('users', $data);
+    if($query) {
       return TRUE;
-    } else {
-      return FALSE;
     }
   }
 }

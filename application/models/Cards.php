@@ -22,9 +22,9 @@ class Cards extends CI_Model {
 
   public function create_card($filename) {
     $id_user = $this->session->userdata('id_user');
-    $author = $this->input->post(trim(addslashes('author')));
-    $quote = $this->input->post(trim(addslashes('quote')));
-    $description = $this->input->post(trim(addslashes('description')));
+    $author = trim(addslashes($this->input->post('author')));
+    $quote = trim(addslashes($this->input->post('quote')));
+    $description = trim(addslashes($this->input->post('description')));
     $color = $this->input->post('color');
     $data = array(
       'id_user' => $id_user,
