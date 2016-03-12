@@ -20,14 +20,14 @@
             <div class="panel panel-default">
               <div class="panel-heading" <?=$card->color;?> >
                 <ul class="info-bar">
-                  <li class="unflag" for="<?=$card->id_card;?>"
-                      author="<?=$card->id_user_author;?>"
-                      flager="<?=$card->id_user_flager;?>">
+                  <li class="unflag" data-for="<?=$card->id_card;?>"
+                      data-author="<?=$card->id_user_author;?>"
+                      data-flager="<?=$card->id_user_flager;?>">
                     <i class="material-icons link">check</i>
                   </li>
-                  <li class="delete" for="<?=$card->id_card;?>"
-                      author="<?=$card->id_user_author;?>"
-                      flager="<?=$card->id_user_flager;?>">
+                  <li class="delete" data-for="<?=$card->id_card;?>"
+                      data-author="<?=$card->id_user_author;?>"
+                      data-flager="<?=$card->id_user_flager;?>">
                     <i class="material-icons link">close</i>
                   </li>
                 </ul>
@@ -57,7 +57,7 @@
       <?php if(isset($users)) : ?>
         <?php foreach($users as $user) : ?>
           <div class="col-xs-12 col-md-6 col-lg-4">
-            <div class="panel panel-default panel-user">
+            <div class="panel panel-default panel-user" data-username="<?=$user->username;?>">
               <a href="<?=base_url();?>profile/<?=$user->username;?>"
                 title="<?=ucwords($user->username);?>">
                 <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
@@ -79,38 +79,56 @@
 <script type="text/javascript">
   var base_url = '<?php print base_url();?>';
   $(document).ready(function() {
+    var is_banned;
+    var users = [];
+    $('.panel-user').each(function(){
+      users.push($(this).attr('data-username'));
+    });
     $('.delete').click(function() {
-      var id_card = $(this).attr('for');
-      var id_user_author = $(this).attr('author');
-      var id_user_flager = $(this).attr('flager');
+      var id_card = $(this).attr('data-for');
+      var id_user_author = $(this).attr('data-author');
+      var id_user_flager = $(this).attr('data-flager');
       $.ajax({
         url: base_url + 'dashboard/delete/' + id_card + '/' + id_user_author + '/' + id_user_flager,
         type: "POST",
         success: function(data) {
           var value = JSON.parse(data);
-          $('#users').append(
-            '<div class="col-xs-12 col-md-6 col-lg-4">' +
-              '<div class="panel panel-default panel-user">' +
-                '<a href="' + '<?=base_url();?>' + 'profile/' + value.username + '"' + 'title="' + value.username + '">' +
-                  '<img class="interactions avatar" src="' + '<?=base_url();?>' + 'custom/img/avatars/' + value.avatar + '" />' +
-                '</a>' +
-                '<p>' + value.username + '</p>' +
-                '<p class="date">' + value.ban_time + '</p>' +
-                '<a href="#" class="pull-right">' +
-                  '<i class="material-icons link">close</i>' +
-                '</a>' +
-              '</div>' +
-            '</div>'
-          );
+          if(users == '') {
+            is_banned = false;
+          } else {
+            for(var i = 0; i < users.length; i++) {
+              if(users[i] == value.username) {
+                is_banned = true;
+                break;
+              }
+            }
+          }
+          if(!is_banned) {
+            $('#users').append(
+              '<div class="col-xs-12 col-md-6 col-lg-4">' +
+                '<div class="panel panel-default panel-user" data-username=' + value.username + '>' +
+                  '<a href="' + '<?=base_url();?>' + 'profile/' + value.username + '"' + 'title="' + value.username + '">' +
+                    '<img class="interactions avatar" src="' + '<?=base_url();?>' + 'custom/img/avatars/' + value.avatar + '" />' +
+                  '</a>' +
+                  '<p>' + value.username + '</p>' +
+                  '<p class="date">' + value.ban_time + '</p>' +
+                  '<a href="#" class="pull-right">' +
+                    '<i class="material-icons link">close</i>' +
+                  '</a>' +
+                '</div>' +
+              '</div>'
+            );
+            users.push(value.username);
+          }
           $('#no-users').remove();
           $('.' + id_card).fadeOut(3000);
         }
       });
     });
     $('.unflag').click(function() {
-      var id = $(this).attr('for');
-      var id_user_author = $(this).attr('author');
-      var id_user_flager = $(this).attr('flager');
+      var id = $(this).attr('data-for');
+      var id_user_author = $(this).attr('data-author');
+      var id_user_flager = $(this).attr('data-flager');
       $.ajax({
         url: base_url + 'dashboard/unflag/' + id_card + '/' + id_user_author + '/' + id_user_flager,
         type: "POST",
@@ -120,6 +138,4 @@
       });
     });
   });
-
-
 </script>
