@@ -10,6 +10,7 @@ class Administration extends CI_Model {
     $this->db->select('*');
     $this->db->from('users');
     $this->db->where('users.ban = 1');
+    $this->db->order_by('users.ban_time');
     $query = $this->db->get();
     if($query->num_rows() != 0) {
       return $query->result();
