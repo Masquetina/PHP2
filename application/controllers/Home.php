@@ -11,9 +11,9 @@ class Home extends MY_Controller {
 		$data['page_title'] = "Home Page";
 		$this->load->library('pagination');
 		$config['base_url'] = base_url() . 'home';
-		$config['total_rows'] = $this->db->get('cards')->num_rows();
-		$config['per_page'] = 3;
-		$config['num_links'] = 2;
+		$config['total_rows'] = $this->db->where('cards.delete = 0')->get('cards')->num_rows();
+		$config['per_page'] = 6;
+		$config['num_links'] = 1;
 
 		$config['full_tag_open']    = '<div class="pagination text-center">';
 		$config['full_tag_close']   = '</div>';
