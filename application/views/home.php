@@ -78,6 +78,7 @@
       <h2 class="text-center">There's no Quote Cards</h2>
     <?php endif ?>
   </div>
+  <?=$this->pagination->create_links()?>
 </div>
 <script>
 var base_url = '<?php print base_url();?>';

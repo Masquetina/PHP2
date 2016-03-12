@@ -6,13 +6,13 @@ class Cards extends CI_Model {
     parent::__construct();
   }
 
-  public function get_all_cards() {
+  public function get_all_cards($per_page, $offset) {
     $this->db->select('*');
     $this->db->from('cards');
     $this->db->where('cards.delete = 0');
     $this->db->order_by('cards.id_card', 'desc');
     $this->db->join('users', 'cards.id_user = users.id_user', 'left');
-    $query = $this->db->get();
+    $query = $this->db->get('', $per_page, $offset);
     if($query->num_rows() != 0) {
       return $query->result();
     } else {

@@ -1013,6 +1013,26 @@ span#file-name {
 overflow-y:scroll;
 }
 
+.pagination {
+  margin: 24px 0;
+}
+
+.pagination * {
+  color: #263238;
+  padding: 4px;
+  margin: 2px;
+}
+
+.pagination *:hover {
+  color: #263238;
+  padding: 4px;
+  margin: 2px;
+}
+
+.pagination span.next {
+  display: none;
+}
+
 footer {
   width: 100%;
 }

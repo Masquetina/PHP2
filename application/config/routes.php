@@ -53,10 +53,6 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['home/:num'] = 'home/index/:num';
 $route['profile/:any'] = 'profile';
-$route['card/like/:any'] = 'card/like';
-$route['card/delete/:any'] = 'card/delete';
-$route['card/flag/:any/:any'] = 'card/flag';
-$route['card/ban/:any/:any/:any'] = 'card/ban';
-$route['card/unflag/:any/:any/:any'] = 'card/unflag';
 $route['settings/image/:any'] = 'settings/image';
