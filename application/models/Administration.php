@@ -40,13 +40,16 @@ class Administration extends CI_Model {
     $this->db->where('id_card', $id_card);
     $query = $this->db->update('cards', $data);
     if($query) {
-      $ban_time = date('d.m.Y.');
+      $ban_time = date('Y-m-d');
       $data = array(
        'ban'      => 1,
        'ban_time' => $ban_time
       );
       $this->db->where('id_user', $id_user_author);
       $query = $this->db->update('users', $data);
+      if($query) {
+        return TRUE;
+      }
     } else {
       return FALSE;
     }

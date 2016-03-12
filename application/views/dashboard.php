@@ -81,7 +81,6 @@
     $('.panel-user').each(function(){
       users.push($(this).attr('data-username'));
     });
-
     $('.delete').click(function() {
       var id_card = $(this).attr('data-for');
       var id_user_author = $(this).attr('data-author');
@@ -101,7 +100,6 @@
               }
             }
           }
-          alert(id_card);
           if(!is_banned) {
             $('#users').append(
               '<div class="col-xs-12 col-md-6 col-lg-4">' +
@@ -110,7 +108,7 @@
                     '<img class="interactions avatar" src="' + '<?=base_url();?>' + 'custom/img/avatars/' + value.avatar + '" />' +
                   '</a>' +
                   '<p>' + value.username + '</p>' +
-                  '<p class="date">' + value.ban_time + '</p>' +
+                  '<p class="date">' + '<?=date("Y-m-d")?>' + '</p>' +
                   '<a href="#" class="pull-right">' +
                     '<i class="material-icons link">close</i>' +
                   '</a>' +
@@ -123,7 +121,6 @@
         }
       });
     });
-
     $('.unflag').click(function() {
       var id_card = $(this).attr('data-for');
       var id_user_author = $(this).attr('data-author');
