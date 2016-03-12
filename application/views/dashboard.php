@@ -1,19 +1,38 @@
 <div class="line"></div>
 <ul class="nav-tabs">
   <li role="presentation" class="active">
-    <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
-      Cards
+    <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
+      Users
     </a>
   </li>
   <li role="presentation">
-    <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
-      Users
+    <a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">
+      Cards
     </a>
   </li>
 </ul>
 <div class="container">
   <div class="tab-content col-xs-12 col-md-12 col-lg-12">
-    <div role="tabpanel" class="tab-pane fade active" id="cards">
+    <div role="tabpanel" class="tab-pane fade active" id="users">
+      <?php if(isset($users)) : ?>
+        <?php foreach($users as $user) : ?>
+          <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="panel panel-default panel-user" data-username="<?=$user->username;?>">
+              <a href="<?=base_url();?>profile/<?=$user->username;?>"
+                title="<?=ucwords($user->username);?>">
+                <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
+              </a>
+              <p><?=ucwords($user->username);?></p>
+              <p class="date"><?=($user->ban_time);?></p>
+              <a href="#" class="pull-right">
+                <i class="material-icons link">close</i>
+              </a>
+            </div>
+          </div>
+        <?php endforeach ?>
+      <?php endif ?>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="cards">
       <?php if(isset($cards)) : ?>
         <?php foreach($cards as $card) : ?>
           <div class="<?=$card->id_card;?> col-xs-12 col-md-6 col-lg-4">
@@ -22,7 +41,8 @@
                 <ul class="info-bar">
                   <li class="unflag" data-for="<?=$card->id_card;?>"
                       data-author="<?=$card->id_user_author;?>"
-                      data-flager="<?=$card->id_user_flager;?>">
+                      data-flager="<?=$card->id_user_flager;?>"
+                      data-flag="<?=$card->id_flag;?>">
                     <i class="material-icons link">check</i>
                   </li>
                   <li class="delete" data-for="<?=$card->id_card;?>"
@@ -49,29 +69,6 @@
             </div>
           </div>
         <?php endforeach ?>
-      <?php else : ?>
-        <h2 id="no-cards">There's no Cards</h2>
-      <?php endif ?>
-    </div>
-    <div role="tabpanel" class="tab-pane fade in" id="users">
-      <?php if(isset($users)) : ?>
-        <?php foreach($users as $user) : ?>
-          <div class="col-xs-12 col-md-6 col-lg-4">
-            <div class="panel panel-default panel-user" data-username="<?=$user->username;?>">
-              <a href="<?=base_url();?>profile/<?=$user->username;?>"
-                title="<?=ucwords($user->username);?>">
-                <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
-              </a>
-              <p><?=ucwords($user->username);?></p>
-              <p class="date"><?=($user->ban_time);?></p>
-              <a href="#" class="pull-right">
-                <i class="material-icons link">close</i>
-              </a>
-            </div>
-          </div>
-        <?php endforeach ?>
-      <?php else : ?>
-        <h2 id="no-users">There's no Users</h2>
       <?php endif ?>
     </div>
   </div>
@@ -84,6 +81,7 @@
     $('.panel-user').each(function(){
       users.push($(this).attr('data-username'));
     });
+
     $('.delete').click(function() {
       var id_card = $(this).attr('data-for');
       var id_user_author = $(this).attr('data-author');
@@ -103,6 +101,7 @@
               }
             }
           }
+          alert(id_card);
           if(!is_banned) {
             $('#users').append(
               '<div class="col-xs-12 col-md-6 col-lg-4">' +
@@ -120,20 +119,21 @@
             );
             users.push(value.username);
           }
-          $('#no-users').remove();
-          $('.' + id_card).fadeOut(3000);
+          $('.' + id_card).fadeOut(2000);
         }
       });
     });
+
     $('.unflag').click(function() {
-      var id = $(this).attr('data-for');
+      var id_card = $(this).attr('data-for');
       var id_user_author = $(this).attr('data-author');
       var id_user_flager = $(this).attr('data-flager');
+      var id_flag = $(this).attr('data-flag');
       $.ajax({
-        url: base_url + 'dashboard/unflag/' + id_card + '/' + id_user_author + '/' + id_user_flager,
+        url: base_url + 'dashboard/unflag/' + id_card + '/' + id_user_author + '/' + id_user_flager + '/' + id_flag,
         type: "POST",
         success: function() {
-          $('.' + id_card).fadeOut(3000);
+          $('.' + id_card).fadeOut(2000);
         }
       });
     });

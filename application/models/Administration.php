@@ -47,17 +47,32 @@ class Administration extends CI_Model {
       );
       $this->db->where('id_user', $id_user_author);
       $query = $this->db->update('users', $data);
-
-      return TRUE;
     } else {
       return FALSE;
     }
   }
 
-  public function get_user($id_user_author) {
+  public function unflag_card($id_card, $id_user_author, $id_user_flager, $id_flag) {
+    $data = array(
+     'flag' => 0,
+    );
+    $this->db->where('id_card', $id_card);
+    $query = $this->db->update('cards', $data);
+    if($query) {
+      $this->db->where('id_flag', $id_flag);
+      $this->db->delete('flags');
+      if($query) {
+        return TRUE;
+      }
+    } else {
+      return FALSE;
+    }
+  }
+
+  public function get_user($id_user) {
     $this->db->select('*');
     $this->db->from('users');
-    $this->db->where('users.id_user', $id_user_author);
+    $this->db->where('users.id_user', $id_user);
     $query = $this->db->get();
     if($query) {
       $query = $query->result();

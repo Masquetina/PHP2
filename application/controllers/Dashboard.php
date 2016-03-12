@@ -58,11 +58,9 @@ class Dashboard extends MY_Controller {
 			$id_card = $this->uri->segment(3);
 			$id_user_author = $this->uri->segment(4);
 			$id_user_flager = $this->uri->segment(5);
+			$id_flag = $this->uri->segment(6);
 			$this->load->model('administration');
-			$query = $this->administration->unflag_card();
-			if($query) {
-
-			}
+			$query = $this->administration->unflag_card($id_card, $id_user_author, $id_user_flager, $id_flag);
 		}
 	}
 }
