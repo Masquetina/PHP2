@@ -31,4 +31,36 @@ class Administration extends CI_Model {
       return FALSE;
     }
   }
+
+  public function delete_card($id_card, $id_user_author, $id_user_flager) {
+    $data = array(
+     'delete' => 1,
+    );
+    $this->db->where('id_card', $id_card);
+    $query = $this->db->update('cards', $data);
+    if($query) {
+      $ban_time = date('d.m.Y.');
+      $data = array(
+       'ban'      => 1,
+       'ban_time' => $ban_time
+      );
+      $this->db->where('id_user', $id_user_author);
+      $query = $this->db->update('users', $data);
+
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+
+  public function get_user($id_user_author) {
+    $this->db->select('*');
+    $this->db->from('users');
+    $this->db->where('users.id_user', $id_user_author);
+    $query = $this->db->get();
+    if($query) {
+      $query = $query->result();
+      return $query;
+    }
+  }
 }

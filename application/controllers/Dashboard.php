@@ -26,4 +26,43 @@ class Dashboard extends MY_Controller {
 			redirect('/');
 		}
 	}
+	public function delete($id_card, $id_user_author, $id_user_flager) {
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
+			$id_card = $this->uri->segment(3);
+			$id_user_author = $this->uri->segment(4);
+			$id_user_flager = $this->uri->segment(5);
+			$this->load->model('administration');
+			$query = $this->administration->delete_card($id_card, $id_user_author, $id_user_flager);
+			if($query) {
+				$this->load->model('administration');
+				$query = $this->administration->get_user($id_user_author);
+				if($query) {
+					foreach($query as $data) {
+						$data = array(
+							'id_user'  => $data->id_user,
+							'username' => $data->username,
+							'avatar' 	 => $data->avatar,
+							'ban_time' =>	$data->ban_time
+						);
+					}
+					echo json_encode($data);
+				}
+			}
+		}
+	}
+
+	public function unflag() {
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
+			$id_card = $this->uri->segment(3);
+			$id_user_author = $this->uri->segment(4);
+			$id_user_flager = $this->uri->segment(5);
+			$this->load->model('administration');
+			$query = $this->administration->unflag_card();
+			if($query) {
+
+			}
+		}
+	}
 }

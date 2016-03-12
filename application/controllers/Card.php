@@ -48,32 +48,4 @@ class Card extends MY_Controller {
 			}
 		}
 	}
-
-	public function ban() {
-		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		if ($ispost) {
-			$id_card = $this->uri->segment(3);
-			$id_user_author = $this->uri->segment(4);
-			$id_user_flager = $this->uri->segment(5);
-			$this->load->model('cards');
-			$query = $this->cards->ban_card();
-			if($query) {
-
-			}
-		}
-	}
-
-	public function unflag() {
-		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
-		if ($ispost) {
-			$id_card = $this->uri->segment(3);
-			$id_user_author = $this->uri->segment(4);
-			$id_user_flager = $this->uri->segment(5);
-			$this->load->model('cards');
-			$query = $this->cards->unflag_card();
-			if($query) {
-
-			}
-		}
-	}
 }

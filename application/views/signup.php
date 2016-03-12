@@ -29,7 +29,7 @@
 					echo form_input($data, set_value('username'));
 					echo form_error(
 					'username',
-					'<span class="text-primary pull-right text-right error">',
+					'<span class="text-primary pull-right error">',
 					'</span>');
 
 					$label_text= 'Username';
@@ -54,7 +54,7 @@
 					echo form_input($data, set_value('email'));
 					echo form_error(
 					'email',
-					'<span class="text-primary pull-right text-right error">',
+					'<span class="text-primary pull-right error">',
 					'</span>');
 
 					$label_text= 'Email';
@@ -76,10 +76,10 @@
 						'class' 		=> 'form-control'
 					);
 					$value = $this->input->post('password');
-					echo form_password($data, $value);
+					echo form_password($data, set_value('password'));
 					echo form_error(
 					'password',
-					'<span class="text-primary pull-right text-right error">',
+					'<span class="text-primary pull-right error">',
 					'</span>');
 
 					$label_text= 'Password';
@@ -100,10 +100,10 @@
 						'size'      => '15',
 						'class' 		=> 'form-control'
 					);
-					echo form_password($data, $value);
+					echo form_password($data, set_value('repeatPassword'));
 					echo form_error(
 					'repeatPassword',
-					'<span class="text-primary pull-right text-right error">',
+					'<span class="text-primary pull-right error">',
 					'</span>');
 
 					$label_text= 'Repeat password';

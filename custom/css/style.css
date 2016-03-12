@@ -72,6 +72,10 @@ a.text-primary {
 a.text-primary:hover {
 	color: #9e9d24; !important;
 }
+
+p:first-letter {
+  text-transform:capitalize;
+}
 /*
 ----------BUTTONS
 */
@@ -489,6 +493,13 @@ header ul li img.logo{
   display: inline-block;
   color: rgba(0,0,0,.6);
   font-size: 120%;
+  padding-right: 8px;
+}
+
+.panel.panel-user p.date{
+  font-size: 12px;
+  font-weight: 400;
+  color: #ff7043;
 }
 
 .panel.panel-user a i{
