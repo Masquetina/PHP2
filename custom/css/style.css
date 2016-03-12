@@ -332,7 +332,7 @@ header ul li img.logo{
 
 .cover {
   position: relative;
-  height: 400px;
+  height: 160px;
   background: url('http://quote.com/custom/img/1920x400.png') center center no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -341,16 +341,7 @@ header ul li img.logo{
 }
 
 .cover h1 {
-	padding-top: 128px;
   font-weight: 400;
-}
-
-.cover h2 {
-  font-weight: 400;
-}
-
-.cover h3 {
-	margin-top: -8px;
 }
 
 .cover .btn {
@@ -1019,17 +1010,19 @@ overflow-y:scroll;
 
 .pagination * {
   color: #263238;
-  padding: 4px;
-  margin: 2px;
+}
+
+.pagination span {
+  /*border-radius: 100%;*/
+  padding: 8px;
+  margin: 4px;
 }
 
 .pagination *:hover {
   color: #263238;
-  padding: 4px;
-  margin: 2px;
 }
 
-.pagination span.next {
+.pagination span.hide {
   display: none;
 }
 

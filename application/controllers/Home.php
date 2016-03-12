@@ -13,21 +13,21 @@ class Home extends MY_Controller {
 		$config['base_url'] = base_url() . 'home';
 		$config['total_rows'] = $this->db->where('cards.delete = 0')->get('cards')->num_rows();
 		$config['per_page'] = 6;
-		$config['num_links'] = 1;
+		$config['num_links'] = 2;
 
-		$config['full_tag_open']    = '<div class="pagination text-center">';
-		$config['full_tag_close']   = '</div>';
-		$config['num_tag_open']     = '<span class="btn btn-default">';
-		$config['num_tag_close']    = '</span>';
-		$config['cur_tag_open']     = '<span class="btn btn-default btn-raised btn-primary">';
-		$config['cur_tag_close']    = '</span>';
-		$config['next_tag_open'] 	  = '<span class="next">';
+		$config['full_tag_open']   = '<div class="pagination text-center">';
+		$config['full_tag_close']  = '</div>';
+		$config['num_tag_open']    = '<span class="btn">';
+		$config['num_tag_close']   = '</span>';
+		$config['cur_tag_open']    = '<span class="btn btn-raised btn-primary">';
+		$config['cur_tag_close']   = '</span>';
+		$config['next_tag_open'] 	 = '<span class="hide">';
 		$config['next_tag_close']  = '</span>';
-		$config['prev_tag_open']	  = '<span class="next">';
+		$config['prev_tag_open']	 = '<span class="hide">';
 		$config['prev_tag_close']  = '</span>';
-		$config['first_tag_open']   = '<span>';
+		$config['first_tag_open']  = '<span>';
 		$config['first_tag_close'] = '</span>';
-		$config['last_tag_open']    = '<span>';
+		$config['last_tag_open']   = '<span>';
 		$config['last_tag_close']  = '</span>';
 
 		$this->pagination->initialize($config);
