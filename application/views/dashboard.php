@@ -90,7 +90,6 @@
         url: base_url + 'dashboard/delete',
         type: 'POST',
         data: data,
-        dataType: 'json',
         success: function(data) {
           $('.' + id_card).fadeOut(2000);
           var value = JSON.parse(data);
@@ -134,7 +133,6 @@
         url: base_url + 'dashboard/unflag',
         type: "POST",
         data: data,
-        dataType: 'json',
         success: function() {
           $('.' + id_card).fadeOut(2000);
         }
