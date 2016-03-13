@@ -64,4 +64,13 @@ class Dashboard extends MY_Controller {
 			$query = $this->administration->unflag_card($id_card, $id_user_author, $id_user_flager, $id_flag);
 		}
 	}
+
+	public function unbann() {
+		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
+		if ($ispost) {
+			$id_user = $this->input->post('id_user');
+			$this->load->model('administration');
+			$query = $this->administration->unbann_user($id_user);
+		}
+	}
 }

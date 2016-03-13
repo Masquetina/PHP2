@@ -16,7 +16,7 @@
     <div role="tabpanel" class="tab-pane fade active" id="users">
       <?php if(isset($users)) : ?>
         <?php foreach($users as $user) : ?>
-          <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="<?=$user->id_user;?> col-xs-12 col-md-6 col-lg-4">
             <div class="panel panel-default panel-user" data-username="<?=$user->username;?>">
               <a href="<?=base_url();?>profile/<?=$user->username;?>"
                  title="<?=ucwords($user->username);?>">
@@ -24,9 +24,8 @@
               </a>
               <p><?=ucwords($user->username);?></p>
               <p class="date"><?=($user->ban_time);?></p>
-              <a href="#" class="pull-right">
-                <i class="material-icons link">close</i>
-              </a>
+              <i class="material-icons link pull-right unbann"
+                 data-user="<?=$user->id_user;?>">close</i>
             </div>
           </div>
         <?php endforeach ?>
@@ -135,6 +134,18 @@
         data: data,
         success: function() {
           $('.' + id_card).fadeOut(2000);
+        }
+      });
+    });
+    $('.unbann').click(function() {
+      var id_user = $(this).attr('data-user');
+      var data = {'id_user': id_user};
+      $.ajax({
+        url: base_url + 'dashboard/unbann',
+        type: "POST",
+        data: data,
+        success: function() {
+          $('.' + id_user).fadeOut(2000);
         }
       });
     });

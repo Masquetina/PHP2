@@ -82,4 +82,18 @@ class Administration extends CI_Model {
       return $query;
     }
   }
+
+  public function unbann_user($id_user) {
+    $data = array(
+     'ban' => 0,
+     'ban_time' => '0000-00-00'
+    );
+    $this->db->where('id_user', $id_user);
+    $query = $this->db->update('users', $data);
+    if($query) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
 }

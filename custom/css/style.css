@@ -495,7 +495,7 @@ header ul li img.logo{
   color: #ff7043;
 }
 
-.panel.panel-user a i{
+.panel.panel-user i{
   display: inline-block;
   border-radius: 100%;
   padding: 4px;
@@ -506,7 +506,7 @@ header ul li img.logo{
 	0 -1px 0 rgba(0, 0, 0, .25);
 }
 
-.panel.panel-user a i:hover{
+.panel.panel-user i:hover{
   background-color: rgba(0,0,0,.1);
 }
 
