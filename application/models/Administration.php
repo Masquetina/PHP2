@@ -63,7 +63,7 @@ class Administration extends CI_Model {
     $query = $this->db->update('cards', $data);
     if($query) {
       $this->db->where('id_flag', $id_flag);
-      $this->db->delete('flags');
+      $query = $this->db->delete('flags');
       if($query) {
         return TRUE;
       }

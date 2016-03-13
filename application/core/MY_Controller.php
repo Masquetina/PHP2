@@ -22,4 +22,12 @@ class MY_Controller extends CI_Controller {
     $this->load->view($view, $data);
     $this->load->view('scripts');
   }
+
+  public function load_admin($view, $data) {
+    $this->session;
+    $this->load->view('head', $data);
+    $this->load->view('header');
+    $this->load->view($view, $data);
+    $this->load->view('scripts');
+  }
 }
