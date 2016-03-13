@@ -9,7 +9,9 @@
           <span class="upload">
             <i class="material-icons icon">settings</i>
           </span>
+          <?=form_open_multipart();?>
           <?=form_upload('userfile');?>
+          <?=form_close();?>
         <?php endif ?>
       </div>
       <h2 class="text-center"><?=ucwords($user->username);?></h2>
@@ -30,15 +32,15 @@
                   <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
                 </a>
                 <ul class="info-bar">
-                  <?php if( ! $this->session->userdata('validated') ||
-                  $this->session->userdata('id_user') == ($card->id_user) ||
-                  $this->session->userdata('id_rolle') != 1 ) : ?>
-                  <li>
-                    <p class="count"><?=$card->likes;?></p>
-                  </li>
-                  <li>
-                    <i class="unclicable material-icons link favorite">favorite</i>
-                  </li>
+                <?php if( ! $this->session->userdata('validated') ||
+                            $this->session->userdata('id_user') == ($card->id_user) ||
+                            $this->session->userdata('id_rolle') != 1 ) : ?>
+                <li>
+                  <p class="count"><?=$card->likes;?></p>
+                </li>
+                <li>
+                  <i class="unclicable material-icons link favorite">favorite</i>
+                </li>
                 <?php endif ?>
                 <?php if( $this->session->userdata('id_rolle') == 1 &&
                 $this->session->userdata('id_user') != ($card->id_user) ) : ?>
@@ -53,9 +55,9 @@
                   <i class="material-icons link">flag</i>
                 </li>
                 <?php endif ?>
-              <?php endif ?>
-              <?php if( $this->session->userdata('id_rolle') == 1 &&
-                        $this->session->userdata('id_user') == ($card->id_user) ) : ?>
+                <?php endif ?>
+                <?php if( $this->session->userdata('id_rolle') == 1 &&
+                          $this->session->userdata('id_user') == ($card->id_user) ) : ?>
                 <li class="delete" for="<?=$card->id_card;?>">
                   <i class="material-icons link favorite">delete</i>
                 </li>
@@ -98,7 +100,7 @@ $(document).ready(function() {
     var name = file.name;
     var size = file.size;
     var type = file.type;
-    //alert(file + " " + name + " " + size + " " + type);
+    alert(file + " " + name + " " + size + " " + type);
     // OVDE TREBA DA URADIM PROVERU PRVO
     $.ajax({
       url: base_url + 'settings/image/' + username,
