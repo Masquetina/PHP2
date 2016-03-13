@@ -19,7 +19,7 @@
             <div class="panel-heading" <?=$card->color;?> >
               <div class="interactions-group">
                 <a href="<?=base_url();?>profile/<?=$card->username;?>"
-                  title="<?=ucwords($card->username);?>">
+                   title="<?=ucwords($card->username);?>">
                   <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
                 </a>
                 <ul class="info-bar">
@@ -38,18 +38,18 @@
                 <li>
                   <p id="count-<?=$card->id_card;?>" class="count"><?=$card->likes;?></p>
                 </li>
-                <li class="like" for="<?=$card->id_card;?>">
+                <li class="like" data-for="<?=$card->id_card;?>">
                   <i class="material-icons link favorite">favorite</i>
                 </li>
                 <?php if( $this->session->userdata('id_rolle') == 1 ) : ?>
-                  <li class="flag" for="<?=$card->id_card;?>" author="<?=$card->id_user;?>">
+                  <li class="flag" data-for="<?=$card->id_card;?>" data-author="<?=$card->id_user;?>">
                     <i class="material-icons link">flag</i>
                   </li>
                 <?php endif ?>
               <?php endif ?>
               <?php if( $this->session->userdata('id_rolle') == 1 &&
               $this->session->userdata('id_user') == ($card->id_user) ) : ?>
-              <li class="delete" for="<?=$card->id_card;?>">
+              <li class="delete" data-for="<?=$card->id_card;?>">
                 <i class="material-icons link favorite">delete</i>
               </li>
             <?php endif ?>
@@ -83,7 +83,7 @@
 var base_url = '<?php print base_url();?>';
 $(document).ready(function() {
   $('.like').click(function() {
-    var id_card = $(this).attr('for');
+    var id_card = $(this).attr('data-for');
     $.ajax({
       url: base_url + 'card/like/' + id_card,
       type: "POST",
@@ -95,7 +95,7 @@ $(document).ready(function() {
     });
   });
   $('.delete').click(function() {
-    var id_card = $(this).attr('for');
+    var id_card = $(this).attr('data-for');
     $.ajax({
       url: base_url + 'card/delete/' + id_card,
       type: "POST",
@@ -113,8 +113,8 @@ $(document).ready(function() {
     });
   });
   $('.flag').click(function() {
-    var id_card = $(this).attr('for');
-    var id_user_author = $(this).attr('author');
+    var id_card = $(this).attr('data-for');
+    var id_user_author = $(this).attr('data-author');
     $.ajax({
       url: base_url + 'card/flag/' + id_card + '/' + id_user_author,
       type: "POST",

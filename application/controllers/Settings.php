@@ -16,8 +16,7 @@ class Settings extends MY_Controller {
 			$config['file_name'] = $username;
 			$config['overwrite'] = TRUE;
 	    $this->load->library('upload', $config);
-			$this->upload->do_upload();
-			if(!$this->upload->do_upload()) {
+			if(!$this->upload->do_upload('userfile')) {
 				$warning = 'Please choose a JPG file.';
 				$this->session->set_flashdata('warning', $warning);
 				redirect('profile/'. $username);
