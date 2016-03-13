@@ -85,10 +85,14 @@
       var id_card = $(this).attr('data-for');
       var id_user_author = $(this).attr('data-author');
       var id_user_flager = $(this).attr('data-flager');
+      var data = {'id_card': id_card, 'id_user_author': id_user_author, 'id_user_flager': id_user_flager};
       $.ajax({
-        url: base_url + 'dashboard/delete/' + id_card + '/' + id_user_author + '/' + id_user_flager,
-        type: "POST",
+        url: base_url + 'dashboard/delete',
+        type: 'POST',
+        data: data,
+        dataType: 'json',
         success: function(data) {
+          $('.' + id_card).fadeOut(2000);
           var value = JSON.parse(data);
           if(users == '') {
             is_banned = false;
@@ -117,7 +121,6 @@
             );
             users.push(value.username);
           }
-          $('.' + id_card).fadeOut(2000);
         }
       });
     });
@@ -126,9 +129,12 @@
       var id_user_author = $(this).attr('data-author');
       var id_user_flager = $(this).attr('data-flager');
       var id_flag = $(this).attr('data-flag');
+      var data = {'id_card': id_card, 'id_user_author': id_user_author, 'id_user_flager': id_user_flager, 'id_flag': id_flag};
       $.ajax({
-        url: base_url + 'dashboard/unflag/' + id_card + '/' + id_user_author + '/' + id_user_flager + '/' + id_flag,
+        url: base_url + 'dashboard/unflag',
         type: "POST",
+        data: data,
+        dataType: 'json',
         success: function() {
           $('.' + id_card).fadeOut(2000);
         }

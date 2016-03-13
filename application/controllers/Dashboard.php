@@ -26,12 +26,13 @@ class Dashboard extends MY_Controller {
 			redirect('/');
 		}
 	}
-	public function delete($id_card, $id_user_author, $id_user_flager) {
+
+	public function delete() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {
-			$id_card = $this->uri->segment(3);
-			$id_user_author = $this->uri->segment(4);
-			$id_user_flager = $this->uri->segment(5);
+			$id_card				= $this->input->post('id_card');
+			$id_user_author	= $this->input->post('id_user_author');
+			$id_user_flager = $this->input->post('id_user_flager');
 			$this->load->model('administration');
 			$query = $this->administration->delete_card($id_card, $id_user_author, $id_user_flager);
 			if($query) {
@@ -55,10 +56,10 @@ class Dashboard extends MY_Controller {
 	public function unflag() {
 		$ispost = $this->input->server('REQUEST_METHOD') == 'POST';
 		if ($ispost) {
-			$id_card = $this->uri->segment(3);
-			$id_user_author = $this->uri->segment(4);
-			$id_user_flager = $this->uri->segment(5);
-			$id_flag = $this->uri->segment(6);
+			$id_card				= $this->input->post('id_card');
+			$id_user_author	= $this->input->post('id_user_author');
+			$id_user_flager = $this->input->post('id_user_flager');
+			$id_flag = $this->input->post('id_flag');
 			$this->load->model('administration');
 			$query = $this->administration->unflag_card($id_card, $id_user_author, $id_user_flager, $id_flag);
 		}
