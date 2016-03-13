@@ -172,5 +172,9 @@ $(document).ready(function() {
 	$('#ToS-link').click(function() {
 			$('#ToS').modal('show');
 	});
+	$('input:text:visible:first')[0].focus();
+	$('.form-control').focus(function() {
+		$(this).val('').toggleClass('active');
+	});
 });
 </script>

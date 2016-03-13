@@ -85,3 +85,11 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('input:text:visible:first')[0].focus();
+	$('.form-control').focus(function() {
+		$(this).val('').toggleClass('active');
+	});
+});
+</script>

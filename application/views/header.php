@@ -122,5 +122,9 @@
 		$('#about-link').click(function() {
 				$('#about').modal('show');
 		});
+		$('.message-container').delay(3000).fadeOut(1);
+	  $(".info-block").click(function() {
+	    $(this).toggleClass('active');
+	  });
 	});
 </script>

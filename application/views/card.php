@@ -205,6 +205,10 @@
 </div>
 <script>
 	$(document).ready(function() {
+		$('input:text:visible:first')[0].focus();
+		$('.form-control').focus(function() {
+			$(this).val('').toggleClass('active');
+		});
 		var type;
 		$(':file').change(function() {
 			var file = this.files[0];

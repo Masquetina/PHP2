@@ -122,7 +122,6 @@ $(document).ready(function() {
       processData: false
     });
   });
-
   $('.delete').click(function() {
     var id_card = $(this).attr('data-for');
     $.ajax({

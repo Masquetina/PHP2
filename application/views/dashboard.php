@@ -19,7 +19,7 @@
           <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="panel panel-default panel-user" data-username="<?=$user->username;?>">
               <a href="<?=base_url();?>profile/<?=$user->username;?>"
-                title="<?=ucwords($user->username);?>">
+                 title="<?=ucwords($user->username);?>">
                 <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$user->avatar;?>" />
               </a>
               <p><?=ucwords($user->username);?></p>
