@@ -1,9 +1,11 @@
 # Vodič kroz aplikaciju
 Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice kojima je marker delete jednak 0, dinamički izlistane iz baze, svih postojećih korisnika, sortirane od najnovije, ka starijim.
 
-U zaglavlje se nalazi fiksirani meni, koji prikazuje linkove u odnosu na to da li je korisnik ulogovan, i ako jeste, koja mu je usloga dodeljena. Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informaciju o autoru, i to je dostupno svim korisnicima, bez obzira na status.
+U zaglavlju se nalazi fiksirani meni, koji prikazuje odgovarajuće linkove u odnosu na to da li je korisnik ulogovan, i ako jeste, koja mu je usloga dodeljena. Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije o autoru, a dostupan je svim korisnicima, bez obzira na status i ulogu.
 
 Život korisnika na QuoteApp nastavlja se pravljenjem korisničkog naloga. Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje). Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
+
+
 
 Zaglavlje je vidljivo korisniku samo u svrhe prikazivanja flashmessage, ukoliko ona postoji, (ovo je zajedničko za sve stranice na kojima se nalazi forma), a u dnu su linkovi ka Terms of service, koji otvara modal i link ka LOGIN stranici ukoliko ovaj korisnik već ima kreiran nalog.
 
@@ -13,7 +15,7 @@ Na stranici za logovanje se nalazi forma za upis korisničkog imena i lozinke. O
 
 Dodatne promene na početnoj stranici koje se tiču statusa autorizovanog korisnika su i te da može da lajkuje i fleguje tuđe kartice, a svoje da obriše, ukoliko to želi. Kao neautorizovan je mogao samo da vidi broj lajkova, a ostale funkcije koje sam nabrojala su mu bile nedostupne. Takođe, pored dugmeta LOGOUT, autorizovani korisnik vidi i svoju profilnu sliku.
 
-U dnu početne stranice, iznad podnožja, nalaze se linkovi za straničenje, koji su podjednako klikabilni za neautorizovane, kao i za autorizovane korisnike.
+U dnu početne stranice, iznad podnožja, nalaze se linkovi za straničenje, koji su podjednako klikabilni za neautorizovane, kao i za autorizovane korisnike, a realizovani su pomoću biblioteke pagination.
 
 Forma za kreiranje nove kartice je urađena uz mnogo jQuery koda, koji pre svega proverava unos korisnika i ispisuje greške, ali i učestvuje u stilizovanju input[type=file], čiji sam podrazumevani izgled potpuno promenila i vizuelno prilagodila stilu sajta.
 
@@ -25,7 +27,15 @@ Administrator je posebna vrsta autorizovanog korisnika. On nema svoju profilnu s
 
 Funkcionalnosti lajkovanja, flegovanja i brisanja kartice od strane korisnika su realizovane upotrebom AJAX-a, a takođe i sve radnje u okviru administratorskog panela. Ovde bih posebno istakla momenat ocenjivanja kartice kao neadekvatne i banovanja korisnika, gde se AJAX-om šalju podaci o kartici, a vraćaju podaci o korisniku da bi se on istovremeno ubacio na listu banovanih. Naime, DOM ne prepoznaje sadržaj ovako ubačen, iako ga administrator vidi!
 
-JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modal pripadaju Bootstrap temi, i taj kod se nalazi u ../vendor/js/bootstrap.js
+JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modali pripadaju Bootstrap temi, i taj kod se nalazi u ../vendor/js/bootstrap.js.
+
+Sve forme su kreirane pomoću form helpera.
+
+Css je inicijalno Bootstrap, ali sam ga restilizovala da odgovara smernicama Material Design stila. Animaciju na karticama sam uradila samostalno. Koristila sam CSS3 maksimalno, a takođe i Icon font MDI. Logo i ilustracija na početnoj stranici su u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije.
+
+Sajt je kompletno responive, a na malim ekranima tekst u navigacionom meniju zamenuju odgovarajuće ikonice.
+
+Napomenula bih još, da je ovo tek prvi draft ili skica sajta, koja jeste funkcionalna, ali po mom mišljenju daleko od svog maksimuma.
 
 
 
