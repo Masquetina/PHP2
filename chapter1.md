@@ -35,7 +35,7 @@ JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sam
 
 Sve forme su kreirane pomoću form helpera.
 
-Css je inicijalno Bootstrap, ali sam ga restilizovala da odgovara smernicama Material Design stila. Animaciju na karticama sam uradila samostalno. Koristila sam CSS3 maksimalno, a takođe i Icon font MDI. Logo i ilustracija na početnoj stranici su u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije.
+Css je inicijalno Bootstrap, ali sam ga restilizovala da odgovara smernicama Material Design stila. Animaciju na karticama sam uradila samostalno. Koristila sam CSS3 maksimalno, a takođe i Icon font MDI. Logo i ilustracija na početnoj stranici su u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije. U HTMl-u sam iskoristila mogućnost definisanja sopstvenih atributa unutar tagova, u obliku data-[ime], da bih podatke lakše dohvatala pomoću jQuery biblioteke.
 
 Sajt je kompletno responive, a na malim ekranima tekst u navigacionom meniju zamenuju odgovarajuće ikonice.
 
