@@ -21,3 +21,5 @@ Nakon kreiranja kartice, korisnik je redirektovan na stranicu svog profila, gde 
 
 
 
+
+
