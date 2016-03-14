@@ -74,6 +74,7 @@
 </div>
 <script type="text/javascript">
   var base_url = '<?php print base_url();?>';
+  var value;
   $(document).ready(function() {
     var is_banned;
     var users = [];
@@ -91,34 +92,35 @@
         data: data,
         success: function(data) {
           $('.' + id_card).fadeOut(2000);
-          var value = JSON.parse(data);
-          if(users == '') {
-            is_banned = false;
-          } else {
-            for(var i = 0; i < users.length; i++) {
-              if(users[i] == value.username) {
-                is_banned = true;
-                break;
-              }
+          value = JSON.parse(data);
+
+        }
+      });
+      $(document).ajaxComplete(function(){
+        if(users == '') {
+          is_banned = false;
+        } else {
+          for(var i = 0; i < users.length; i++) {
+            if(users[i] == value.username) {
+              is_banned = true;
+              break;
             }
           }
-          if(!is_banned) {
-            $('#users').append(
-              '<div class="col-xs-12 col-md-6 col-lg-4">' +
-                '<div class="panel panel-default panel-user" data-username=' + value.username + '>' +
-                  '<a href="' + '<?=base_url();?>' + 'profile/' + value.username + '"' + 'title="' + value.username + '">' +
-                    '<img class="interactions avatar" src="' + '<?=base_url();?>' + 'custom/img/avatars/' + value.avatar + '" />' +
-                  '</a>' +
-                  '<p>' + value.username + '</p>' +
-                  '<p class="date">' + '<?=date("Y-m-d")?>' + '</p>' +
-                  '<a href="#" class="pull-right">' +
-                    '<i class="material-icons link">close</i>' +
-                  '</a>' +
-                '</div>' +
-              '</div>'
-            );
-            users.push(value.username);
-          }
+        }
+        if(!is_banned) {
+          $('#users').append(
+            '<div class="' + value.id_user + ' col-xs-12 col-md-6 col-lg-4">' +
+              '<div class="panel panel-default panel-user" data-username=' + value.username + '>' +
+                '<a href="' + '<?=base_url();?>' + 'profile/' + value.username + '"' + 'title="' + value.username + '">' +
+                  '<img class="interactions avatar" src="' + '<?=base_url();?>' + 'custom/img/avatars/' + value.avatar + '" />' +
+                '</a>' +
+                '<p>' + value.username + '</p>' +
+                '<p class="date">' + '<?=date("Y-m-d")?>' + '</p>' +
+                  '<i class="material-icons link pull-right unbann" data-user=' + value.id_user + '>close</i>' +
+              '</div>' +
+            '</div>'
+          );
+          users.push(value.username);
         }
       });
     });
