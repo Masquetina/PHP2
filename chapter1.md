@@ -1,7 +1,7 @@
-# First Chapter
+# Vodič kroz aplikaciju
 Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice, svih postojećih korisnika, sortirane od najnovije, ka starijim.
 
-Život budućeg korisnika na QuoteApp nastavlja se pravljenjem ličnog naloga. Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, sli i kao dodatni link na stranici za logovanje.
+Život budućeg korisnika na QuoteApp nastavlja se pravljenjem ličnog naloga. Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje).
 
 Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
 
