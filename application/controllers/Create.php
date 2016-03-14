@@ -20,8 +20,7 @@ class Create extends MY_Controller {
 			$config['allowed_types'] = 'jpg';
 	    $config['file_name'] = $username . rand(1, 999999) . '.jpg';
 	    $this->load->library('upload', $config);
-	    $this->upload->do_upload();
-			if($this->upload->do_upload()) {
+			if($this->upload->do_upload('userfile')) {
 				$image = $config['file_name'];
 				$config['image_library']	= 'gd2';
 				$config['source_image']		= './custom/img/cards/' . $image;

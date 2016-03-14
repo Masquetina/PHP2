@@ -91,5 +91,6 @@ $(document).ready(function() {
 	$('.form-control').focus(function() {
 		$(this).val('').toggleClass('active');
 	});
+	$('.message-container').delay(3000).fadeOut(1);
 });
 </script>
