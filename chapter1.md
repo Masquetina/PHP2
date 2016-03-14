@@ -25,7 +25,7 @@ Administrator je posebna vrsta autorizovanog korisnika. On nema svoju profilnu s
 
 Funkcionalnosti lajkovanja, flegovanja i brisanja kartice od strane korisnika su realizovane upotrebom AJAX-a, a takođe i sve radnje u okviru administratorskog panela. Ovde bih posebno istakla momenat ocenjivanja kartice kao neadekvatne i banovanja korisnika, gde se AJAX-om šalju podaci o kartici, a vraćaju podaci o korisniku da bi se on istovremeno ubacio na listu banovanih. Naime, DOM ne prepoznaje sadržaj ovako ubačen, iako ga administrator vidi!
 
-JavaScript kod koji se nalazi u okviru stranica VIEW
+JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modal pripadaju Bootstrap temi, i taj kod se nalazi u ../vendor/js/bootstrap.js
 
 
 
