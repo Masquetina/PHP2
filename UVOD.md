@@ -12,7 +12,7 @@ Registrovani korisnici kreiraju kartice. Svoje mogu da obrišu, a tuđe mogu da 
 
 Posledica kreiranja nepodobnog sadržaja je banovanje, što zavisi od arbitraže administratora. Banovan korisnik se ne može ulogovati na sajt, sve dok mu to ponovo ne omogući administrator.
 
-* Sopstvena kartica koju je moguće izbrisati:*
+* Sopstvena kartica koju je moguće izbrisati:
 
 ![](doc-images/own-card.png)
 
