@@ -123,6 +123,8 @@
 * profile.php
 
 -----
+####Baza
+![](doc-images/base.png)
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
 ##2.3 Slike stranica i opisi funkcionalnosti
