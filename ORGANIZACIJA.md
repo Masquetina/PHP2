@@ -180,7 +180,7 @@ Funkcionalnosti lajkovanja, flegovanja i brisanja kartice od strane korisnika su
 Ovde bih posebno istakla momenat ocenjivanja kartice kao neadekvatne i banovanja korisnika, gde se AJAX-om šalju podaci o kartici, a vraćaju podaci o korisniku da bi se on istovremeno ubacio na listu banovanih. Naime, DOM ne prepoznaje sadržaj ovako ubačen, iako ga administrator momentalno vidi! (O vome bih želela da prodiskutujemo.)
 
 ### Dodatne napomene:
-JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modali pripadaju Bootstrap temi, i taj kod se nalazi u ../vendor/js/bootstrap.js.
+JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modali pripadaju Bootstrap framework-u, i taj kod se nalazi u ../vendor/js/bootstrap.js.
 
 Sve forme su kreirane pomoću ```form``` helpera.
 
