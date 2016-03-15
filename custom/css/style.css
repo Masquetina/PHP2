@@ -969,37 +969,55 @@ span#file-name {
           0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.modal ul {
+.social ul {
   list-style: none;
   text-align: center;
   padding: 0;
   margin: 0;
 }
 
-.modal .social {
-  display: table;
+.social {
+  display: block;
 	margin: 0 auto;
   padding: 16px;
 }
 
-.modal ul li {
+.modal ul li,
+footer ul li {
   display: inline-block;;
   margin-right: 10px;
   padding: 0;
   margin: 0 16px;
 }
 
-.modal .mdi {
-  font-size: 32px;
-  text-align: center;
+footer ul li {
+  margin: 8px;
+  padding: 4px;
 }
 
-.modal .mdi-dribbble {
+.social .mdi {
+  font-size: 32px;
+  text-align: center;
+  border-radius: 100%;
+  padding: 4px;
+}
+
+.social .mdi-dribbble {
   color: #ea4c89;
 }
 
-.modal .mdi-twitter {
+.social .mdi-dribbble:hover {
+  color: #fcfcfc;
+  background-color: #ea4c89;
+}
+
+.social .mdi-twitter {
   color: #55acee;
+}
+
+.social .mdi-twitter:hover {
+  color: #fcfcfc;
+  background-color: #55acee;
 }
 
 .modal-open .no-jump {
@@ -1007,7 +1025,7 @@ overflow-y:scroll;
 }
 
 .pagination {
-  margin: 24px 0;
+  margin: 64px 0;
 }
 
 .pagination * {
@@ -1030,4 +1048,58 @@ overflow-y:scroll;
 
 footer {
   width: 100%;
+  background-color: #263238;
+}
+
+footer .menu {
+  margin: 32px 0 4px 0;
+  padding: 0;
+}
+
+footer p {
+  color: #fff;
+  cursor: pointer !important;
+}
+
+footer p:hover {
+  text-decoration: underline;
+}
+
+footer .regular p {
+  margin: 12px 0 0 0;
+}
+
+footer p.copy {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 479px) {
+  footer .menu {
+    float: none !important;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  footer .regular{
+    padding: 0;
+    margin: -16px 0 16px 0;
+  }
+  footer .social{
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+  }
+  footer ul {
+  -moz-margin-before: 0;
+	-moz-margin-after: 0;
+	-moz-margin-start: 0;
+	-moz-margin-end: 0;
+	-moz-padding-start: 0;
+  -webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+  }
 }

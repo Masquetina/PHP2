@@ -33,10 +33,6 @@
           <div class="panel panel-default">
             <div class="panel-heading" <?=$card->color;?> >
               <div class="interactions-group">
-                <a href="<?=base_url();?>profile/<?=$card->username;?>"
-                   title="<?=ucwords($card->username);?>">
-                  <img class="interactions avatar" src="<?=base_url();?>custom/img/avatars/<?=$card->avatar;?>" />
-                </a>
                 <ul class="info-bar">
                 <?php if( ! $this->session->userdata('validated') ||
                             $this->session->userdata('id_user') == ($card->id_user) ||

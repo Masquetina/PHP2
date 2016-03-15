@@ -11,7 +11,15 @@ class MY_Controller extends CI_Controller {
     $this->load->view('head', $data);
     $this->load->view('header');
     $this->load->view($view, $data);
-    $this->load->view('footer');
+    $data = array();
+		$this->load->model('menu');
+    $query = $this->menu->get_social();
+		if($query) {
+			$data['socials'] = $query;
+      $this->load->view('footer', $data);
+    } else {
+      $this->load->view('footer');
+    }
   }
 
   public function load_forms($view, $data) {
