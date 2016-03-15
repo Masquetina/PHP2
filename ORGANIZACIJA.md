@@ -1,7 +1,7 @@
 #2. Organizacija
 ##2.1 Organizaciona šema
 ###KONTROLERI
-| **MY_Controler.php** |
+| MY_Controler.php |
 | -- |
 | __construct() |
 | load_basic() |
@@ -9,13 +9,19 @@
 
 | Home.php |
 | -- |
+| __construct() |
 | index() |
 
 | Signup.php |
 | -- |
+| __construct() |
 | index() |
 | validate() |
 
+| Login.php |
+| -- |
+| __construct() |
+| index() |
 
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
