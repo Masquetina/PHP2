@@ -37,10 +37,4 @@ class Settings extends MY_Controller {
 			}
 		}
 	}
-
-	public function password() {
-		$data = array();
-		$data['page_title'] = "Password change request";
-		$this->load_forms('password', $data);
-	}
 }

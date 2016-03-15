@@ -17,17 +17,12 @@
 		<div class="regular menu pull-right">
 			<ul>
 				<li>
-					<a href="#">
-						<p>Contact</p>
-					</a>
-				</li>
-				<li>
-					<a href="#">
+					<a href="<?=base_url();?>/sitemap.xml" target="_blank">
 						<p>Sitemap</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://github.com/Masquetina/PHP2/blob/master/SUMMARY.md" target="_blank">
 						<p>Documentation</p>
 					</a>
 				</li>
