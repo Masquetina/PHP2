@@ -22,7 +22,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="https://github.com/Masquetina/PHP2/blob/master/SUMMARY.md" target="_blank">
+					<a href="https://github.com/Masquetina/PHP2/blob/master/DOKUMENTACIJA_SADRZAJ.md" target="_blank">
 						<p>Documentation</p>
 					</a>
 				</li>
