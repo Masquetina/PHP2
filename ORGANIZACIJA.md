@@ -159,7 +159,7 @@ Dodatne promene na početnoj stranici koje se tiču statusa autorizovanog korisn
 
 U dnu početne stranice, iznad podnožja, nalaze se linkovi za straničenje, koji su podjednako klikabilni za neautorizovane, kao i za autorizovane korisnike, a realizovani su pomoću biblioteke ```pagination```.
 
-Forma za kreiranje nove kartice je urađena uz mnogo jQuery koda, koji pre svega proverava unos korisnika i ispisuje greške, ali i učestvuje u stilizovanju ```input[type=file]```, čiji sam podrazumevani izgled potpuno promenila i vizuelno prilagodila stilu sajta. Takođe, potpuno sam promenila podrazumevani izgled ```input[type=radio]```, tako da budu obojeni u boju koju korisnik želi da odabere za pozadinsku boju svoje kartice. Na donjoj slici se konačno vidi i izgled stranice na malom ekranu, a primetna je promena u izgledu zaglavlja, gde su tekstualne dugmiće zamenile ikonice. 
+Forma za kreiranje nove kartice je urađena je u jQuery-ju, koji pre svega proverava unos korisnika i ispisuje greške, ali i učestvuje u stilizovanju ```input[type=file]```, čiji sam podrazumevani izgled potpuno promenila i vizuelno prilagodila stilu sajta. Takođe, potpuno sam promenila podrazumevani izgled ```input[type=radio]```, tako da budu obojeni u boju koju korisnik želi da odabere za pozadinsku boju svoje kartice. Na donjoj slici se konačno vidi i izgled stranice na malom ekranu, a primetna je promena u izgledu zaglavlja, gde su tekstualne dugmiće zamenile ikonice. 
 
 ![](doc-images/new-card.png) 
 
