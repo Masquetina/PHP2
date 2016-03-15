@@ -110,6 +110,16 @@
 * get_social()
 
 -----
+###VIEW-s
+head.php
+header.php
+home.php
+footer.php
+login.php
+signup.php
+card.php
+profile.php
+-----
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
 ##2.3 Slike stranica i opisi funkcionalnosti
