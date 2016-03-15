@@ -123,7 +123,7 @@
 * profile.php
 
 -----
-####Baza
+###Baza
 ![](doc-images/base.png)
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
