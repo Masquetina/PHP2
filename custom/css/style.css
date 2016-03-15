@@ -1058,7 +1058,7 @@ footer .menu {
 
 footer p {
   color: #fff;
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 footer p:hover {
@@ -1072,6 +1072,7 @@ footer .regular p {
 footer p.copy {
   font-size: 12px;
   text-decoration: none;
+  cursor: default;
 }
 
 @media screen and (max-width: 479px) {

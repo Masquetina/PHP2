@@ -75,7 +75,7 @@
 		</div>
 		<div class="text-center">
 			<small class="text-muted">
-				<a class="text-primary" href="<?=base_url();?>settings/password">Forgot password?</a>
+				<a class="text-primary" href="#">Forgot password?</a>
 			</small>
 		</div>
 		<div class="text-center">
