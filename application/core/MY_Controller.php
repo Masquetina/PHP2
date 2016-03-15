@@ -7,7 +7,6 @@ class MY_Controller extends CI_Controller {
   }
 
   public function load_basic($view, $data) {
-    $this->session;
     $this->load->view('head', $data);
     $this->load->view('header');
     $this->load->view($view, $data);
@@ -23,14 +22,12 @@ class MY_Controller extends CI_Controller {
   }
 
   public function load_forms($view, $data) {
-    $this->session;
     $this->load->view('head', $data);
     $this->load->view('flashdata');
     $this->load->view($view, $data);
   }
 
   public function load_admin($view, $data) {
-    $this->session;
     $this->load->view('head', $data);
     $this->load->view('header');
     $this->load->view($view, $data);
