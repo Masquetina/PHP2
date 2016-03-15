@@ -39,14 +39,29 @@
 * card()
 
 -----
-**Cardgout.php**
+**Card.php**
 * __construct()
-* index()
 * like()
 * delete(
 * flag()
 
 -----
+**Profile.php**
+* __construct()
+* index()
+
+-----
+**Settings.php**
+* __construct()
+* image()
+
+-----
+**Dashboardd.php**
+* __construct()
+* index()
+* delete(
+* unflag()
+* unbann()
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
 ##2.3 Slike stranica i opisi funkcionalnosti
