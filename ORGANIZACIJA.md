@@ -188,7 +188,7 @@ Animaciju na karticama sam uradila samostalno.
 
 Logo je u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije.
 
-Napomenula bih još, da je ovo tek prvi draft ili skica sajta, koja jeste funkcionalna, ali po mom mišljenju daleko od svog maksimuma. Posebno bih se osvrnula na JavaScript kod kom je potrebna refaktorizacija. Osim premeštanja u eksterni js fajl, bilo bi poželjno iz postojećeg koda izdvojiti zajedničke funkcije, kojima bi se samo prosleđivali različiti parametri.
+Napomenula bih još, da je ovo tek prvi draft ili skica sajta, koja jeste funkcionalna, ali po mom mišljenju daleko od svog maksimuma. Posebno bih se osvrnula na JavaScript kod, kojem je potrebna refaktorizacija. Osim premeštanja u eksterni js fajl, bilo bi poželjno iz postojećeg koda izdvojiti zajedničke funkcije, kojima bi se samo prosleđivali različiti parametri.
 
 
 
