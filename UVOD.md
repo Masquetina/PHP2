@@ -10,15 +10,15 @@ Registrovani korisnici kreiraju kartice. Svoje mogu da obrišu, a tuđe mogu da 
 
 Posledica kreiranja nepodobnog sadržaja je banovanje, što zavisi od arbitraže administratora. Banovan korisnik se ne može ulogovati na sajt, sve dok mu to ponovo ne omogući administrator.
 
-- Sopstvena kartica koju je moguće izbrisati:
+*Sopstvena kartica koju je moguće izbrisati:*
 
 ![](doc-images/own-card.png)
 
-- Tuđa kartica koju je moguće lajkovati ili flegovati, ali na drugoj slici prikazana onako kako je vidi neautorizovani korisnik i to nakon animacije na klik:
+* Tuđa kartica koju je moguće lajkovati ili flegovati, ali na drugoj slici prikazana onako kako je vidi neautorizovani korisnik i to nakon animacije na klik:
 
 ![](doc-images/other-card.png)![](doc-images/card-info.png)
 
-- Flegovana kartica kako je vidi administrator u svom panelu:
+* Flegovana kartica kako je vidi administrator u svom panelu:
 
 ![](doc-images/dashboart-card.png)
 
