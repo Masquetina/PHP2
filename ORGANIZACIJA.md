@@ -139,11 +139,11 @@ Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog de
 
 ![](doc-images/create-account.png)
 
-Zaglavlje je vidljivo korisniku samo u svrhu prikazivanja flashmessage, ukoliko ona postoji, (ovo je zajedničko za sve stranice na kojima se nalazi forma), a u dnu su linkovi ka Terms of service, koji otvara modal i link ka LOGIN stranici ukoliko ovaj korisnik već ima kreiran nalog.
+Zaglavlje je vidljivo korisniku samo u svrhu prikazivanja flashmessage, ukoliko ona postoji, (ovo je zajedničko za sve stranice na kojima se nalazi forma), a u dnu su linkovi ka Terms of service, koji otvara modal i link ka LOGIN stranici.
 
 U centralnom delu se nalazi forma u koju korisnik upisuje svoje podatke. Obradu podataka sam uradila pomoću biblioteke ```form_validation```, koja je učitana u konfiguracionom fajlu ```autoload```.
 
-Ispis grešaka je realizovan ispod svakog polja ponaosob, i adekvatno je stilizovan
+Ispis grešaka je realizovan ispod svakog polja ponaosob, i adekvatno je stilizovan.
 
 Nakon ispravno unesenih podataka, klikom na dugme CREATE ACCOUNT, kreira se korisnički nalog u bazi, i korisnik biva redirektovan na stranicu za logovanje, uz adekvatnu propratnu ```flashmessage```. Takođe, svakom korisniku biva dodeljana podrazumevana profilna slika, koju sam predvidela da kasnije mogu promeniti na stranici svog profila.
 
