@@ -121,6 +121,7 @@
 * signup.php
 * card.php
 * profile.php
+* 
 -----
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
