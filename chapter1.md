@@ -1,15 +1,16 @@
-# Vodič kroz aplikaciju
-Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice kojima je marker delete jednak 0, dinamički izlistane iz baze, svih postojećih korisnika, sortirane od najnovije, ka starijim.
+# Organizacija
+##Slike stranica i opisi funkcionalnosti
+Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice kojima je marker ```delete``` jednak 0, dinamički izlistane iz baze, svih postojećih korisnika, sortirane od najnovije, ka starijim, uz straničenje.
 
 ![](home.png)
 
-U zaglavlju se nalazi fiksirani meni, koji prikazuje odgovarajuće linkove u odnosu na to da li je korisnik ulogovan, i ako jeste, koja mu je usloga dodeljena.
+U zaglavlju se nalazi fiksirani meni, koji prikazuje odgovarajuće linkove u odnosu na to da li je korisnik ulogovan, i ako jeste, koja mu je usloga dodeljena. Na predhodnoj slici vidi se stanje koje zatiče neulogovan korisnik.
 
-Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije o autoru, a dostupan je svim korisnicima, bez obzira na status i ulogu.
+Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije **o autoru**, a dostupan je svim korisnicima, bez obzira na status i ulogu, a na slici ispod, osim modala, nažire se u pozadini izgled zaglavlja kako ga vidi ulogovan korisnik.
 
 ![](modal.png)
 
-Život korisnika na QuoteApp nastavlja se pravljenjem korisničkog naloga. Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje). Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
+Život neautorizovanog korisnika na QuoteApp nastavlja se logovanje, ili ukoliko nalog ne postoji, kreiranjem korisničkog naloga. Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje). Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
 
 ![](01.png)
 
