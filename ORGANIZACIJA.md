@@ -33,7 +33,20 @@
 * index()
 
 -----
+**Create.php**
+* __construct()
+* index()
+* card()
 
+-----
+**Cardgout.php**
+* __construct()
+* index()
+* like()
+* delete(
+* flag()
+
+-----
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
 ##2.3 Slike stranica i opisi funkcionalnosti
