@@ -12,15 +12,15 @@ Posledica kreiranja nepodobnog sadržaja je banovanje, što zavisi od arbitraže
 
 1. Sopstvena kartica koju je moguće izbrisati:
 
-![](own-card.png)
+![](doc-images/own-card.png)
 
 2. Tuđa kartica koju je moguće lajkovati ili flegovati, ali na drugoj slici prikazana onako kako je vidi neautorizovani korisnik i to nakon animacije na klik:
 
-![](other-card.png)![](cart-info.png)
+![](doc-images/other-card.png)![](doc-images/card-info.png)
 
 3. Flegovana kartica kako je vidi administrator u svom panelu:
 
-![](dashboart-card.png)
+![](doc-images/dashboart-card.png)
 
 Unutar footer-a se nalazi dinamički meni sa leve strane, koji se sastoji iz linkova ka društvenim mrežama, a prikazan je u vidu odgovarajućih ikonica.
 ## Template
