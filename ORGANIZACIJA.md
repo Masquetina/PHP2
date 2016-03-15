@@ -56,7 +56,7 @@
 * image()
 
 -----
-**Dashboardd.php**
+**Dashboard.php**
 * __construct()
 * index()
 * delete(
