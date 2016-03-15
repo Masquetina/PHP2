@@ -127,7 +127,7 @@ Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice kojima je m
 
 U zaglavlju se nalazi fiksirani meni, koji prikazuje odgovarajuće linkove u odnosu na to da li je korisnik ulogovan, i ako jeste, koja mu je usloga dodeljena. Na predhodnoj slici vidi se stanje koje zatiče neulogovan korisnik.
 
-Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije **o autoru**, a dostupan je svim korisnicima, bez obzira na status i ulogu, a na slici ispod, osim modala, nažire se u pozadini izgled zaglavlja kako ga vidi ulogovan korisnik.
+Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije **o autoru**, a dostupan je svim korisnicima, bez obzira na status i ulogu, a na slici ispod, iza modala, nazire se u pozadini izgled zaglavlja kako ga vidi ulogovan korisnik.
 
 ![](doc-images/modal.png)
 
