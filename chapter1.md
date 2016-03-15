@@ -10,19 +10,27 @@ Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije **
 
 ![](modal.png)
 
-Život neautorizovanog korisnika na QuoteApp nastavlja se logovanje, ili ukoliko nalog ne postoji, kreiranjem korisničkog naloga. Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje). Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
+Život neautorizovanog korisnika na QuoteApp nastavlja se logovanje, ili ukoliko nalog ne postoji, kreiranjem korisničkog naloga.
+
+Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje).
+
+Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
 
 ![](01.png)
 
 Zaglavlje je vidljivo korisniku samo u svrhu prikazivanja flashmessage, ukoliko ona postoji, (ovo je zajedničko za sve stranice na kojima se nalazi forma), a u dnu su linkovi ka Terms of service, koji otvara modal i link ka LOGIN stranici ukoliko ovaj korisnik već ima kreiran nalog.
 
-U centralnom delu se nalazi forma u koju korisnik upisuje svoje podatke. Obradu podataka sam uradila pomoću biblioteke form_validation, koja je učitana u konfiguracionom fajlu autoload. Ispis grešaka je ispod svakog polja ponaosob, i adekvatno je stilizovan. Nakon ispravno unesenih podataka, klikom na dugme CREATE ACCOUNT, kreira se korisnički nalog u bazi, i korisnik biva redirektovan na stranicu za logovanje, uz adekvatnu propratnu flashmessage. Takođe, svakom korisniku biva dodeljana podrazumevana profilna slika, koju kasnije mogu promeniti na stranici svog profila.
+U centralnom delu se nalazi forma u koju korisnik upisuje svoje podatke. Obradu podataka sam uradila pomoću biblioteke ```form_validation```, koja je učitana u konfiguracionom fajlu ```autoload```.
 
-Na stranici za logovanje se nalazi forma za upis korisničkog imena i lozinke. Ovde nisam iskoristila biblioteku form_validation, već se jednostavno, ukoliko korisnik ne postoji u bazi, ispisuje flashmessage koja upozorava na to.
+Ispis grešaka je realizovan ispod svakog polja ponaosob, i adekvatno je stilizovan
+
+Nakon ispravno unesenih podataka, klikom na dugme CREATE ACCOUNT, kreira se korisnički nalog u bazi, i korisnik biva redirektovan na stranicu za logovanje, uz adekvatnu propratnu ```flashmessage```. Takođe, svakom korisniku biva dodeljana podrazumevana profilna slika, koju sam predvidela da kasnije mogu promeniti na stranici svog profila.
+
+Na stranici za logovanje se nalazi forma za upis korisničkog imena i lozinke. Ovde nisam iskoristila biblioteku ```form_validation```, već se jednostavno, ukoliko korisnik ne postoji u bazi, ispisuje ```flashmessage``` koja upozorava na to.
 
 ![Login forma sa ispisom o grešci.](02.png)
 
-Ukoliko je logovanje uspešno, korisnik biva redirektovan na početnu stranicu, uz dodatne izmene u odnosu na ono kako ju je video kao neautorizovan. Dugme JOIN US NOW se više ne prikazuje, a umesto dugmeta LOGIN se prikazuje dugme LOGOUT. Takođe, dugme NEW CARD dobija svoju svrsishodnost, odnosno, klikom na njega korisnik stiže na stranicu na kojoj je u mogućnosti da kreira novu karticu, a koja mu je dok je bio neautorizovan bila nedostupna.
+Ukoliko je logovanje uspešno, korisnik biva redirektovan na početnu stranicu, uz dodatne izmene u odnosu na ono kako ju je video kao neautorizovan. Dugme JOIN US NOW se više ne prikazuje, a umesto dugmeta LOGIN se prikazuje dugme LOGOUT. Takođe, dugme NEW CARD dobija svoju svrsishodnost, odnosno, klikom na njega korisnik stiže na stranicu na kojoj je u mogućnosti da kreira novu karticu, a koja mu je dok je bio neautorizovan bila nedostupna. Kao neautorižovanok, klik na dugme NEW CARD vodilo je na stranicu za logovanje.
 
 ![](login-nav.png)
 
