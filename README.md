@@ -1,6 +1,6 @@
 # Uvod
 ## Korišćeni programski jezici
-Dinamički web site QuoteApp je napisan u serverskom jeziku PHP, u framework-u Codeigniter, a od klijentrskih jezika korišćena je JavaScript u obliku AJAX-a i biblioteke jQuery. Markup jezik je HTML, uz dodatak lično kreiranih atributa u obliku ```data-[atribut]```, za potrebe dohvatanja podataka iz DOM-a preko jQuery selektora. Za stilizovanje je korišćen CSS3 , uformi mnogih novijih tehnika stilizovanja i animacije. Dizajn sajta je osmišljen prema osnovnim standardima Material Design stila od Google-a, a koriščen je Material Design Icon font za ikonice. Inicijalno je upotrebljena tema Bootstrap, međutim u mnogome je prerađena, što je očigledno.
+Dinamički web site QuoteApp je napisan u serverskom jeziku PHP, u framework-u Codeigniter, a od klijentrskih jezika korišćena je JavaScript u obliku AJAX-a i biblioteke jQuery. Markup jezik je HTML, uz dodatak lično kreiranih atributa u obliku ```data-[atribut]```, za potrebe dohvatanja podataka iz DOM-a preko jQuery selektora. Za stilizovanje je korišćen CSS3 , uformi mnogih novijih tehnika stilizovanja i animacije. Dizajn sajta je osmišljen prema osnovnim standardima Material Design stila od Google-a, a koriščen je Material Design Icon font za ikonice. Inicijalno je upotrebljena tema Bootstrap.
 ## Opis funkcionalnosti
 QuoteApp sadrži dinačko prikazivanje kartica iz baze, na početnoj stranici, kao i na stranicama profila svih korisnika, a svaka kartica kao gradivna jedinica sastoji se iz podataka koji čine nju samu, kao i podataka o njenom autoru. A u bazi se čuvaju i podaci o lajkovima, flegovima, kao i manipulaciji administratora nad karticom, ukoliko do toga dođe akcijom korisnika.
 
@@ -26,7 +26,7 @@ Unutar footer-a se nalazi dinamički meni sa leve strane, koji se sastoji iz lin
 ## Template
 Sama sam kreirala strukturu sajta, ne postoji tuđi templejt.
 ## Korišćeni CSS
-Bootstrap CSS framework od kog sam inicijalno krenula sam u mnogome promenila, a koristila sam ga mahom da bih postigla responsivnost, a sve ostalo sam restilizovala.
+Bootstrap CSS framework je korišćen mahom u svrhu responsivnosti, dok je sve ostalo restilizovano.
 
 
 
