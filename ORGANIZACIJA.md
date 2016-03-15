@@ -1,5 +1,22 @@
-# 2. Organizacija
+#2. Organizacija
 ##2.1 Organizaciona šema
+###KONTROLERI
+| **MY_Controler.php** |
+| -- |
+| __construct() |
+| load_basic() |
+| load_admin() |
+
+| Home.php |
+| -- |
+| index() |
+
+| Signup.php |
+| -- |
+| index() |
+| validate() |
+
+
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
 ##2.3 Slike stranica i opisi funkcionalnosti
