@@ -189,11 +189,11 @@ Ovde bih posebno istakla momenat ocenjivanja kartice kao neadekvatne i banovanja
 ### Dodatne napomene:
 JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modali pripadaju Bootstrap temi, i taj kod se nalazi u ../vendor/js/bootstrap.js.
 
-Sve forme su kreirane pomoću form helpera.
+Sve forme su kreirane pomoću ```form``` helpera.
 
 Animaciju na karticama sam uradila samostalno.
 
-Logo i ilustracija na početnoj stranici su u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije.
+Logo je u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije.
 
 Napomenula bih još, da je ovo tek prvi draft ili skica sajta, koja jeste funkcionalna, ali po mom mišljenju daleko od svog maksimuma. Posebno bih se osvrnula na JavaScript kod kojme je potrebna refaktorizacija. Osim premeštanja u eksterni js fajl, bilo bi poželjno iz postojećeg koda izdvojiti zajedničke funkcije, kojima bi se samo prosleđivali različiti parametri. Takođe, svesna sam da je svaku formu na sajtu potrebno, u smislu validacije unesenih podataka, tretirati na isti način.
 
