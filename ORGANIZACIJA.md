@@ -4,13 +4,13 @@
 ##Slike stranica i opisi funkcionalnosti
 Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice kojima je marker ```delete``` jednak 0, dinamički izlistane iz baze, svih postojećih korisnika, sortirane od najnovije, ka starijim, uz straničenje.
 
-![](home.png)
+![](doc-images/home.png)
 
 U zaglavlju se nalazi fiksirani meni, koji prikazuje odgovarajuće linkove u odnosu na to da li je korisnik ulogovan, i ako jeste, koja mu je usloga dodeljena. Na predhodnoj slici vidi se stanje koje zatiče neulogovan korisnik.
 
 Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije **o autoru**, a dostupan je svim korisnicima, bez obzira na status i ulogu, a na slici ispod, osim modala, nažire se u pozadini izgled zaglavlja kako ga vidi ulogovan korisnik.
 
-![](modal.png)
+![](doc-images/modal.png)
 
 Život neautorizovanog korisnika na QuoteApp nastavlja se logovanje, ili ukoliko nalog ne postoji, kreiranjem korisničkog naloga.
 
@@ -18,7 +18,7 @@ Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i on
 
 Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
 
-![](01.png)
+![](doc-images/login.png)
 
 Zaglavlje je vidljivo korisniku samo u svrhu prikazivanja flashmessage, ukoliko ona postoji, (ovo je zajedničko za sve stranice na kojima se nalazi forma), a u dnu su linkovi ka Terms of service, koji otvara modal i link ka LOGIN stranici ukoliko ovaj korisnik već ima kreiran nalog.
 
@@ -30,11 +30,11 @@ Nakon ispravno unesenih podataka, klikom na dugme CREATE ACCOUNT, kreira se kori
 
 Na stranici za logovanje se nalazi forma za upis korisničkog imena i lozinke. Ovde nisam iskoristila biblioteku ```form_validation```, već se jednostavno, ukoliko korisnik ne postoji u bazi, ispisuje ```flashmessage``` koja upozorava na to.
 
-![Login forma sa ispisom o grešci.](02.png)
+![](doc-images/login-error.png)
 
 Ukoliko je logovanje uspešno, korisnik biva redirektovan na početnu stranicu, uz dodatne izmene u odnosu na ono kako ju je video kao neautorizovan. Dugme JOIN US NOW se više ne prikazuje, a umesto dugmeta LOGIN se prikazuje dugme LOGOUT. Takođe, dugme NEW CARD dobija svoju svrsishodnost, odnosno, klikom na njega korisnik stiže na stranicu na kojoj je u mogućnosti da kreira novu karticu, a koja mu je dok je bio neautorizovan bila nedostupna. Kao neautorižovanok, klik na dugme NEW CARD vodilo je na stranicu za logovanje.
 
-![](login-nav.png)
+![](doc-images/login-nav.png)
 
 Dodatne promene na početnoj stranici koje se tiču statusa autorizovanog korisnika su i te da može da lajkuje i fleguje tuđe kartice, a svoje da obriše, ukoliko to želi. Kao neautorizovan je mogao samo da vidi broj lajkova, a ostale funkcije koje sam nabrojala su mu bile nedostupne. Takođe, pored dugmeta LOGOUT, autorizovani korisnik vidi i svoju profilnu sliku.
 
@@ -42,19 +42,19 @@ U dnu početne stranice, iznad podnožja, nalaze se linkovi za straničenje, koj
 
 Forma za kreiranje nove kartice je urađena uz mnogo jQuery koda, koji pre svega proverava unos korisnika i ispisuje greške, ali i učestvuje u stilizovanju ```input[type=file]```, čiji sam podrazumevani izgled potpuno promenila i vizuelno prilagodila stilu sajta. Takođe, potpuno sam promenila podrazumevani izgled ```input[type=radio]```, tako da budu obojeni u boju koju korisnik želi da odabere za pozadinsku boju svoje kartice. Na donjoj slici se konačno vidi i izgled stranice na malom ekranu, a primetna je promena u izgledu zaglavlja, gde su tekstualne dugmiće zamenile ikonice. 
 
-![](new-card.png) 
+![](doc-images/new-card.png) 
 
 Nakon kreiranja kartice, korisnik je redirektovan na stranicu svog profila, gde može da je vidi, kao i sve ostale svoje kartice, poređane od najnovije ka starijim.
 
 Osim svog profila, korisnik klikom na profilnu sliku drugog korisnika, koja se nalazi na svakoj od kartica čiji je ovaj autor (ako posmatramo početnu stanu sajta), može da stigne na profilnu stranicu tog korisnika.
 
-![](profile.png)
+![](doc-images/profile.png)
 
 Administrator je posebna vrsta autorizovanog korisnika. On nema svoju profilnu stranicu, jer mu nije ni potrebna, niti učestvuje u kreiranju, lajkovanju i/ili flegovanju kartica, jer to nije njegova uloga. On je zadužen za upravljanje već kreiranim karticama i korisnicima. Naime, može se desiti da je neka kartica neprikladnog sadržaja i tada biva flegovana od strane nekog korisnika. Takve kartice su vidljive administratoru u okviru administratorskog panela, i on je dužan da ih dalje procesuira. On karticu može označiti kao neadekvatnu i time je potpuno ukloniti sa sajta, a autora kartice banovati, a može karticu oceniti kao adekviatnu i time joj ```flag``` marker vratiti na 0.
 
 Ako je neki korisnik banovan, prikazan je na kartici u administratorskom panelu, gde se vidi njegova profilna slika, korisničko ime i datum banovanja. Administrator može vratiti marker ```ban``` na 0, klikom na ikonicu X na kartici korisnika. Ukoliko je korisnik banovan, nije u mogućnosti da se uloguje, pa mu funkcionalnosti za autorizovane korisnike sajta samim tim nisu dostupne, a pri pokušaju logovanje na to je upozoren putem ispisa flashmessage.
 
-![](dashboard-users.png)
+![](doc-images/dashboard-users.png)
 
 Funkcionalnosti lajkovanja, flegovanja i brisanja kartice od strane korisnika su realizovane upotrebom AJAX-a, a takođe i sve radnje u okviru administratorskog panela.
 
