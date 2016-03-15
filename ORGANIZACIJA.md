@@ -138,7 +138,7 @@ Klikom na ikonicu "i" sa desne strane otvara se modal koji pruža informacije **
 
 ![](doc-images/modal.png)
 
-Život neautorizovanog korisnika na QuoteApp nastavlja se logovanje, ili ukoliko nalog ne postoji, kreiranjem korisničkog naloga.
+Aktivnost neautorizovanog korisnika na QuoteApp može se nastaviti logovanjem, ili ukoliko nalog ne postoji, kreiranjem korisničkog naloga.
 
 Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i ono je dostupno neautorizovanim korisnicima na početnoj stranici sajta, (ali i kao dodatni link na stranici za logovanje).
 
