@@ -1,7 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-* [Kodovi](Kodovi.md)
-* [Uvod](UVOD.md)
+* [1. Uvod](UVOD.md)
+* [2. Orgnizacija](ORGANIZACIJA.md)
 * [Orgnizacija](ORGANIZACIJA.md)
 
