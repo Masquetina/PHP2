@@ -34,6 +34,3 @@
 		</div>
 	</div>
 </footer>
-<script type="text/javascript">
-
-</script>
