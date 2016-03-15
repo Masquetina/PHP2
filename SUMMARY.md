@@ -1,5 +1,5 @@
 # Summary
 
 * [Uvod](README.md)
-* [First Chapter](chapter1.md)
+* [Organizavija](chapter1.md)
 
