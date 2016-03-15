@@ -1,5 +1,5 @@
 # Summary
 
-* [Uvod](UVOD.md)
-* [Orgnizacija](ORGANIZACIJA.md)
+* [1. Uvod](UVOD.md)
+* [2. Orgnizacija](ORGANIZACIJA.md)
 
