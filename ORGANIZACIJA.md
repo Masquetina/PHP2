@@ -1,7 +1,7 @@
 #2. Organizacija
 ##2.1 Organizaciona šema
 ###KONTROLERI
-**MY_Controler.php**
+[**MY_Controler.php**](https://github.com/Masquetina/PHP2/blob/master/application/core/MY_Controller.php)
 * __construct()
 * load_basic()
 * load_form()
@@ -21,8 +21,8 @@
 * index()
 
 **Logout.php**
-*__construct()
-*index()
+* __construct()
+* index()
 
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
