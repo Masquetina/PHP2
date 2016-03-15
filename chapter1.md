@@ -1,4 +1,6 @@
 # Organizacija
+##Organizaciona šema
+
 ##Slike stranica i opisi funkcionalnosti
 Početna stranica QuoteApp inicijalno prikazuje sve kreirane kartice kojima je marker ```delete``` jednak 0, dinamički izlistane iz baze, svih postojećih korisnika, sortirane od najnovije, ka starijim, uz straničenje.
 
@@ -58,16 +60,16 @@ Funkcionalnosti lajkovanja, flegovanja i brisanja kartice od strane korisnika su
 
 Ovde bih posebno istakla momenat ocenjivanja kartice kao neadekvatne i banovanja korisnika, gde se AJAX-om šalju podaci o kartici, a vraćaju podaci o korisniku da bi se on istovremeno ubacio na listu banovanih. Naime, DOM ne prepoznaje sadržaj ovako ubačen, iako ga administrator momentalno vidi! (O vome bih želela da prodiskutujemo.)
 
-###Napomene:
+### Dodatne napomene:
 JavaScript kod koji se nalazi u okviru stranica VIEW-а sam kompletno pisala sama, ali modali pripadaju Bootstrap temi, i taj kod se nalazi u ../vendor/js/bootstrap.js.
 
 Sve forme su kreirane pomoću form helpera.
 
-Css je inicijalno Bootstrap, ali sam ga restilizovala da odgovara smernicama Material Design stila. Animaciju na karticama sam uradila samostalno. Koristila sam CSS3 maksimalno, a takođe i Icon font MDI. Logo i ilustracija na početnoj stranici su u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije. U HTML-u sam iskoristila mogućnost definisanja sopstvenih atributa unutar tagova, u obliku data-[ime], da bih podatke lakše dohvatala pomoću jQuery biblioteke.
+Animaciju na karticama sam uradila samostalno.
 
-Sajt je kompletno responive, a na malim ekranima tekst u navigacionom meniju zamenuju odgovarajuće ikonice.
+Logo i ilustracija na početnoj stranici su u formatu SVG, radi kvalitetnijeg prikaza na uređajima visoke rezolucije.
 
-Napomenula bih još, da je ovo tek prvi draft ili skica sajta, koja jeste funkcionalna, ali po mom mišljenju daleko od svog maksimuma. Posebno bih se osvrnula na JavaScript kod koji je razbacan i potrebna mu je refaktorizacija, jer se dobar deo ponavlja iz stranice u stranicu, i osim premeštanja u eksterni js fajl, bilo bi poželjno iz postojećeg koda izdvojiti zajedničke funkcije kojima mi bi se samo prosleđivali različiti parametri, umesto ponavljanja istog koda. Takođe, svesna sam da je svaku formu na sajtu potrebno, u smislu validacije unesenih podataka, tretirati na isti način, iako sam ja u ovoj verziji za različite forme uradila različite validacije. To sam uradila za sada ovako, da bi svaki od načina bio zastupljen, odnosno da bih pokazala da znam da uradim svaki način, a u konačnom obliku, trebalo bi ih kombinovati, odnosno za svaku formu uraditi prvo proveru sa klijentske strane, pa proveru sa serverske strane, i napokon uporednu proveru podataka koje vraća baza.
+Napomenula bih još, da je ovo tek prvi draft ili skica sajta, koja jeste funkcionalna, ali po mom mišljenju daleko od svog maksimuma. Posebno bih se osvrnula na JavaScript kod kojme je potrebna refaktorizacija. Osim premeštanja u eksterni js fajl, bilo bi poželjno iz postojećeg koda izdvojiti zajedničke funkcije, kojima bi se samo prosleđivali različiti parametri. Takođe, svesna sam da je svaku formu na sajtu potrebno, u smislu validacije unesenih podataka, tretirati na isti način.
 
 
 
