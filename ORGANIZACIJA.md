@@ -79,13 +79,6 @@
 * signup()
 
 -----
-**User.php**
-* __construct()
-* get_user()
-* get_cards()
-* get_likes()
-
------
 **Cards.php**
 * __construct()
 * get_all_cards()
