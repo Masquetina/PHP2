@@ -84,18 +84,25 @@
 * get_likes()
 
 -----
-**User.php**
+**Cards.php**
 * __construct()
-* get_user()
-* get_cards()
-* get_likes()
+* get_all_cards()
+* create_card()
+* like_card()
+* create_like()
+* delete_card()
+* flag_card()
+* create_flag()
 
 -----
-**User.php**
+**Administration.php**
 * __construct()
+* get_users()
+* get_cards()
+* delete_card()
+* unflag_card()
 * get_user()
-* get_cards(
-* get_likes()
+* unbann_user()
 
 -----
 ##2.2 Mapa sajta
