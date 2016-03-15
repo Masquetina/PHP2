@@ -36,15 +36,15 @@ Ukoliko je logovanje uspešno, korisnik biva redirektovan na početnu stranicu, 
 
 Dodatne promene na početnoj stranici koje se tiču statusa autorizovanog korisnika su i te da može da lajkuje i fleguje tuđe kartice, a svoje da obriše, ukoliko to želi. Kao neautorizovan je mogao samo da vidi broj lajkova, a ostale funkcije koje sam nabrojala su mu bile nedostupne. Takođe, pored dugmeta LOGOUT, autorizovani korisnik vidi i svoju profilnu sliku.
 
-U dnu početne stranice, iznad podnožja, nalaze se linkovi za straničenje, koji su podjednako klikabilni za neautorizovane, kao i za autorizovane korisnike, a realizovani su pomoću biblioteke pagination.
+U dnu početne stranice, iznad podnožja, nalaze se linkovi za straničenje, koji su podjednako klikabilni za neautorizovane, kao i za autorizovane korisnike, a realizovani su pomoću biblioteke ```pagination```.
 
-Forma za kreiranje nove kartice je urađena uz mnogo jQuery koda, koji pre svega proverava unos korisnika i ispisuje greške, ali i učestvuje u stilizovanju input[type=file], čiji sam podrazumevani izgled potpuno promenila i vizuelno prilagodila stilu sajta.
+Forma za kreiranje nove kartice je urađena uz mnogo jQuery koda, koji pre svega proverava unos korisnika i ispisuje greške, ali i učestvuje u stilizovanju ```input[type=file]```, čiji sam podrazumevani izgled potpuno promenila i vizuelno prilagodila stilu sajta. Takođe, potpuno sam promenila podrazumevani izgled ```input[type=radio]```, tako da budu obojeni u boju koju korisnik želi da odabere za pozadinsku boju svoje kartice. Na donjoj slici se konačno vidi i izgled stranice na malom ekranu, a primetna je promena u izgledu zaglavlja, gde su tekstualne dugmiće zamenile ikonice. 
 
 ![](new-card.png) 
 
 Nakon kreiranja kartice, korisnik je redirektovan na stranicu svog profila, gde može da je vidi, kao i sve ostale svoje kartice, poređane od najnovije ka starijim.
 
-Osim svog profila, korisnik klikom na profilnu sliku drugog korisnika, koja se nalazi na svakoj od kartica čiji je ovaj autor, može da stigne na profilnu stranicu tog korisnika.
+Osim svog profila, korisnik klikom na profilnu sliku drugog korisnika, koja se nalazi na svakoj od kartica čiji je ovaj autor (ako posmatramo početnu stanu sajta), može da stigne na profilnu stranicu tog korisnika.
 
 ![](profile.png)
 
