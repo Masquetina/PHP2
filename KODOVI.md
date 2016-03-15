@@ -23,6 +23,9 @@
 ###VIEW-s
 ![](doc-images/head.png)
 ![](doc-images/flashdata.png)
+![](doc-images/header01.png)
+![](doc-images/header02.png)
+![](doc-images/header03.png)
 ![](doc-images/home01.png)
 ![](doc-images/home02.png)
 ![](doc-images/home03.png)
