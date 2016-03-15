@@ -8,7 +8,7 @@ Administratorski panel, osim o flegovanim karticama, sadrži i dinamičke podatk
 
 Registrovani korisnici kreiraju kartice. Svoje mogu da obrišu, a tuđe mogu da lajkuju ukoliko im se dopadaju, ili fleguju (prijave administratoru), ukoliko ocene sadržaj kao nepodoban, a za realizaciju ovih funkcionalnosti sam koristila AJAX.
 
-Posledica kreiranja nepodobnog sadržaja je banovanje, što zavisi od dalje arbitraže administratora. Banovan korisnik se ne može ulogovati na sajt, sve dok mu to ponovo ne omogući administrator.
+Posledica kreiranja nepodobnog sadržaja je banovanje, što zavisi od arbitraže administratora. Banovan korisnik se ne može ulogovati na sajt, sve dok mu to ponovo ne omogući administrator.
 
 1. Sopstvena kartica koju je moguće izbrisati:
 
