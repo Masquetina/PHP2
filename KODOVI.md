@@ -9,4 +9,18 @@
 ![](doc-images/Profile.png)
 ![](doc-images/Settings.png)
 ![](doc-images/Dashboard.png)
+###MODELI
 
+![](doc-images/Validate01.png)
+![](doc-images/Validate02.png)
+![](doc-images/User.png)
+![](doc-images/Cards01.png)
+![](doc-images/Cards02.png)
+![](doc-images/Cards03.png)
+![](doc-images/Administration01.png)
+![](doc-images/Administration02.png)
+![](doc-images/Menu.png)
+###VIEW-s
+![](doc-images/home01.png)
+![](doc-images/home02.png)
+![](doc-images/home03.png)
