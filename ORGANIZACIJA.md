@@ -137,7 +137,7 @@ Na stranicu predviđenu za ovu svrhu stiže se klikom na dugme JOIN US NOW, i on
 
 Stranica za kreiranje korisničkog naloga se sastoji iz zaglavlja, centralnog dela sa dva dodatna linka u dnu, i podnožja stranice.
 
-![](doc-images/login.png)
+![](doc-images/create-account.png)
 
 Zaglavlje je vidljivo korisniku samo u svrhu prikazivanja flashmessage, ukoliko ona postoji, (ovo je zajedničko za sve stranice na kojima se nalazi forma), a u dnu su linkovi ka Terms of service, koji otvara modal i link ka LOGIN stranici ukoliko ovaj korisnik već ima kreiran nalog.
 
