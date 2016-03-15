@@ -59,11 +59,38 @@
 **Dashboard.php**
 * __construct()
 * index()
-* delete(
+* delete()
 * unflag()
 * unbann()
 
 ###MODELI
+**User.php**
+* __construct()
+* get_user()
+* get_cards(
+* get_likes()
+
+-----
+**Validate.php**
+* __construct()
+* login()
+* signup()
+
+-----
+**User.php**
+* __construct()
+* get_user()
+* get_cards()
+* get_likes()
+
+-----
+**User.php**
+* __construct()
+* get_user()
+* get_cards()
+* get_likes()
+
+-----
 **User.php**
 * __construct()
 * get_user()
