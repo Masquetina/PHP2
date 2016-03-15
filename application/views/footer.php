@@ -17,17 +17,17 @@
 		<div class="regular menu pull-right">
 			<ul>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#">
 						<p>Contact</p>
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#">
 						<p>Sitemap</p>
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#">
 						<p>Documentation</p>
 					</a>
 				</li>
