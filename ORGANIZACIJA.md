@@ -1,27 +1,24 @@
 #2. Organizacija
 ##2.1 Organizaciona šema
 ###KONTROLERI
-| MY_Controler.php |
-| -- |
-| __construct() |
-| load_basic() |
-| load_admin() |
+**MY_Controler.php**
+* __construct()
+* load_basic()
+* load_form()
+* load_admin()
 
-| Home.php |
-| -- |
-| __construct() |
-| index() |
+**Home.ph**
+* __construct()
+* index()
 
-| Signup.php |
-| -- |
-| __construct() |
-| index() |
-| validate() |
+**Signup.php**
+__construct()
+index()
+validate()
 
-| Login.php |
-| -- |
-| __construct() |
-| index() |
+**Login.php**
+__construct()
+index()
 
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
