@@ -20,10 +20,9 @@
 * __construct()
 * index()
 
-| Logout.php |
-| -- |
-| __construct() |
-| index() |
+**Logout.php**
+*__construct()
+*index()
 
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
