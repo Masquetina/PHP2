@@ -11,22 +11,26 @@
 **Home.php**
 * __construct()
 * index()
+
 -----
 
 **Signup.php**
 * __construct()
 * index()
 * validate()
+
 -----
 
 **Login.php**
 * __construct()
 * index()
+
 -----
 
 **Logout.php**
 * __construct()
 * index()
+
 -----
 
 ##2.2 Mapa sajta
