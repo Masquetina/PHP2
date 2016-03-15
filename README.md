@@ -4,9 +4,9 @@ Dinamički web site QuoteApp je napisan u serverskom jeziku PHP, u frejmvorku Co
 
 Dizajn kartice, kao osnovne gradivne jedinice:
 
+
 <p data-height="268" data-theme-id="19687" data-slug-hash="yeGRzB" data-default-tab="result" data-user="Masquetina" class="codepen">See the Pen <a href="http://codepen.io/Masquetina/pen/yeGRzB/">Quotation Card Prototype</a> by Iva Dopuđ (<a href="http://codepen.io/Masquetina">@Masquetina</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
 
 
 
