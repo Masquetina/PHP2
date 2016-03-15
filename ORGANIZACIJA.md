@@ -63,7 +63,7 @@
 * unflag()
 * unbann()
 
-
+###MODELI
 ##2.2 Mapa sajta
 ![](doc-images/sitemap.png)
 ##2.3 Slike stranica i opisi funkcionalnosti
