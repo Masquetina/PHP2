@@ -47,9 +47,9 @@
                 <?php if( $this->session->userdata('id_rolle') == 1 &&
                 $this->session->userdata('id_user') != ($card->id_user) ) : ?>
                 <li>
-                  <p class="count"><?=$card->likes;?></p>
+                  <p id="count-<?=$card->id_card;?>" class="count"><?=$card->likes;?></p>
                 </li>
-                <li>
+                <li class="like" data-for="<?=$card->id_card;?>">
                   <i class="material-icons link favorite">favorite</i>
                 </li>
                 <?php if( $this->session->userdata('id_rolle') == 1 ) : ?>
@@ -116,6 +116,18 @@ $(document).ready(function() {
       cache: false,
       contentType: false,
       processData: false
+    });
+  });
+  $('.like').click(function() {
+    var id_card = $(this).attr('data-for');
+    $.ajax({
+      url: base_url + 'card/like/' + id_card,
+      type: "POST",
+      success: function() {
+        var count = $('#count-' + id_card).html();
+        count = parseInt(count);
+        $('#count-' + id_card).html(count + 1);
+      }
     });
   });
   $('.delete').click(function() {
