@@ -17,13 +17,8 @@
 		<div class="regular menu pull-right">
 			<ul>
 				<li>
-					<a href="<?=base_url();?>/sitemap.xml" target="_blank">
-						<p>Sitemap</p>
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/Masquetina/PHP2/blob/master/DOKUMENTACIJA_SADRZAJ.md" target="_blank">
-						<p>Documentation</p>
+					<a href="<?=base_url();?>/https://github.com/Masquetina/PHP2" target="_blank">
+						<p>QuoteApp on GitHub</p>
 					</a>
 				</li>
 			</ul>
