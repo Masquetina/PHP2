@@ -74,11 +74,6 @@
 			</div>
 		</div>
 		<div class="text-center">
-			<small class="text-muted">
-				<a class="text-primary" href="#">Forgot password?</a>
-			</small>
-		</div>
-		<div class="text-center">
 			<small class="text-muted">Don't have an account?
 				<a class="text-primary" href="<?=base_url();?>signup">Create Account</a>
 			</small>
