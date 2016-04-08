@@ -17,7 +17,7 @@
 		<div class="regular menu pull-right">
 			<ul>
 				<li>
-					<a href="https://github.com/Masquetina/PHP2" target="_blank">
+					<a href="https://github.com/Masquetina/QuoteApp" target="_blank">
 						<p>QuoteApp on GitHub</p>
 					</a>
 				</li>
